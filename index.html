@@ -2913,7 +2913,7 @@ body.uni-dec [role="button"]:focus-visible {
           <div class="uni-som-group-title">🔍 Missions CAC</div>
           <div class="uni-som-links">
             <button class="uni-som-link" onclick="navGo('cac','missions')">
-              <span class="sl-icon">📋</span>Toutes les missions<span class="sl-badge">5 missions</span>
+              <span class="sl-icon">📋</span>Toutes les missions<span class="sl-badge">6 missions</span>
             </button>
             <button class="uni-som-link" onclick="showMission('cac',0)">
               <span class="sl-icon">✅</span>Certification des comptes annuels<span class="sl-badge">Mission légale</span>
@@ -2929,6 +2929,9 @@ body.uni-dec [role="button"]:focus-visible {
             </button>
             <button class="uni-som-link" onclick="showMission('cac',4)">
               <span class="sl-icon">🤝</span>Missions contractuelles<span class="sl-badge">Audit, ISRE 2400…</span>
+            </button>
+            <button class="uni-som-link sl-new" onclick="showMission('cac',5)">
+              <span class="sl-icon">🌱</span>Certification des informations de durabilité<span class="sl-badge sl-new">CSRD</span>
             </button>
           </div>
         </div>
@@ -3092,6 +3095,7 @@ body.uni-dec [role="button"]:focus-visible {
         <div class="mission-card cac-card" onclick="showMission('cac',2)"><div class="mission-icon" style="background:var(--bordeaux)">📋</div><h3>Attestations spéciales</h3><p>Attestations délivrées par le CAC sur des informations financières spécifiques à la demande de l'entité ou imposées par la réglementation.</p><ul><li>Attestation de chiffre d'affaires</li><li>Attestation pour organismes publics</li><li>Subventions et financements publics</li><li>Comptes de campagne électorale</li></ul><span class="mission-read-more">Lire la fiche complète →</span></div>
         <div class="mission-card cac-card" onclick="showMission('cac',3)"><div class="mission-icon" style="background:var(--bordeaux)">🏛️</div><h3>Entités d'Intérêt Public (EIP)</h3><p>Régime d'audit légal renforcé pour les sociétés cotées, établissements de crédit, compagnies d'assurance et autres EIP — règlement européen 537/2014.</p><ul><li>Rotation décennale obligatoire</li><li>Co-commissariat aux comptes</li><li>Rapport complémentaire au comité d'audit</li><li>Questions Clés d'Audit (KAM)</li></ul><span class="mission-read-more">Lire la fiche complète →</span></div>
         <div class="mission-card cac-card" onclick="showMission('cac',4)"><div class="mission-icon" style="background:var(--bordeaux)">🤝</div><h3>Missions contractuelles</h3><p>Au-delà de la certification légale, le CAC peut réaliser des missions contractuelles d'assurance — ISRE 2400, ISRS 4400 — et des missions CSRD d'OTI.</p><ul><li>Examen limité ISRE 2400</li><li>Procédures convenues ISRS 4400</li><li>CSRD — Organisme Tiers Indépendant (OTI)</li><li>Rapports spéciaux contractuels</li></ul><span class="mission-read-more">Lire la fiche complète →</span></div>
+        <div class="mission-card cac-card" onclick="showMission('cac',5)"><div class="mission-icon" style="background:var(--bordeaux)">🌱</div><h3>Certification des informations de durabilité (CSRD)</h3><p>Nouvelle mission légale issue de la directive CSRD : certifier le rapport de durabilité établi selon les normes ESRS, avec une conclusion d'assurance limitée.</p><ul><li>Ordonnance du 6 décembre 2023 — mission distincte</li><li>Référentiel ESRS et double matérialité</li><li>Assurance limitée — rapport séparé</li><li>CAC « auditeur de durabilité » ou OTI (COFRAC)</li></ul><span class="mission-read-more">Lire la fiche complète →</span></div>
       </div>
     </div>
   </section>
@@ -4603,6 +4607,7 @@ function buildSearchIndex() {
   add('cac','missions',"Attestations spéciales CAC","attestations spéciales marchés publics financement CSE procédures amiables",function(){switchUni('cac');setTimeout(function(){showMission('cac',2)},60)});
   add('cac','missions',"Entités d'Intérêt Public — EIP","EIP entités intérêt public co-commissariat rotation KAM ESEF iXBRL",function(){switchUni('cac');setTimeout(function(){showMission('cac',3)},60)});
   add('cac','missions',"Missions contractuelles — CSRD OTI","missions contractuelles ISRE ISRS CSRD OTI audit contractuel",function(){switchUni('cac');setTimeout(function(){showMission('cac',4)},60)});
+  add('cac','missions',"Certification des informations de durabilité — CSRD","durabilité CSRD ESRS rapport durabilité assurance limitée OTI COFRAC H2A double matérialité taxonomie ESG extra-financier",function(){switchUni('cac');setTimeout(function(){showMission('cac',5)},60)});
 
   // ── CAC NORMES ────────────────────────────────────────────────
   add('cac','normes',"NEP 100 — Co-commissariat","NEP100 co-commissariat deux commissaires EIP",function(){switchUni('cac');setTimeout(function(){showNorme('norme-nep100')},60)});

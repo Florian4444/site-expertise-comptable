@@ -4254,8 +4254,12 @@ body.uni-dec [role="button"]:focus-visible {
     document.body.appendChild(b);
   }
 
+  // Version des données : à incrémenter si besoin de forcer le
+  // rafraîchissement des JSON malgré un cache navigateur existant
+  var DATA_V = '2026-07-04a';
+
   function load(k) {
-    fetch('data/' + FILES[k] + '.json')
+    fetch('data/' + FILES[k] + '.json?v=' + DATA_V)
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (v) { window[k] = v; })
       .catch(function () { failed.push(k); })

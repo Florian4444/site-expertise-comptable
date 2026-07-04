@@ -12,12 +12,14 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# ── Performance : cache long pour les données et modèles ──
-# (ils changent rarement ; le HTML, lui, reste toujours frais)
+# ── Performance : les JSON sont revalidés à chaque visite ──
+# (sinon un navigateur mobile garde d'anciennes données jusqu'à 1 h
+# après un déploiement, alors que le HTML — toujours frais — référence
+# déjà le nouveau contenu : les nouvelles fiches ne s'ouvrent plus)
 [[headers]]
   for = "/data/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/modeles/*"

@@ -1,0 +1,30 @@
+# Configuration Netlify — site statique, aucun build nécessaire
+
+[build]
+  publish = "."
+
+# ── Sécurité : en-têtes HTTP recommandés ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ── Performance : cache long pour les données et modèles ──
+# (ils changent rarement ; le HTML, lui, reste toujours frais)
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/modeles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -7,6 +7,7 @@
 <meta name="description" content="Site de référence indépendant sur l'expertise comptable, le commissariat aux comptes et le cursus DEC. Normes PCG/IFRS/NEP, missions normées, outils, institutions et formations. Par un expert-comptable diplômé.">
 <meta name="keywords" content="expert-comptable, commissaire aux comptes, DEC, DCG, DSCG, NEP, IFRS, PCG, ANC, OEC, CNCC, H2A, CSRD, stage DEC, épreuves DEC, mémoire DEC, facture électronique, NP 2300, NP 2400">
 <meta name="author" content="Expert-Comptable Diplômé">
+<meta name="version" content="v65">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://expertise-comptable-ressources.fr/">
 <meta property="og:type" content="website">
@@ -1526,6 +1527,41 @@ body.uni-cac [role="button"]:focus-visible {
 body.uni-dec [role="button"]:focus-visible {
   outline-color: #9c7ae0;
 }
+/* ══ v65.2 — Recherche visible & résultats groupés ══ */
+.quick-search-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);border-radius:10px;padding:.85rem 1.1rem;cursor:pointer;font-family:'Source Serif 4',Georgia,serif;font-size:14.5px;color:rgba(255,255,255,.6);transition:border-color .2s,background .2s;text-align:left}
+.quick-search-bar:hover,.quick-search-bar:focus-visible{border-color:var(--gold);background:rgba(255,255,255,.13)}
+.quick-search-bar .qsb-kbd{margin-left:auto;font-size:11px;letter-spacing:.05em;border:1px solid rgba(255,255,255,.28);border-radius:4px;padding:2px 7px;color:rgba(255,255,255,.5);white-space:nowrap}
+.landing-qsb-wrap{display:flex;justify-content:center;margin:1.7rem auto .3rem;padding:0 1.5rem;position:relative;z-index:3}
+.hero-qsb-wrap{margin-top:1.3rem;max-width:520px}
+.search-group-label{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:.9rem 2px .45rem}
+.search-recent{margin-bottom:.4rem}
+.search-recent-chip{display:inline-block;margin:0 6px 8px 0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:16px;color:rgba(255,255,255,.78);font-size:13px;padding:5px 13px;cursor:pointer;font-family:'Source Serif 4',Georgia,serif;transition:border-color .15s,color .15s}
+.search-recent-chip:hover{border-color:var(--gold);color:#fff}
+/* ══ v65.4 — Menus regroupés ══ */
+.nav-dropdown-menu .nav-dd-group{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:9px 16px 4px;pointer-events:none;list-style:none}
+.res-group-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:2.2rem 0 0;padding-bottom:.45rem;border-bottom:2px solid var(--gold)}
+/* ══ v65.5 — Reprendre / épinglés + Boîte à outils ══ */
+.resume-strip{max-width:1200px;margin:1.1rem auto -0.4rem;padding:0 2rem;display:none;flex-wrap:wrap;gap:8px;align-items:center}
+.resume-strip.has-items{display:flex}
+.resume-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.resume-chip{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:5px 8px 5px 13px;font-size:12.5px;font-weight:600;color:var(--navy);cursor:pointer;font-family:'Source Serif 4',Georgia,serif;transition:border-color .15s}
+.resume-chip:hover{border-color:var(--gold)}
+.resume-pin{border:none;background:none;cursor:pointer;font-size:13px;padding:0 2px;color:#b9a15c;line-height:1}
+.tbx-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin:1.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:2px solid var(--gold)}
+.tbx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem;margin-bottom:.6rem}
+.tbx-link{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer;text-align:left;font-family:'Source Serif 4',Georgia,serif;transition:border-color .2s,box-shadow .2s}
+.tbx-link:hover{border-color:var(--gold);box-shadow:0 3px 10px rgba(0,0,0,.06)}
+@media(max-width:640px){.quick-search-bar .qsb-kbd{display:none}}
+/* ══ v65.3 — Accès rapides landing ══ */
+.landing-quick{max-width:1080px;margin:1.3rem auto 0;padding:0 1.5rem;position:relative;z-index:3}
+.lq-label{display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.8rem}
+.lq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:.7rem}
+.lq-tile{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:.75rem .9rem;cursor:pointer;text-align:left;font-family:'Source Serif 4',Georgia,serif;transition:border-color .2s,background .2s,transform .2s}
+.lq-tile:hover{border-color:var(--gold);background:rgba(255,255,255,.11);transform:translateY(-2px)}
+.lq-ico{font-size:20px}
+.lq-txt{display:flex;flex-direction:column;line-height:1.3}
+.lq-txt strong{font-size:13.5px;color:#fff;font-weight:600}
+.lq-txt small{font-size:11px;color:rgba(255,255,255,.5)}
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }
@@ -1567,18 +1603,27 @@ body.uni-dec [role="button"]:focus-visible {
     <li><a href="javascript:void(0)" onclick="navGo('ec','home')" class="active">Accueil</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('ec','missions')">Missions</a></li>
     <li class="nav-dropdown">
-      <a href="javascript:void(0)" onclick="navGo('ec','ressources')">Ressources</a>
+      <a href="javascript:void(0)" onclick="navGo('ec','ressources')">Guides &amp; chiffres</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showFormesJuridiques,120)">🏛️ Formes juridiques</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showSchemaStructures,120)">🗂️ Schéma structure / fiscalité</a></li>
+        <li class="nav-dd-group">📊 Barèmes &amp; références</li>
+        <li><a href="javascript:void(0)" onclick="showChiffresUtiles()">🔢 Chiffres utiles 2026</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showCalculateur,120)">⚖️ Calculateur de seuils</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showGlossaire,120)">📖 Glossaire comptable</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showFaq,120)">❓ FAQ pratique</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showVeille,120)">📅 Timeline réglementaire</a></li>
+        <li class="nav-dd-group">📘 Guides pratiques</li>
+        <li><a href="javascript:void(0)" onclick="showFiscal()">📊 Fiscalité &amp; TVA</a></li>
+        <li><a href="javascript:void(0)" onclick="showSocial()">👥 Droit social &amp; Paie</a></li>
+        <li><a href="javascript:void(0)" onclick="showComptaGen()">📒 Comptabilité générale</a></li>
+        <li><a href="javascript:void(0)" onclick="showIA()">🤖 IA en cabinet</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showFormesJuridiques,120)">🏛️ Formes juridiques</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showFaq,120)">❓ FAQ pratique</a></li>
+        <li class="nav-dd-group">🧰 Outils interactifs</li>
+        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showGlossaire,120)">📖 Glossaire comptable</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showComparatifPCGIFRS,120)">⚖️ Comparatif PCG / IFRS</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showSchemaStructures,120)">🗂️ Schéma structure / fiscalité</a></li>
+        <li><a href="javascript:void(0)" onclick="showToolbox()" style="border-top:1px solid rgba(201,168,76,.25);margin-top:4px">🧰 Toute la boîte à outils →</a></li>
       </ul>
     </li>
-    <li><a href="javascript:void(0)" onclick="navGo('ec','outils')">Outils</a></li>
+    <li><a href="javascript:void(0)" onclick="navGo('ec','outils')">Logiciels</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('ec','normes')">Normes</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('ec','institutions')">Institutions</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('ec','actu')">Actualités</a></li>
@@ -1588,18 +1633,25 @@ body.uni-dec [role="button"]:focus-visible {
     <li><a href="javascript:void(0)" onclick="navGo('cac','home')" class="active">Accueil</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('cac','missions')">Missions</a></li>
     <li class="nav-dropdown">
-      <a href="javascript:void(0)" onclick="navGo('cac','ressources')">Ressources</a>
+      <a href="javascript:void(0)" onclick="navGo('cac','ressources')">Guides &amp; chiffres</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showFormesJuridiques,120)">🏛️ Formes juridiques</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showSchemaStructures,120)">🗂️ Schéma structure / fiscalité</a></li>
+        <li class="nav-dd-group">📊 Barèmes &amp; références</li>
+        <li><a href="javascript:void(0)" onclick="showChiffresUtiles()">🔢 Chiffres utiles 2026</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showCalculateur,120)">⚖️ Calculateur de seuils</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showGlossaire,120)">📖 Glossaire comptable</a></li>
-        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showFaq,120)">❓ FAQ pratique</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showVeille,120)">📅 Timeline réglementaire</a></li>
+        <li class="nav-dd-group">📘 Guides pratiques</li>
+        <li><a href="javascript:void(0)" onclick="showFiscal()">📊 Fiscalité &amp; TVA</a></li>
+        <li><a href="javascript:void(0)" onclick="showSocial()">👥 Droit social &amp; Paie</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showFormesJuridiques,120)">🏛️ Formes juridiques</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showFaq,120)">❓ FAQ pratique</a></li>
+        <li class="nav-dd-group">🧰 Outils interactifs</li>
+        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showGlossaire,120)">📖 Glossaire comptable</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showComparatifPCGIFRS,120)">⚖️ Comparatif PCG / IFRS</a></li>
+        <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showSchemaStructures,120)">🗂️ Schéma structure / fiscalité</a></li>
+        <li><a href="javascript:void(0)" onclick="showToolbox()" style="border-top:1px solid rgba(201,168,76,.25);margin-top:4px">🧰 Toute la boîte à outils →</a></li>
       </ul>
     </li>
-    <li><a href="javascript:void(0)" onclick="navGo('cac','outils')">Outils</a></li>
+    <li><a href="javascript:void(0)" onclick="navGo('cac','outils')">Logiciels</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('cac','normes')">Normes</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('cac','institutions')">Institutions</a></li>
     <li><a href="javascript:void(0)" onclick="navGo('cac','actu')">Actualités</a></li>
@@ -1636,6 +1688,26 @@ body.uni-dec [role="button"]:focus-visible {
   <p class="landing-tagline" id="landing-tagline">Site d'information professionnelle indépendant<span class="tagline-cursor" id="tagline-cursor"></span></p>
   <h1 class="landing-title" id="landing-title">Expertise comptable,<br>Commissariat, <em>Cursus DEC</em></h1>
   <p class="landing-sub">Un site de référence pour comprendre les deux grandes professions du chiffre et les formations qui y mènent. Choisissez votre univers.</p>
+
+  <!-- v65.2 — Barre de recherche visible dès l'arrivée -->
+  <div class="landing-qsb-wrap">
+    <button type="button" class="quick-search-bar" onclick="openSearch()" aria-label="Ouvrir la recherche">
+      <span>🔍</span><span>Rechercher : un seuil, un barème, une norme, un guide…</span><span class="qsb-kbd">Ctrl K</span>
+    </button>
+  </div>
+
+  <!-- v65.3 — Accès rapides : les contenus les plus consultés, à 1 clic -->
+  <div class="landing-quick">
+    <span class="lq-label">Accès rapides</span>
+    <div class="lq-grid">
+      <button type="button" class="lq-tile" onclick="showChiffresUtiles()"><span class="lq-ico">🔢</span><span class="lq-txt"><strong>Chiffres 2026</strong><small>SMIC, PASS, barème km, IR</small></span></button>
+      <button type="button" class="lq-tile" onclick="switchUni('ec');setTimeout(showCalculateur,60)"><span class="lq-ico">⚖️</span><span class="lq-txt"><strong>Seuils &amp; calculateur</strong><small>CAC, micro-entité, EIP</small></span></button>
+      <button type="button" class="lq-tile" onclick="showFiscal()"><span class="lq-ico">📊</span><span class="lq-txt"><strong>Fiscalité &amp; TVA</strong><small>IS, IR, TVA, CVAE</small></span></button>
+      <button type="button" class="lq-tile" onclick="showSocial()"><span class="lq-ico">👥</span><span class="lq-txt"><strong>Social &amp; Paie</strong><small>Cotisations, DSN, contrats</small></span></button>
+      <button type="button" class="lq-tile" onclick="switchUni('ec');setTimeout(showVeille,60)"><span class="lq-ico">📅</span><span class="lq-txt"><strong>Échéances</strong><small>E-facture, CSRD, timeline</small></span></button>
+      <button type="button" class="lq-tile" onclick="navGo('dec','annales')"><span class="lq-ico">🎓</span><span class="lq-txt"><strong>Annales</strong><small>DCG, DSCG, DEC, BTS CG</small></span></button>
+    </div>
+  </div>
 
   <!-- STATS STRIP ANIMÉ -->
   <div class="landing-stats" id="landing-stats">
@@ -1727,8 +1799,8 @@ body.uni-dec [role="button"]:focus-visible {
         <div class="about-update">
           <span class="about-update-icon">✍️</span>
           <div class="about-update-text">
-            <strong>Dernière mise à jour — novembre 2025</strong>
-            <span>Intégration de la NEP 600 révisée, mise à jour du référentiel normatif OEC (édition 2025) et ajout des nouvelles dispositions IA pour les épreuves DEC (arrêté du 4 août 2025).</span>
+            <strong>Dernière mise à jour — juillet 2026 (v65)</strong>
+            <span>Audit complet des chiffres 2026 (barème IR, seuils micro, cotisations, CVAE, CSRD) et refonte de la navigation : liens profonds partageables, recherche mise en avant, accès rapides et menus regroupés.</span>
           </div>
         </div>
 
@@ -1948,6 +2020,7 @@ body.uni-dec [role="button"]:focus-visible {
         <h1 class="hero-title">Le savoir de <em>l'expert-comptable</em>,<br>accessible à tous</h1>
         <p class="hero-text">Normes comptables, missions d'expertise, outils du métier et actualités du secteur. Une ressource indépendante et rigoureuse pour les professionnels et les curieux.</p>
         <button class="hero-cta" onclick="navGo('ec','missions')">Découvrir les ressources →</button>
+        <div class="hero-qsb-wrap"><button type="button" class="quick-search-bar" onclick="openSearch()" aria-label="Ouvrir la recherche"><span>🔍</span><span>Rechercher : un seuil, une norme, un barème…</span><span class="qsb-kbd">Ctrl K</span></button></div>
       </div>
       <div class="hero-card">
         <div class="hero-card-title">Le métier en chiffres</div>
@@ -2251,20 +2324,43 @@ body.uni-dec [role="button"]:focus-visible {
       <h2 class="section-title">Ressources pratiques</h2>
       <div class="section-divider"></div>
       <p class="section-intro">Outils interactifs, guides de création d'entreprise, glossaire, comparatifs et références réglementaires.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem">
+
+      <!-- v65.4 — Groupe 1 : Barèmes & références -->
+      <div class="res-group-title">📊 Barèmes &amp; références</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.2rem">
+
+        <button type="button" onclick="showChiffresUtiles()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #1a2e5a">
+          <div style="width:44px;height:44px;border-radius:8px;background:#1a2e5a;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🔢</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Chiffres utiles 2026</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Barème kilométrique, PMSS/PASS, SMIC, taux d'intérêt légal, indices ILC/IRL/ICC et seuils légaux — tous les chiffres de référence.</p>
+          <div style="font-size:13px;font-weight:600;color:#1a2e5a;margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter les barèmes <span>→</span></div>
+        </button>
+
+        <button type="button" onclick="showCalculateur()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
+          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">⚖️</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Calculateur de seuils légaux</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Audit légal obligatoire, nomination CAC, entités d'intérêt public — seuils PACTE 2024.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Ouvrir le calculateur <span>→</span></div>
+        </button>
+
+        <button type="button" onclick="showVeille()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
+          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📅</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Timeline réglementaire 2024–2028</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Facture électronique, CSRD, FIDA, révision des seuils CAC — toutes les échéances à venir.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir la timeline <span>→</span></div>
+        </button>
+
+      </div>
+
+      <!-- v65.4 — Groupe 2 : Guides pratiques -->
+      <div class="res-group-title">📘 Guides pratiques</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.2rem">
 
         <button type="button" onclick="showComptaGen()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #4a148c">
           <div style="width:44px;height:44px;border-radius:8px;background:#4a148c;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📒</div>
           <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Comptabilité générale pratique</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Écritures courantes, amortissements, provisions, charges à payer, check-list de clôture et FEC — le référentiel PCG en pratique.</p>
           <div style="font-size:13px;font-weight:600;color:#4a148c;margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter le guide <span>→</span></div>
-        </button>
-
-        <button type="button" onclick="showGlossaire()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
-          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📖</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Glossaire comptable interactif</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">EBE, VA, BFR, CAF, FRNG — définitions filtrables par catégorie, références PCG et IFRS.</p>
-          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Ouvrir le glossaire <span>→</span></div>
         </button>
 
         <button type="button" onclick="showFiscal()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #e65100">
@@ -2288,41 +2384,6 @@ body.uni-dec [role="button"]:focus-visible {
           <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter le guide <span>→</span></div>
         </button>
 
-        <button type="button" onclick="showSchemaStructures()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #1565c0">
-          <div style="width:44px;height:44px;border-radius:8px;background:#1565c0;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🗂️</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Schéma : quelle structure choisir ?</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Arbre de décision visuel — seuils micro, IR vs IS, statut social dirigeant, seuils TVA 2024.</p>
-          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir le schéma <span>→</span></div>
-        </button>
-
-        <button type="button" onclick="showComparatifPCGIFRS()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
-          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">⚖️</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Comparatif PCG vs IFRS</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Différences clés entre le référentiel français et les normes IFRS — actifs, provisions, stocks.</p>
-          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir le comparatif <span>→</span></div>
-        </button>
-
-        <button type="button" onclick="showChiffresUtiles()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #1a2e5a">
-          <div style="width:44px;height:44px;border-radius:8px;background:#1a2e5a;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🔢</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Chiffres utiles 2026</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Barème kilométrique, PMSS/PASS, SMIC, taux d'intérêt légal, indices ILC/IRL/ICC et seuils légaux — tous les chiffres de référence.</p>
-          <div style="font-size:13px;font-weight:600;color:#1a2e5a;margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter les barèmes <span>→</span></div>
-        </button>
-
-        <button type="button" onclick="showCalculateur()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
-          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">⚖️</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Calculateur de seuils légaux</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Audit légal obligatoire, nomination CAC, entités d'intérêt public — seuils PACTE 2024.</p>
-          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Ouvrir le calculateur <span>→</span></div>
-        </button>
-
-        <button type="button" onclick="showVeille()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
-          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📅</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Timeline réglementaire 2024–2028</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Facture électronique, CSRD, FIDA, révision des seuils CAC — toutes les échéances à venir.</p>
-          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir la timeline <span>→</span></div>
-        </button>
-
         <button type="button" onclick="showFaq()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
           <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">❓</div>
           <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">FAQ pratique</h3>
@@ -2335,6 +2396,33 @@ body.uni-dec [role="button"]:focus-visible {
           <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Intelligence artificielle en cabinet</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Cas d'usage, outils comparés, prompts, déontologie RGPD, AI Act 2026 et ROI — le guide complet de l'IA pour l'EC.</p>
           <div style="font-size:13px;font-weight:600;color:#059669;margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter le guide <span>→</span></div>
+        </button>
+
+      </div>
+
+      <!-- v65.4 — Groupe 3 : Outils interactifs -->
+      <div class="res-group-title">🧰 Outils interactifs</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.2rem">
+
+        <button type="button" onclick="showGlossaire()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
+          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📖</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Glossaire comptable interactif</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">EBE, VA, BFR, CAF, FRNG — définitions filtrables par catégorie, références PCG et IFRS.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Ouvrir le glossaire <span>→</span></div>
+        </button>
+
+        <button type="button" onclick="showComparatifPCGIFRS()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid var(--gold)">
+          <div style="width:44px;height:44px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">⚖️</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Comparatif PCG vs IFRS</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Différences clés entre le référentiel français et les normes IFRS — actifs, provisions, stocks.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir le comparatif <span>→</span></div>
+        </button>
+
+        <button type="button" onclick="showSchemaStructures()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #1565c0">
+          <div style="width:44px;height:44px;border-radius:8px;background:#1565c0;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🗂️</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Schéma : quelle structure choisir ?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Arbre de décision visuel — seuils micro, IR vs IS, statut social dirigeant, seuils TVA 2026.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--navy-light);margin-top:1rem;display:flex;align-items:center;gap:6px">Voir le schéma <span>→</span></div>
         </button>
 
       </div>
@@ -2881,6 +2969,7 @@ body.uni-dec [role="button"]:focus-visible {
         <h1 class="hero-title">Le rôle du <em>commissaire aux comptes</em>,<br>décrypté</h1>
         <p class="hero-text">Missions légales, normes d'audit, outils professionnels et actualités réglementaires. Tout ce que vous devez savoir sur la certification des comptes en France.</p>
         <button class="hero-cta" onclick="navGo('cac','missions')">Découvrir les ressources →</button>
+        <div class="hero-qsb-wrap"><button type="button" class="quick-search-bar" onclick="openSearch()" aria-label="Ouvrir la recherche"><span>🔍</span><span>Rechercher : une NEP, un seuil, la CSRD…</span><span class="qsb-kbd">Ctrl K</span></button></div>
       </div>
       <div class="hero-card">
         <div class="hero-card-title">Le métier en chiffres</div>
@@ -3483,6 +3572,7 @@ body.uni-dec [role="button"]:focus-visible {
         <h1 class="hero-title">Le cursus de la <em>filière comptable</em>,<br>de A à Z</h1>
         <p class="hero-text">BTS CG, DCG, DSCG, DEC, CAFCAC, Master CCA… Toutes les formations, toutes les épreuves, tous les parcours — en formation initiale, en alternance ou en VAE.</p>
         <button class="hero-cta" onclick="navGo('dec','etudes')">Découvrir les formations →</button>
+        <div class="hero-qsb-wrap"><button type="button" class="quick-search-bar" onclick="openSearch()" aria-label="Ouvrir la recherche"><span>🔍</span><span>Rechercher : une UE, des annales, une dispense…</span><span class="qsb-kbd">Ctrl K</span></button></div>
       </div>
       <div class="hero-card">
         <div class="hero-card-title">La filière en chiffres</div>
@@ -4296,6 +4386,7 @@ function switchUni(uni) {
   showPage(homeMap[uni]);
   window.scrollTo(0,0);
   if (uni==='dec') setTimeout(buildCursusSchema, 80);
+  routeSet(uni);                     // v65.1 — URL de l'univers
 }
 
 function goToLanding() {
@@ -4313,6 +4404,7 @@ function goToLanding() {
   document.getElementById('nav-search-btn').style.display = 'none';
   hideUniSwitcher();
   window.scrollTo(0,0);
+  routeSet('');                      // v65.1 — retour à la racine
 }
 
 /* ══ SEARCH ENGINE ══ */
@@ -4672,6 +4764,8 @@ function buildSearchIndex() {
   add('ec','outils',"PPF Portail Public de Facturation — DGFiP gratuit","PPF portail public facturation DGFiP Chorus Pro gratuit B2B B2G API",function(){switchUni('ec');setTimeout(function(){showOutilCategorie('cat-ec-efacture')},60)});
   add('ec','outils',"Factur-X — format hybride PDF XML","Factur-X format hybride PDF XML ZUGFeRD EN 16931 norme européenne facture électronique",function(){switchUni('ec');setTimeout(function(){showOutilCategorie('cat-ec-efacture')},60)});
   add('ec','outils',"E-reporting — données TVA DGFiP","e-reporting données transactions TVA DGFiP transmission mensuelle trimestrielle B2C",function(){switchUni('ec');setTimeout(function(){showOutilCategorie('cat-ec-efacture')},60)});
+
+  add('ec','ressources',"Boîte à outils — tous les outils et guides du site","boîte outils hub transverse barèmes guides calculateur glossaire annales lettres mission raccourcis",function(){showToolbox()});
 }
 
 function runSearch(query) {
@@ -4692,7 +4786,7 @@ function runSearch(query) {
     return { item: item, score: score };
   }).filter(function(x){ return x.score > 0; })
     .sort(function(a,b){ return b.score - a.score; })
-    .slice(0, 8);
+    .slice(0, 12);
 
   if (!scored.length) {
     el.innerHTML = '<div class="search-empty">Aucun résultat pour "' + query.replace(/</g,'&lt;') + '"</div>';
@@ -4702,6 +4796,14 @@ function runSearch(query) {
   var uniLabels = {ec:'Expert-Comptable', cac:'Commissaire aux Comptes', dec:'Étudiants / DEC'};
   var sectionLabels = {missions:'Missions',normes:'Normes',outils:'Outils',ressources:'Ressources pratiques',institutions:'Institutions',actu:'Actualités',etudes:'Formations'};
 
+  // v65.2 — regroupe les résultats par univers (ordre des groupes = meilleur score)
+  var groupOrder = [];
+  scored.forEach(function(x){ if (groupOrder.indexOf(x.item.uni) === -1) groupOrder.push(x.item.uni); });
+  var grouped = [];
+  groupOrder.forEach(function(u){ scored.forEach(function(x){ if (x.item.uni === u) grouped.push(x); }); });
+  scored = grouped;
+
+  var lastUni = null;
   var html = scored.map(function(x, idx) {
     var item = x.item;
     // Highlight match in title — single combined regex to avoid re-highlighting
@@ -4715,8 +4817,13 @@ function runSearch(query) {
       title = title.replace(combined, '<span class="search-result-highlight">$1</span>');
     }
     var snippet = sectionLabels[item.section] || item.section;
-    return '<div class="search-result-item" data-idx="'+idx+'" onclick="selectSearchResult('+idx+')">'
-      +'<div class="search-result-uni '+item.uni+'">'+uniLabels[item.uni]+' — '+snippet+'</div>'
+    var head = '';
+    if (item.uni !== lastUni) {   // v65.2 — en-tête de groupe
+      head = '<div class="search-group-label">' + uniLabels[item.uni] + '</div>';
+      lastUni = item.uni;
+    }
+    return head + '<div class="search-result-item" data-idx="'+idx+'" onclick="selectSearchResult('+idx+')">'
+      +'<div class="search-result-uni '+item.uni+'">'+snippet+'</div>'
       +'<div class="search-result-title">'+title+'</div>'
       +'</div>';
   }).join('');
@@ -4729,8 +4836,45 @@ function selectSearchResult(idx) {
   var el = document.getElementById('search-results');
   var item = el._results && el._results[idx] && el._results[idx].item;
   if (!item) return;
+  var q = (document.getElementById('search-input').value || '').trim();   // v65.2
+  if (q.length >= 2) recentSearchesAdd(q);
   closeSearch();
   item.action();
+}
+
+/* ══ v65.2 — RECHERCHES RÉCENTES (localStorage) ══ */
+function recentSearchesGet() {
+  try { return JSON.parse(localStorage.getItem('ecx-recherches') || '[]'); } catch (e) { return []; }
+}
+function recentSearchesAdd(q) {
+  try {
+    var list = recentSearchesGet().filter(function(x){ return x.toLowerCase() !== q.toLowerCase(); });
+    list.unshift(q);
+    localStorage.setItem('ecx-recherches', JSON.stringify(list.slice(0, 5)));
+  } catch (e) {}
+}
+function renderSearchHome() {
+  var el = document.getElementById('search-results');
+  var html = '';
+  var rec = recentSearchesGet();
+  if (rec.length) {
+    html += '<div class="search-recent"><div class="search-group-label">Recherches récentes</div>'
+      + rec.map(function(q) {
+          var safe = q.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+          return '<button type="button" class="search-recent-chip">' + safe + '</button>';
+        }).join('')
+      + '</div>';
+  }
+  html += '<div class="search-empty">Commencez à taper pour rechercher dans tout le site</div>';
+  el.innerHTML = html;
+  el.querySelectorAll('.search-recent-chip').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var inp = document.getElementById('search-input');
+      inp.value = btn.textContent;
+      runSearch(inp.value);
+      inp.focus();
+    });
+  });
 }
 
 function handleSearchKey(e) {
@@ -4756,7 +4900,7 @@ function handleSearchKey(e) {
 function openSearch() {
   var ov = document.getElementById('search-overlay');
   ov.classList.add('open');
-  document.getElementById('search-results').innerHTML = '<div class="search-empty">Commencez à taper pour rechercher dans tout le site</div>';
+  renderSearchHome();   // v65.2 — affiche les recherches récentes
   document.getElementById('search-input').value = '';
   document.getElementById('search-input').focus();
   document.body.style.overflow = 'hidden';
@@ -4805,6 +4949,8 @@ function showPage(id) {
       });
     }
   }
+  var r = routeForPage(id);          // v65.1 — synchronise l'URL (pages sans paramètre)
+  if (r) routeSet(r);
 }
 
 // Univers pages = les 3 home pages. Tout le reste = page interne
@@ -4834,7 +4980,7 @@ function navGo(uni, section) {
   closeMenu();
   if (uni !== currentUni) switchUni(uni);
   var homeMap = {ec:'pg-ec-home', cac:'pg-cac-home', dec:'pg-dec-home'};
-  if (section === 'home') { showPageWithNav(homeMap[uni]); window.scrollTo(0,0); return; }
+  if (section === 'home') { showPageWithNav(homeMap[uni]); window.scrollTo(0,0); routeSet(uni); return; }
   showPageWithNav(homeMap[uni]);
   const sId = uni + '-' + section;
   setTimeout(function(){
@@ -4852,9 +4998,10 @@ function navGo(uni, section) {
   const navEl = document.getElementById('nav-links-' + uni);
   if (navEl) {
     navEl.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-    const sectionMap = {home:'Accueil',missions:'Missions',normes:'Normes',outils:'Outils',ressources:'Ressources',institutions:'Institutions',actu:'Actualités',etudes:'Formations',cursus:'Cursus',annales:'Annales'};
-    navEl.querySelectorAll('a').forEach(a => { if(a.textContent.trim()===sectionMap[section]) a.classList.add('active'); });
+    const sectionMap = {home:'Accueil',missions:'Missions',normes:'Normes',outils:['Outils','Logiciels'],ressources:['Ressources','Guides & chiffres'],institutions:'Institutions',actu:'Actualités',etudes:'Formations',cursus:'Cursus',annales:'Annales'};
+    navEl.querySelectorAll('a').forEach(a => { var labels = [].concat(sectionMap[section] || []); if(labels.indexOf(a.textContent.trim()) > -1) a.classList.add('active'); });
   }
+  routeSet(uni + '/' + section);     // v65.1 — URL de la section d'univers
 }
 
 function scrollS(id) {
@@ -4863,6 +5010,207 @@ function scrollS(id) {
 }
 
 function showHome() { navGo(currentUni,'home'); }
+
+/* ══════════════════════════════════════════════════════════
+   ROUTEUR HASH (v65.1) — liens profonds, F5, Précédent/Suivant
+   Format : #/route[/param1[/param2]]
+   Ex. : #/ec/ressources · #/chiffres-utiles/social · #/mission/ec/2
+══════════════════════════════════════════════════════════ */
+var HASH_SYNC = true;          // coupé pendant un dispatch pour ne pas ré-empiler l'historique
+var _routePending = null;      // dernière route demandée dans le tick courant (anti-doublons)
+var _lastAppliedRoute = null;  // route déjà affichée (ignore le hashchange qu'on a provoqué soi-même)
+
+function routeForPage(pgId) {
+  var m = {
+    'pg-about':'about','pg-contact':'contact','pg-seuils':'seuils','pg-lettres':'lettres','pg-toolbox':'boite-a-outils',
+    'pg-calculateur':'calculateur','pg-glossaire':'glossaire','pg-comparatif-pcg-ifrs':'pcg-ifrs',
+    'pg-ec-anc':'plan-comptes','pg-schema-structures':'schema-structures',
+    'pg-formes-juridiques':'formes-juridiques','pg-faq':'faq','pg-veille':'veille',
+    'pg-chronologie-audit':'chronologie-audit','pg-matrice-audit':'matrice-audit','pg-fiche-eip':'fiche-eip',
+    'pg-calendrier-dec':'calendrier-dec','pg-memoire-dec':'memoire-dec','pg-voies-dec':'voies-dec',
+    'pg-dispenses':'dispenses','pg-comparatif-logiciels':'comparatif-logiciels',
+    'pg-dcg-annales':'annales-dcg','pg-dscg-annales':'annales-dscg',
+    'pg-bts-annales':'annales-bts','pg-dec-annales':'annales-dec',
+    'pg-chiffres-utiles':'chiffres-utiles','pg-ia':'ia','pg-compta-gen':'compta-gen',
+    'pg-social':'social','pg-fiscal':'fiscal'
+  };
+  return m[pgId] || null;
+}
+
+function routeSet(route) {
+  if (!HASH_SYNC) return;
+  _routePending = route;
+  setTimeout(function() {
+    if (_routePending === null) return;
+    var r = _routePending; _routePending = null;
+    var h = (r === '') ? '#/' : '#/' + r;
+    _lastAppliedRoute = r;
+    if (location.hash !== h) location.hash = h;
+    visitTrack(r.split('/')[0]);   // v65.5 — alimente « Reprendre »
+  }, 0);
+}
+
+function routeDispatch() {
+  var h = location.hash.replace(/^#\/?/, '');
+  if (h === _lastAppliedRoute) return;   // hash écrit par routeSet : la page est déjà affichée
+  _lastAppliedRoute = h;
+  var parts = h.split('/');
+  var p0 = parts[0] || '';
+  HASH_SYNC = false;
+  try {
+    if (p0 === '' || p0 === 'home') { goToLanding(); }
+    else if (p0 === 'ec' || p0 === 'cac' || p0 === 'dec') {
+      navGo(p0, parts[1] || 'home');
+      // Second défilement correctif : les contenus injectés après coup
+      // (schéma cursus, images) décalent la cible pendant le scroll fluide
+      if (parts[1] && parts[1] !== 'home') {
+        setTimeout(function() {
+          var el = document.getElementById(p0 + '-' + parts[1]);
+          if (el) {
+            // Défilement instantané forcé : le smooth est annulé par les
+            // reflows tardifs (schéma cursus, images) et le reset du load
+            document.documentElement.style.scrollBehavior = 'auto';
+            el.scrollIntoView({ block: 'start' });
+            document.documentElement.style.scrollBehavior = '';
+          }
+        }, 700);
+      }
+    }
+    else {
+      var R = {
+        'about': function(){ showAbout(); },
+        'contact': function(){ showContact(); },
+        'boite-a-outils': function(){ showToolbox(); },
+        'seuils': function(){ showSeuils(); },
+        'lettres': function(){ showLettres(); },
+        'calculateur': function(){ showCalculateur(); },
+        'glossaire': function(){ showGlossaire(); },
+        'pcg-ifrs': function(){ showComparatifPCGIFRS(); },
+        'plan-comptes': function(){ showANC(); },
+        'schema-structures': function(){ showSchemaStructures(); },
+        'formes-juridiques': function(){ showFormesJuridiques(); },
+        'faq': function(){ showFaq(); },
+        'veille': function(){ showVeille(); },
+        'chronologie-audit': function(){ showChronologieAudit(); },
+        'matrice-audit': function(){ showMatriceAudit(); },
+        'fiche-eip': function(){ showFicheEIP(); },
+        'calendrier-dec': function(){ showCalendrierDec(); },
+        'memoire-dec': function(){ showMemoireDec(); },
+        'voies-dec': function(){ showVoiesDec(); },
+        'dispenses': function(){ showDispenses(); },
+        'comparatif-logiciels': function(){ showComparatifLogiciels(); },
+        'annales-dcg': function(){ showDcgAnnales(); },
+        'annales-dscg': function(){ showDscgAnnales(); },
+        'annales-bts': function(){ showBtsAnnales(); },
+        'annales-dec': function(){ showDecAnnales(); },
+        'chiffres-utiles': function(a){ showChiffresUtiles(a); },
+        'ia': function(a){ showIA(a); },
+        'compta-gen': function(a){ showComptaGen(a); },
+        'social': function(a){ showSocial(a); },
+        'fiscal': function(a){ showFiscal(a); },
+        'mission': function(a, b){ showMission(a, parseInt(b, 10) || 0); },
+        'formation': function(a){ showFormation(parseInt(a, 10) || 0); },
+        'epreuve-dec': function(a){ showDecEpreuve(parseInt(a, 10) || 0); },
+        'institution': function(a){ showInstitution(a); },
+        'actu': function(a){ showActu(a); },
+        'outil-cat': function(a){ showOutilCategorie(a); },
+        'outil': function(a){ showOutil(a); },
+        'norme': function(a){ showNorme(a); },
+        'forme': function(a){ showFormeJuridique(a); }
+      };
+      var fn = R[p0];
+      if (fn) { fn(parts[1], parts[2]); }
+      else { goToLanding(); }
+    }
+  } catch (e) {
+    // Route invalide ou donnée absente : retour à la landing sans casser la page
+    try { goToLanding(); } catch (e2) {}
+  }
+  visitTrack(p0);   // v65.5 — les liens profonds alimentent aussi « Reprendre »
+  setTimeout(function(){ HASH_SYNC = true; }, 150);
+}
+
+window.addEventListener('hashchange', routeDispatch);
+window.addEventListener('load', function() {
+  if (!location.hash || location.hash === '#/' || location.hash === '#') return;
+  if (window.DATA_READY) { routeDispatch(); }
+  else { document.addEventListener('data:ready', function(){ routeDispatch(); }, { once: true }); }
+});
+
+/* ══════════════════════════════════════════════════════════
+   v65.5 — REPRENDRE / ÉPINGLÉS (localStorage) + BOÎTE À OUTILS
+══════════════════════════════════════════════════════════ */
+var ROUTE_TITLES = {
+  'chiffres-utiles':'🔢 Chiffres utiles 2026','calculateur':'⚖️ Calculateur de seuils','veille':'📅 Timeline réglementaire',
+  'fiscal':'📊 Fiscalité & TVA','social':'👥 Droit social & Paie','compta-gen':'📒 Comptabilité générale','ia':'🤖 IA en cabinet',
+  'formes-juridiques':'🏛️ Formes juridiques','faq':'❓ FAQ pratique','glossaire':'📖 Glossaire','pcg-ifrs':'⚖️ PCG vs IFRS',
+  'schema-structures':'🗂️ Schéma structures','plan-comptes':'🧾 Plan de comptes ANC','seuils':'📋 Seuils légaux','lettres':'✉️ Lettres de mission',
+  'comparatif-logiciels':'🖥️ Comparatif logiciels','dispenses':'🎓 Dispenses DCG/DSCG','annales-dcg':'📄 Annales DCG','annales-dscg':'📄 Annales DSCG',
+  'annales-bts':'📄 Annales BTS CG','annales-dec':'📄 Annales DEC','calendrier-dec':'📅 Calendrier DEC','memoire-dec':'📝 Mémoire DEC',
+  'voies-dec':'🛤️ Voies d\'accès DEC','chronologie-audit':'⏱️ Chronologie d\'audit','matrice-audit':'🗺️ Matrice risques','fiche-eip':'🏦 Fiche EIP',
+  'boite-a-outils':'🧰 Boîte à outils'
+};
+function visitsGet() { try { return JSON.parse(localStorage.getItem('ecx-visites') || '[]'); } catch (e) { return []; } }
+function pinsGet()   { try { return JSON.parse(localStorage.getItem('ecx-epingles') || '[]'); } catch (e) { return []; } }
+function visitTrack(route) {
+  if (!ROUTE_TITLES[route]) return;
+  try {
+    var v = visitsGet().filter(function(r){ return r !== route; });
+    v.unshift(route);
+    localStorage.setItem('ecx-visites', JSON.stringify(v.slice(0, 6)));
+  } catch (e) {}
+  renderResumeStrips();
+}
+function pinToggle(route, ev) {
+  if (ev) ev.stopPropagation();
+  try {
+    var p = pinsGet();
+    var i = p.indexOf(route);
+    if (i > -1) { p.splice(i, 1); } else { p.unshift(route); }
+    localStorage.setItem('ecx-epingles', JSON.stringify(p.slice(0, 8)));
+  } catch (e) {}
+  renderResumeStrips();
+}
+function renderResumeStrips() {
+  var pins = pinsGet().filter(function(r){ return ROUTE_TITLES[r]; });
+  var visits = visitsGet().filter(function(r){ return ROUTE_TITLES[r] && pins.indexOf(r) === -1; }).slice(0, 4);
+  ['pg-ec-home', 'pg-cac-home', 'pg-dec-home'].forEach(function(pgId) {
+    var pg = document.getElementById(pgId);
+    if (!pg) return;
+    var strip = pg.querySelector('.resume-strip');
+    if (!strip) {
+      var hero = pg.querySelector('.site-hero');
+      if (!hero) return;
+      strip = document.createElement('div');
+      strip.className = 'resume-strip';
+      hero.insertAdjacentElement('afterend', strip);
+    }
+    var items = pins.concat(visits);
+    if (!items.length) { strip.classList.remove('has-items'); strip.innerHTML = ''; return; }
+    var html = '<span class="resume-label">Reprendre :</span>';
+    items.forEach(function(r) {
+      var pinned = pins.indexOf(r) > -1;
+      html += '<span class="resume-chip" role="link" tabindex="0" data-route="' + r + '">' + ROUTE_TITLES[r]
+        + '<button type="button" class="resume-pin" title="' + (pinned ? 'Désépingler' : 'Épingler en tête de liste') + '" data-route="' + r + '">' + (pinned ? '★' : '☆') + '</button></span>';
+    });
+    strip.innerHTML = html;
+    strip.classList.add('has-items');
+    strip.querySelectorAll('.resume-chip').forEach(function(ch) {
+      ch.addEventListener('click', function() { location.hash = '#/' + ch.getAttribute('data-route'); });
+    });
+    strip.querySelectorAll('.resume-pin').forEach(function(bp) {
+      bp.addEventListener('click', function(ev) { pinToggle(bp.getAttribute('data-route'), ev); });
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', renderResumeStrips);
+
+function showToolbox() {
+  showPageWithNav('pg-toolbox');
+  injectContextBar('pg-toolbox', 'Boîte à outils');
+  currentDetailBack = function(){ currentUni ? navGo(currentUni, 'ressources') : goToLanding(); };
+  window.scrollTo(0, 0);
+}
 
 /* ══ PAGE SEUILS ══ */
 /* ── Helper fil d'ariane ── */
@@ -5009,9 +5357,9 @@ function showDscgAnnales() {
 /* ══ HAMBURGER ══ */
 
 var MOBILE_MENUS = {
-  ec:  [{l:'Accueil',f:"navGo('ec','home')"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Outils',f:"navGo('ec','outils')"},{l:'Ressources',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'Contact',f:"showContact()"}],
-  cac: [{l:'Accueil',f:"navGo('cac','home')"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Outils',f:"navGo('cac','outils')"},{l:'Ressources',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'Contact',f:"showContact()"}],
-  dec: [{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'Contact',f:"showContact()"}],
+  ec:  [{l:'Accueil',f:"navGo('ec','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Logiciels',f:"navGo('ec','outils')"},{l:'Guides & chiffres',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  cac: [{l:'Accueil',f:"navGo('cac','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Logiciels',f:"navGo('cac','outils')"},{l:'Guides & chiffres',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  dec: [{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
   landing: [{l:'🟡 Expert-Comptable',f:"switchUni('ec')"},{l:'🟢 Commissaire aux Comptes',f:"switchUni('cac')"},{l:'🟣 Étudiants / DEC',f:"switchUni('dec')"}]
 };
 
@@ -5097,6 +5445,7 @@ function showMission(uni, idx) {
   // Mémorise pour fermeture Échap
   currentDetailBack = function(){ navGo(uni,'missions'); };
   window.scrollTo(0,0);
+  routeSet('mission/' + uni + '/' + idx);   // v65.1
 }
 
 function buildDetailNav(uni, idx, data) {
@@ -5164,6 +5513,7 @@ function showFormation(idx){
   document.getElementById('dec-fd-body').innerHTML=f.body+buildDecNav(idx);
   showPage('pg-dec-formation'); hideUniSwitcher();
   window.scrollTo(0,0);
+  routeSet('formation/' + idx);             // v65.1
 }
 function buildDecNav(idx){
   var prev=idx>0?DEC_FORMATIONS[idx-1]:null;
@@ -5309,6 +5659,7 @@ function showInstitution(id) {
   injectContextBar('pg-institution', inst.title, 'Institutions', "navGo('"+inst.uni+"','institutions')");
   currentDetailBack = showInstitutionBack;
   window.scrollTo(0,0);
+  routeSet('institution/' + id);            // v65.1
 }
 
 function showInstitutionBack() {
@@ -5334,6 +5685,7 @@ function showActu(id) {
   injectContextBar('pg-actu', a.title, 'Actualités', "navGo('"+a.uni+"','actu')");
   currentDetailBack = showActuBack;
   window.scrollTo(0,0);
+  routeSet('actu/' + id);                   // v65.1
 }
 
 function showActuBack() {
@@ -5359,6 +5711,7 @@ function showOutilCategorie(id) {
   document.getElementById('inst-back-btn').textContent = '\u2190 Retour aux outils';
   showPage('pg-institution'); hideUniSwitcher();
   window.scrollTo(0,0);
+  routeSet('outil-cat/' + id);              // v65.1
 }
 
 /* ══ OUTILS DATA ══ */
@@ -5380,6 +5733,7 @@ function showOutil(id) {
   document.getElementById('inst-back-btn').textContent = '\u2190 Retour aux outils';
   showPage('pg-institution');
   window.scrollTo(0,0);
+  routeSet('outil/' + id);                  // v65.1
 }
 
 /* ══ NORMES DATA ══ */
@@ -5403,6 +5757,7 @@ function showNorme(id) {
   injectContextBar('pg-institution', n.title, 'Normes', "navGo('"+normeFromUni+"','normes')");
   currentDetailBack = function(){ navGo(normeFromUni,'normes'); };
   window.scrollTo(0,0);
+  routeSet('norme/' + id);                  // v65.1
 }
 
 /* ══ DEC ÉPREUVES DATA ══ */
@@ -5430,6 +5785,7 @@ function showDecEpreuve(idx) {
   document.getElementById('dec-fd-body').innerHTML = bodyHTML + nav;
   showPage('pg-dec-formation'); hideUniSwitcher();
   window.scrollTo(0,0);
+  routeSet('epreuve-dec/' + idx);           // v65.1
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -9832,6 +10188,65 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
 
 
 <!-- ══ PAGE FAQ PRATIQUE ══ -->
+<!-- v65.5 — HUB TRANSVERSE : BOÎTE À OUTILS -->
+<div id="pg-toolbox" class="page">
+  <div class="detail-hero">
+    <div class="detail-hero-inner" style="background:var(--navy)">
+      <div class="detail-inner-wrap">
+        <button class="back-btn" onclick="currentUni ? navGo(currentUni,'ressources') : goToLanding()">← Retour</button>
+        <span class="detail-label">Accès transverse — EC · CAC · DEC</span>
+        <h1 class="detail-title">Boîte à outils</h1>
+        <p class="detail-intro">Tous les barèmes, guides, outils interactifs et annales du site, regroupés sur une seule page — quel que soit votre univers.</p>
+        <div class="detail-icon-bg" aria-hidden="true">🧰</div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div style="max-width:980px;margin:0 auto;padding:1.5rem 1.5rem 2.5rem">
+
+        <h2 class="tbx-title">📊 Barèmes &amp; références</h2>
+        <div class="tbx-grid">
+          <button type="button" class="tbx-link" onclick="showChiffresUtiles()">🔢 Chiffres utiles 2026</button>
+          <button type="button" class="tbx-link" onclick="showSeuils()">📋 Seuils légaux — tableau de bord</button>
+          <button type="button" class="tbx-link" onclick="showCalculateur()">⚖️ Calculateur de seuils</button>
+          <button type="button" class="tbx-link" onclick="showVeille()">📅 Timeline réglementaire</button>
+          <button type="button" class="tbx-link" onclick="showLettres()">✉️ Lettres de mission</button>
+        </div>
+
+        <h2 class="tbx-title">📘 Guides pratiques</h2>
+        <div class="tbx-grid">
+          <button type="button" class="tbx-link" onclick="showFiscal()">📊 Fiscalité &amp; TVA</button>
+          <button type="button" class="tbx-link" onclick="showSocial()">👥 Droit social &amp; Paie</button>
+          <button type="button" class="tbx-link" onclick="showComptaGen()">📒 Comptabilité générale pratique</button>
+          <button type="button" class="tbx-link" onclick="showIA()">🤖 IA en cabinet</button>
+          <button type="button" class="tbx-link" onclick="showFormesJuridiques()">🏛️ Formes juridiques</button>
+          <button type="button" class="tbx-link" onclick="showFaq()">❓ FAQ pratique</button>
+        </div>
+
+        <h2 class="tbx-title">🧰 Outils interactifs</h2>
+        <div class="tbx-grid">
+          <button type="button" class="tbx-link" onclick="showGlossaire()">📖 Glossaire comptable</button>
+          <button type="button" class="tbx-link" onclick="showComparatifPCGIFRS()">⚖️ Comparatif PCG / IFRS</button>
+          <button type="button" class="tbx-link" onclick="showANC()">🧾 Plan de comptes ANC 2022-06</button>
+          <button type="button" class="tbx-link" onclick="showSchemaStructures()">🗂️ Schéma structure / fiscalité</button>
+          <button type="button" class="tbx-link" onclick="showComparatifLogiciels()">🖥️ Comparatif logiciels</button>
+        </div>
+
+        <h2 class="tbx-title">🎓 Filière DEC</h2>
+        <div class="tbx-grid">
+          <button type="button" class="tbx-link" onclick="showDcgAnnales()">📄 Annales DCG</button>
+          <button type="button" class="tbx-link" onclick="showDscgAnnales()">📄 Annales DSCG</button>
+          <button type="button" class="tbx-link" onclick="showBtsAnnales()">📄 Annales BTS CG</button>
+          <button type="button" class="tbx-link" onclick="showDecAnnales()">📄 Annales DEC</button>
+          <button type="button" class="tbx-link" onclick="showDispenses()">🎓 Suis-je dispensé ?</button>
+          <button type="button" class="tbx-link" onclick="showCalendrierDec()">📅 Calendrier DEC</button>
+          <button type="button" class="tbx-link" onclick="showMemoireDec()">📝 Mémoire DEC</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="pg-faq" class="page">
   <div class="detail-hero">
     <div class="detail-hero-inner" id="faq-hero-inner" style="background:var(--navy-mid)">
@@ -10141,7 +10556,7 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
             <div class="tl-card">
               <div class="tl-date">Février 2026</div>
               <div class="tl-title">Directive "Omnibus" — Périmètre CSRD simplifié</div>
-              <div class="tl-desc">La directive "Omnibus" (COM(2025)87) réduit le périmètre des entreprises soumises à la CSRD et allège certaines obligations pour les PME cotées. Les seuils d'entrée sont relevés, le calendrier de la 2e vague est confirmé pour 2026.</div>
+              <div class="tl-desc">La directive "Omnibus" (COM(2025)87) réduit le périmètre des entreprises soumises à la CSRD (> 1 000 salariés et CA > 450 M€) et allège les obligations. Combinée à la directive « Stop the clock » (UE) 2025/794, elle reporte la 2e vague à 2028 (exercice 2027).</div>
               <div class="tl-tags"><span class="tl-tag tl-tag-cac">CAC / OTI</span><span class="tl-tag tl-tag-all">CSRD</span></div>
             </div>
           </div>
@@ -10356,6 +10771,7 @@ function showFormeJuridique(id) {
   showPageWithNav('pg-forme-detail');
   injectContextBar('pg-forme-detail', d.title, 'Formes juridiques', 'showFormesJuridiques()');
   window.scrollTo(0, 0);
+  routeSet('forme/' + id);                  // v65.1
 }
 
 /* ══ NAVIGATION ══ */
@@ -11272,6 +11688,7 @@ function showChiffresUtiles(section) {
   }
   var sidebar = wrapBodyWithTOC('chiffres-utiles-body');
   buildTOCFromAnchors(bodyEl, sidebar, 'cu-sec-', '#1a2e5a');
+  injectContextBar('pg-chiffres-utiles', 'Chiffres utiles 2026', 'Guides & chiffres', "navGo('ec','ressources')");   // v65.5
   if (section) {
     setTimeout(function() {
       var el = document.getElementById('cu-sec-' + section);
@@ -11651,6 +12068,7 @@ function showIA(section) {
       document.getElementById('ia-body'), sidebar, 'ia-sec-', '#059669'
     );
   }, 60);
+  injectContextBar('pg-ia', 'IA en cabinet', 'Guides & chiffres', "navGo('ec','ressources')");   // v65.5
   window.scrollTo(0,0);
   if (section) {
     setTimeout(function() {
@@ -11959,6 +12377,7 @@ function showComptaGen(section) {
       document.getElementById('compta-gen-body'), sidebar, 'cg-sec-', '#4a148c'
     );
   }, 60);
+  injectContextBar('pg-compta-gen', 'Comptabilité générale pratique', 'Guides & chiffres', "navGo('ec','ressources')");   // v65.5
   window.scrollTo(0,0);
   if (section) {
     setTimeout(function() {
@@ -12397,6 +12816,7 @@ function showSocial(section) {
       document.getElementById('social-body'), sidebar, 'social-sec-', '#1565c0'
     );
   }, 60);
+  injectContextBar('pg-social', 'Droit social & Paie', 'Guides & chiffres', "navGo('ec','ressources')");   // v65.5
   window.scrollTo(0,0);
   if (section) {
     setTimeout(function() {
@@ -12659,6 +13079,7 @@ function showFiscal(section) {
       document.getElementById('fiscal-body'), sidebar, 'fiscal-sec-', '#e65100'
     );
   }, 60);
+  injectContextBar('pg-fiscal', 'Fiscalité & TVA', 'Guides & chiffres', "navGo('ec','ressources')");   // v65.5
   window.scrollTo(0,0);
   if (section) {
     setTimeout(function() {

@@ -425,7 +425,7 @@ body.uni-dec nav { border-bottom-color: #7c5cbf; }
 /* Detail-hero inner */
 /* ── SOMMAIRE EC / CAC ── */
 .uni-sommaire{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white)}
-.uni-sommaire.cac-sommaire{background:var(--burgundy-bg);border-color:rgba(107,26,42,.15)}
+.uni-sommaire.cac-sommaire{background:var(--white);border-color:rgba(107,26,42,.15)}
 .uni-sommaire-inner{max-width:1300px;margin:0 auto;padding:2rem 2rem}
 .uni-som-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:.8rem}
 .uni-som-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:.5rem}
@@ -1541,7 +1541,7 @@ body.uni-dec [role="button"]:focus-visible {
 .nav-dropdown-menu .nav-dd-group{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:9px 16px 4px;pointer-events:none;list-style:none}
 .res-group-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:2.2rem 0 0;padding-bottom:.45rem;border-bottom:2px solid var(--gold)}
 /* ══ v65.5 — Reprendre / épinglés + Boîte à outils ══ */
-.resume-strip{max-width:1200px;margin:1.1rem auto -0.4rem;padding:0 2rem;display:none;flex-wrap:wrap;gap:8px;align-items:center}
+.resume-strip{max-width:1160px;width:calc(100% - 3rem);margin:1.2rem auto .4rem;padding:.65rem 1.1rem;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.04);display:none;flex-wrap:wrap;gap:8px;align-items:center}
 .resume-strip.has-items{display:flex}
 .resume-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .resume-chip{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:5px 8px 5px 13px;font-size:12.5px;font-weight:600;color:var(--navy);cursor:pointer;font-family:'Source Serif 4',Georgia,serif;transition:border-color .15s}
@@ -1799,7 +1799,7 @@ body.uni-dec [role="button"]:focus-visible {
         <div class="about-update">
           <span class="about-update-icon">✍️</span>
           <div class="about-update-text">
-            <strong>Dernière mise à jour — juillet 2026 (v65)</strong>
+            <strong>Dernière mise à jour — juillet 2026</strong>
             <span>Audit complet des chiffres 2026 (barème IR, seuils micro, cotisations, CVAE, CSRD) et refonte de la navigation : liens profonds partageables, recherche mise en avant, accès rapides et menus regroupés.</span>
           </div>
         </div>
@@ -2033,12 +2033,8 @@ body.uni-dec [role="button"]:focus-visible {
     </div>
   </div>
 
-  <div class="section-inner" style="padding-top:1.5rem;padding-bottom:1.5rem;border-top:1px solid var(--border)">
-    <div class="cross-links">
-      <span class="cross-link-label">En lien avec cet univers</span>
-      <button class="cross-link-btn to-cac" onclick="switchUni('cac')">🔵 Commissariat aux Comptes</button><button class="cross-link-btn to-cac" onclick="switchUni('cac');setTimeout(function(){navGo('cac','missions')},60)">→ Missions du CAC</button><button class="cross-link-btn to-dec" onclick="switchUni('dec')">📘 Devenir Expert-Comptable</button><button class="cross-link-btn to-dec" onclick="switchUni('dec');setTimeout(function(){navGo('dec','cursus')},60)">→ Cursus DEC</button>
-    </div>
-  </div>
+  <!-- v65.6 : bloc « En lien avec cet univers » retiré (redondant avec le
+       sélecteur d'univers du haut de page ; allège l'accueil EC) -->
 
   <!-- ══ SOMMAIRE INTERACTIF EC ══ -->
   <div class="uni-sommaire">
@@ -2982,12 +2978,8 @@ body.uni-dec [role="button"]:focus-visible {
     </div>
   </div>
 
-  <div class="section-inner" style="padding-top:1.5rem;padding-bottom:1.5rem;border-top:1px solid var(--border)">
-    <div class="cross-links">
-      <span class="cross-link-label">En lien avec cet univers</span>
-      <button class="cross-link-btn to-ec" onclick="switchUni('ec')">🔵 Expert-Comptable</button><button class="cross-link-btn to-ec" onclick="switchUni('ec');setTimeout(function(){navGo('ec','missions')},60)">→ Missions de l'EC</button><button class="cross-link-btn to-dec" onclick="switchUni('dec');setTimeout(function(){showFormation(5)},80)">📘 Devenir Commissaire aux Comptes</button><button class="cross-link-btn to-dec" onclick="switchUni('dec');setTimeout(function(){navGo('dec','cursus')},60)">→ Cursus DEC → CAFCAC</button>
-    </div>
-  </div>
+  <!-- v65.6 : bloc « En lien avec cet univers » retiré (redondant avec le
+       sélecteur d'univers du haut de page ; allège l'accueil CAC) -->
 
   <!-- ══ SOMMAIRE INTERACTIF CAC ══ -->
   <div class="uni-sommaire cac-sommaire">
@@ -3585,12 +3577,8 @@ body.uni-dec [role="button"]:focus-visible {
     </div>
   </div>
 
-  <div class="section-inner" style="padding-top:1.5rem;padding-bottom:1.5rem;border-top:1px solid var(--border)">
-    <div class="cross-links">
-      <span class="cross-link-label">Explorez les deux professions</span>
-      <button class="cross-link-btn to-ec" onclick="switchUni('ec')">⚖️ Univers Expert-Comptable</button><button class="cross-link-btn to-ec" onclick="switchUni('ec');setTimeout(function(){navGo('ec','missions')},60)">→ Missions de l'EC</button><button class="cross-link-btn to-cac" onclick="switchUni('cac')">🔍 Univers Commissaire aux Comptes</button><button class="cross-link-btn to-cac" onclick="switchUni('cac');setTimeout(function(){navGo('cac','missions')},60)">→ Missions du CAC</button>
-    </div>
-  </div>
+  <!-- v65.6 : bloc « Explorez les deux professions » retiré (redondant avec le
+       sélecteur d'univers du haut de page ; allège l'accueil DEC) -->
 
   <!-- ══ SOMMAIRE INTERACTIF DEC ══ -->
   <div class="dec-sommaire">

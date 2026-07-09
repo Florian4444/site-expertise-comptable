@@ -7,7 +7,7 @@
 <meta name="description" content="Site de référence indépendant sur l'expertise comptable, le commissariat aux comptes et le cursus DEC. Normes PCG/IFRS/NEP, missions normées, outils, institutions et formations. Par un expert-comptable diplômé.">
 <meta name="keywords" content="expert-comptable, commissaire aux comptes, DEC, DCG, DSCG, NEP, IFRS, PCG, ANC, OEC, CNCC, H2A, CSRD, stage DEC, épreuves DEC, mémoire DEC, facture électronique, NP 2300, NP 2400">
 <meta name="author" content="Expert-Comptable Diplômé">
-<meta name="version" content="v65">
+<meta name="version" content="v66">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://expertise-comptable-ressources.fr/">
 <meta property="og:type" content="website">
@@ -86,6 +86,7 @@ body.uni-dec #scroll-top-btn{border-color:#9c7bd4;color:#9c7bd4;}
 
 /* ══ SOMMAIRE LATÉRAL ══ */
 .detail-with-toc{display:grid;grid-template-columns:1fr 220px;gap:0;align-items:start;width:100%;}
+.detail-with-toc.no-toc{grid-template-columns:1fr;}   /* v66 : pas de TOC → corps pleine largeur */
 .detail-with-toc>*:first-child{min-width:0;}
 .detail-toc-sidebar{
   position:sticky;top:80px;
@@ -1551,11 +1552,43 @@ body.uni-dec [role="button"]:focus-visible {
 .tbx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem;margin-bottom:.6rem}
 .tbx-link{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer;text-align:left;font-family:'Source Serif 4',Georgia,serif;transition:border-color .2s,box-shadow .2s}
 .tbx-link:hover{border-color:var(--gold);box-shadow:0 3px 10px rgba(0,0,0,.06)}
+/* ══ v66 — Guide « Ouvrir son cabinet » ══ */
+.ocb-switch{position:sticky;top:56px;z-index:20;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:.55rem .7rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.ocb-switch-label{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-right:.3rem}
+.ocb-switch button{border:1px solid var(--border);background:var(--white);color:var(--navy);border-radius:20px;padding:5px 14px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'Source Serif 4',Georgia,serif;transition:all .15s}
+.ocb-switch button.active[data-v="all"]{background:#0e5a44;border-color:#0e5a44;color:#fff}
+.ocb-switch button.active[data-v="ec"]{background:#1565c0;border-color:#1565c0;color:#fff}
+.ocb-switch button.active[data-v="cac"]{background:#7a1e2b;border-color:#7a1e2b;color:#fff}
+.ocb-filter-ec .ocb-only-cac{display:none}
+.ocb-filter-cac .ocb-only-ec{display:none}
+.ocb-pair{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.2rem}
+@media(max-width:720px){.ocb-pair{grid-template-columns:1fr}.ocb-switch{top:52px}}
+.ocb-card{border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.3rem;background:var(--white)}
+.ocb-card.ec{border-top:3px solid #1565c0}
+.ocb-card.cac{border-top:3px solid #7a1e2b}
+.ocb-card h4{font-family:'Playfair Display',serif;font-size:14.5px;font-weight:700;margin:0 0 .5rem;display:flex;align-items:center;gap:7px}
+.ocb-card.ec h4{color:#0d47a1}
+.ocb-card.cac h4{color:#7a1e2b}
+.ocb-badge{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px}
+.ocb-card.ec .ocb-badge{background:#1565c018;color:#1565c0}
+.ocb-card.cac .ocb-badge{background:#7a1e2b18;color:#7a1e2b}
+.ocb-card ul{margin:.4rem 0 0;padding-left:1.1rem}
+.ocb-card li{font-size:13px;color:var(--text);line-height:1.65;margin-bottom:.35rem}
+.ocb-tl{position:relative;margin:1rem 0 1.2rem;padding-left:1.5rem;border-left:2px solid #0e5a44}
+.ocb-tl-item{position:relative;margin-bottom:1rem}
+.ocb-tl-item::before{content:'';position:absolute;left:calc(-1.5rem - 5px);top:4px;width:10px;height:10px;border-radius:50%;background:#0e5a44;border:2px solid var(--white)}
+.ocb-tl-when{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#0e5a44}
+.ocb-tl-what{font-size:13.5px;color:var(--text);line-height:1.6;margin-top:.15rem}
+.ocb-tl-hidden{display:inline-block;margin-top:.25rem;font-size:11.5px;color:#8a5a00;background:#fff8e6;border:1px solid #f0d68a;border-radius:5px;padding:2px 8px}
+.ocb-src{font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:.4rem}
+.ocb-linkbtn{display:inline-flex;align-items:center;gap:6px;background:#0e5a44;color:#fff;border:none;border-radius:7px;padding:.55rem 1.1rem;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'Source Serif 4',Georgia,serif;margin:.2rem .4rem .2rem 0}
+.ocb-linkbtn.ghost{background:transparent;color:#0e5a44;border:1.5px solid #0e5a44}
 @media(max-width:640px){.quick-search-bar .qsb-kbd{display:none}}
 /* ══ v65.3 — Accès rapides landing ══ */
 .landing-quick{max-width:1080px;margin:1.3rem auto 0;padding:0 1.5rem;position:relative;z-index:3}
 .lq-label{display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.8rem}
-.lq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:.7rem}
+.lq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;max-width:660px;margin:0 auto}   /* v66 : 2 colonnes, OK mobile */
+.lq-wide{grid-column:1 / -1}
 .lq-tile{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:.75rem .9rem;cursor:pointer;text-align:left;font-family:'Source Serif 4',Georgia,serif;transition:border-color .2s,background .2s,transform .2s}
 .lq-tile:hover{border-color:var(--gold);background:rgba(255,255,255,.11);transform:translateY(-2px)}
 .lq-ico{font-size:20px}
@@ -1610,6 +1643,7 @@ body.uni-dec [role="button"]:focus-visible {
         <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showCalculateur,120)">⚖️ Calculateur de seuils</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('ec','ressources');setTimeout(showVeille,120)">📅 Timeline réglementaire</a></li>
         <li class="nav-dd-group">📘 Guides pratiques</li>
+        <li><a href="javascript:void(0)" onclick="showOuvrirCabinet()">🚀 Ouvrir son cabinet</a></li>
         <li><a href="javascript:void(0)" onclick="showFiscal()">📊 Fiscalité &amp; TVA</a></li>
         <li><a href="javascript:void(0)" onclick="showSocial()">👥 Droit social &amp; Paie</a></li>
         <li><a href="javascript:void(0)" onclick="showComptaGen()">📒 Comptabilité générale</a></li>
@@ -1640,6 +1674,7 @@ body.uni-dec [role="button"]:focus-visible {
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showCalculateur,120)">⚖️ Calculateur de seuils</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showVeille,120)">📅 Timeline réglementaire</a></li>
         <li class="nav-dd-group">📘 Guides pratiques</li>
+        <li><a href="javascript:void(0)" onclick="showOuvrirCabinet()">🚀 Ouvrir son cabinet</a></li>
         <li><a href="javascript:void(0)" onclick="showFiscal()">📊 Fiscalité &amp; TVA</a></li>
         <li><a href="javascript:void(0)" onclick="showSocial()">👥 Droit social &amp; Paie</a></li>
         <li><a href="javascript:void(0)" onclick="navGo('cac','ressources');setTimeout(showFormesJuridiques,120)">🏛️ Formes juridiques</a></li>
@@ -1706,6 +1741,7 @@ body.uni-dec [role="button"]:focus-visible {
       <button type="button" class="lq-tile" onclick="showSocial()"><span class="lq-ico">👥</span><span class="lq-txt"><strong>Social &amp; Paie</strong><small>Cotisations, DSN, contrats</small></span></button>
       <button type="button" class="lq-tile" onclick="switchUni('ec');setTimeout(showVeille,60)"><span class="lq-ico">📅</span><span class="lq-txt"><strong>Échéances</strong><small>E-facture, CSRD, timeline</small></span></button>
       <button type="button" class="lq-tile" onclick="navGo('dec','annales')"><span class="lq-ico">🎓</span><span class="lq-txt"><strong>Annales</strong><small>DCG, DSCG, DEC, BTS CG</small></span></button>
+      <button type="button" class="lq-tile lq-wide" onclick="showOuvrirCabinet()"><span class="lq-ico">🚀</span><span class="lq-txt"><strong>Ouvrir son cabinet</strong><small>S'installer en EC ou CAC : inscription, structure, budget, missions</small></span></button>
     </div>
   </div>
 
@@ -1913,6 +1949,22 @@ body.uni-dec [role="button"]:focus-visible {
       </div>
     </div>
     <div class="detail-body" id="chiffres-utiles-body"></div>
+  </div>
+</div>
+
+<!-- OUVRIR SON CABINET PAGE (v66) -->
+<div id="pg-ouvrir-cabinet" class="page">
+  <div class="detail-hero">
+    <div class="detail-hero-inner" style="background:linear-gradient(135deg,#0d3b2e 0%,#0e5a44 100%)">
+      <div class="detail-inner-wrap">
+        <button class="back-btn" style="color:#8fe3c0" onclick="(currentUni==='cac'?navGo('cac','ressources'):navGo('ec','ressources'))">← Retour aux ressources</button>
+        <span class="detail-label" style="color:rgba(143,227,192,.72)">Guide pratique — Expert-comptable &amp; Commissaire aux comptes</span>
+        <h1 class="detail-title">Se lancer — Ouvrir son cabinet</h1>
+        <p class="detail-intro">De l'inscription à l'Ordre (EC) ou à la H2A (CAC) jusqu'aux premières missions : rétroplanning, structure juridique, obligations, budget, outils et angles morts. À jour en 2026.</p>
+        <div class="detail-icon-bg">🚀</div>
+      </div>
+    </div>
+    <div class="detail-body" id="ouvrir-cabinet-body"></div>
   </div>
 </div>
 
@@ -2352,6 +2404,13 @@ body.uni-dec [role="button"]:focus-visible {
       <div class="res-group-title">📘 Guides pratiques</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:1.2rem">
 
+        <button type="button" onclick="showOuvrirCabinet()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #0e5a44">
+          <div style="width:44px;height:44px;border-radius:8px;background:#0e5a44;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🚀</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Ouvrir son cabinet</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300">Démarches, structure juridique, inscription à l'Ordre, budget et premières missions : le parcours complet pour lancer votre cabinet.</p>
+          <div style="font-size:13px;font-weight:600;color:#0e5a44;margin-top:1rem;display:flex;align-items:center;gap:6px">Consulter le guide <span>→</span></div>
+        </button>
+
         <button type="button" onclick="showComptaGen()" style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;transition:box-shadow .25s,transform .25s;border-top:3px solid #4a148c">
           <div style="width:44px;height:44px;border-radius:8px;background:#4a148c;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">📒</div>
           <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Comptabilité générale pratique</h3>
@@ -2770,7 +2829,7 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Expert-Comptable</h4><p>Site d'information dédié aux professionnels du chiffre et aux entreprises souhaitant mieux comprendre la comptabilité et l'audit.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('ec','missions')">Missions</a><a onclick="navGo('ec','normes')">Normes comptables</a><a onclick="navGo('ec','outils')">Outils informatiques</a><a onclick="navGo('ec','institutions')">Institutions</a><a onclick="navGo('ec','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><p style="margin-top:.8rem">© 2025 Expert-Comptable. Tous droits réservés.</p></div>
+      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Expert-Comptable. Tous droits réservés.</p></div>
     </div>
     <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
   </footer>
@@ -3224,6 +3283,13 @@ body.uni-dec [role="button"]:focus-visible {
           <div style="font-size:13px;font-weight:600;color:var(--bordeaux-mid);margin-top:1rem">Consulter la FAQ →</div>
         </button>
 
+        <button type="button" onclick="showOuvrirCabinet()" style="background:var(--white);border:1px solid rgba(176,64,96,.2);border-radius:6px;padding:2rem;text-align:left;cursor:pointer;font-family:inherit;border-top:3px solid var(--bordeaux-light)">
+          <div style="width:44px;height:44px;border-radius:8px;background:var(--bordeaux);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem">🚀</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.7rem">Ouvrir son cabinet</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.75">Inscription à la H2A, structure, RCP, mandats et sous-traitance : s'installer comme commissaire aux comptes.</p>
+          <div style="font-size:13px;font-weight:600;color:var(--bordeaux-mid);margin-top:1rem">Consulter le guide →</div>
+        </button>
+
       </div>
     </div>
   </section>
@@ -3420,7 +3486,7 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Commissaire aux Comptes</h4><p>Site d'information dédié à la pratique du commissariat aux comptes, aux normes d'audit et aux actualités réglementaires de la profession.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('cac','missions')">Missions</a><a onclick="navGo('cac','normes')">Normes d'audit</a><a onclick="navGo('cac','outils')">Outils informatiques</a><a onclick="navGo('cac','institutions')">Institutions</a><a onclick="navGo('cac','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><p style="margin-top:.8rem">© 2025 Commissaire aux Comptes. Tous droits réservés.</p></div>
+      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Commissaire aux Comptes. Tous droits réservés.</p></div>
     </div>
     <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
   </footer>
@@ -4142,7 +4208,7 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Étudiants / Stagiaires DEC</h4><p>Toutes les informations sur les formations de la filière expertise comptable : BTS CG, DCG, DSCG, Master CCA, DEC et CAFCAC.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('dec','etudes')">Les formations</a><a onclick="navGo('dec','cursus')">Cursus & schéma</a><a onclick="navGo('dec','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Ressources officielles</h4><p>Inscriptions : plateforme Cyclades (SIEC)</p><p style="margin-top:.4rem">Stage DEC : Ordre des Experts-Comptables (OEC)</p><p style="margin-top:.4rem">CAFCAC : CNCC</p><p style="margin-top:.8rem">© 2025 — Site à vocation informative</p></div>
+      <div class="footer-col"><h4>Ressources officielles</h4><p>Inscriptions : plateforme Cyclades (SIEC)</p><p style="margin-top:.4rem">Stage DEC : Ordre des Experts-Comptables (OEC)</p><p style="margin-top:.4rem">CAFCAC : CNCC</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 — Site à vocation informative</p></div>
     </div>
     <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
   </footer>
@@ -4754,6 +4820,18 @@ function buildSearchIndex() {
   add('ec','outils',"E-reporting — données TVA DGFiP","e-reporting données transactions TVA DGFiP transmission mensuelle trimestrielle B2C",function(){switchUni('ec');setTimeout(function(){showOutilCategorie('cat-ec-efacture')},60)});
 
   add('ec','ressources',"Boîte à outils — tous les outils et guides du site","boîte outils hub transverse barèmes guides calculateur glossaire annales lettres mission raccourcis",function(){showToolbox()});
+
+  add('ec','ressources',"Ouvrir son cabinet — se lancer (expert-comptable)","ouvrir cabinet créer installation s'installer expert-comptable inscription Ordre tableau RCP SEL EURL SASU budget démarrage sous-traitance premiers clients honoraires",function(){showOuvrirCabinet()});
+  add('cac','ressources',"Ouvrir son cabinet — se lancer (commissaire aux comptes)","ouvrir cabinet créer installation s'installer commissaire aux comptes inscription H2A liste mandats audit RCP budget sous-traitance co-commissariat",function(){showOuvrirCabinet()});
+  add('ec','ressources',"Inscription à l'Ordre des experts-comptables — étapes, délais, coût","inscription tableau ordre CRO cotisation ordinale serment délai session commission dossier installation",function(){showOuvrirCabinet('prealables')});
+  add('cac','ressources',"Inscription H2A — liste des commissaires aux comptes","inscription H2A H3C liste I liste II durabilité CSRD serment installation commissaire",function(){showOuvrirCabinet('prealables')});
+  add('ec','ressources',"Structure juridique du cabinet — EI EURL SASU SEL SPFPL","structure juridique EI EURL SASU SELARL SELAS SPFPL TNS assimilé salarié capital SEL détention société exercice libéral",function(){showOuvrirCabinet('structure')});
+  add('ec','ressources',"RCP, LCB-FT et obligations du cabinet","RCP responsabilité civile professionnelle assurance garantie financière LCB-FT TRACFIN RGPD lettre mission formation continue déontologie",function(){showOuvrirCabinet('obligations')});
+  add('ec','ressources',"Budget de démarrage d'un cabinet comptable","budget démarrage coût création cabinet RCP logiciels local coworking trésorerie communication fourchette",function(){showOuvrirCabinet('budget')});
+  add('ec','ressources',"Trouver ses premiers clients — cabinet comptable","trouver clients premiers missions prescripteurs réseau recommandation niche spécialisation grille tarifaire honoraires acquisition",function(){showOuvrirCabinet('missions')});
+  add('ec','ressources',"Sous-traitance et modèles hybrides au démarrage","sous-traitance co-traitance cumul salariat portage temps partagé enseignement missions manque démarrage montée en charge",function(){showOuvrirCabinet('hybride')});
+
+  add('ec','home',"Mentions légales du site","mentions légales éditeur hébergeur Netlify LCEN RGPD données personnelles cookies propriété intellectuelle responsabilité droit applicable",function(){showMentionsLegales()});
 }
 
 function runSearch(query) {
@@ -4929,6 +5007,9 @@ function showPage(id) {
   // Toujours afficher le switcher sauf sur landing
   if (id !== 'pg-landing') {
     showUniSwitcher();
+    // v66 : garantit le retour à l'accueil général (🏠) depuis tout contexte
+    var hb = document.getElementById('nav-home-btn');
+    if (hb) hb.style.display = '';
     // Afficher les nav-links de l'univers courant
     if (currentUni) {
       ['ec','cac','dec'].forEach(function(u) {
@@ -5010,7 +5091,7 @@ var _lastAppliedRoute = null;  // route déjà affichée (ignore le hashchange q
 
 function routeForPage(pgId) {
   var m = {
-    'pg-about':'about','pg-contact':'contact','pg-seuils':'seuils','pg-lettres':'lettres','pg-toolbox':'boite-a-outils',
+    'pg-about':'about','pg-contact':'contact','pg-seuils':'seuils','pg-lettres':'lettres','pg-toolbox':'boite-a-outils','pg-ouvrir-cabinet':'ouvrir-cabinet','pg-mentions-legales':'mentions-legales',
     'pg-calculateur':'calculateur','pg-glossaire':'glossaire','pg-comparatif-pcg-ifrs':'pcg-ifrs',
     'pg-ec-anc':'plan-comptes','pg-schema-structures':'schema-structures',
     'pg-formes-juridiques':'formes-juridiques','pg-faq':'faq','pg-veille':'veille',
@@ -5069,6 +5150,8 @@ function routeDispatch() {
         'about': function(){ showAbout(); },
         'contact': function(){ showContact(); },
         'boite-a-outils': function(){ showToolbox(); },
+        'ouvrir-cabinet': function(a){ showOuvrirCabinet(a); },
+        'mentions-legales': function(){ showMentionsLegales(); },
         'seuils': function(){ showSeuils(); },
         'lettres': function(){ showLettres(); },
         'calculateur': function(){ showCalculateur(); },
@@ -5136,7 +5219,7 @@ var ROUTE_TITLES = {
   'comparatif-logiciels':'🖥️ Comparatif logiciels','dispenses':'🎓 Dispenses DCG/DSCG','annales-dcg':'📄 Annales DCG','annales-dscg':'📄 Annales DSCG',
   'annales-bts':'📄 Annales BTS CG','annales-dec':'📄 Annales DEC','calendrier-dec':'📅 Calendrier DEC','memoire-dec':'📝 Mémoire DEC',
   'voies-dec':'🛤️ Voies d\'accès DEC','chronologie-audit':'⏱️ Chronologie d\'audit','matrice-audit':'🗺️ Matrice risques','fiche-eip':'🏦 Fiche EIP',
-  'boite-a-outils':'🧰 Boîte à outils'
+  'boite-a-outils':'🧰 Boîte à outils','ouvrir-cabinet':'🚀 Ouvrir son cabinet'
 };
 function visitsGet() { try { return JSON.parse(localStorage.getItem('ecx-visites') || '[]'); } catch (e) { return []; } }
 function pinsGet()   { try { return JSON.parse(localStorage.getItem('ecx-epingles') || '[]'); } catch (e) { return []; } }
@@ -5192,6 +5275,13 @@ function renderResumeStrips() {
   });
 }
 document.addEventListener('DOMContentLoaded', renderResumeStrips);
+
+function showMentionsLegales() {
+  showPageWithNav('pg-mentions-legales');
+  injectContextBar('pg-mentions-legales', 'Mentions légales');
+  currentDetailBack = function(){ currentUni ? navGo(currentUni, 'home') : goToLanding(); };
+  window.scrollTo(0, 0);
+}
 
 function showToolbox() {
   showPageWithNav('pg-toolbox');
@@ -5345,9 +5435,9 @@ function showDscgAnnales() {
 /* ══ HAMBURGER ══ */
 
 var MOBILE_MENUS = {
-  ec:  [{l:'Accueil',f:"navGo('ec','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Logiciels',f:"navGo('ec','outils')"},{l:'Guides & chiffres',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
-  cac: [{l:'Accueil',f:"navGo('cac','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Logiciels',f:"navGo('cac','outils')"},{l:'Guides & chiffres',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
-  dec: [{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  ec:  [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('ec','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Logiciels',f:"navGo('ec','outils')"},{l:'Guides & chiffres',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  cac: [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('cac','home')"},{l:'🔢 Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Logiciels',f:"navGo('cac','outils')"},{l:'Guides & chiffres',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  dec: [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
   landing: [{l:'🟡 Expert-Comptable',f:"switchUni('ec')"},{l:'🟢 Commissaire aux Comptes',f:"switchUni('cac')"},{l:'🟣 Étudiants / DEC',f:"switchUni('dec')"}]
 };
 
@@ -6385,8 +6475,13 @@ function buildTOCFromAnchors(pageEl, sidebarEl, prefix, color) {
   if (!pageEl || !sidebarEl) return;
   sidebarEl.innerHTML = '';
   var sections = pageEl.querySelectorAll('[id^="'+prefix+'"]');
-  if (sections.length < 2) { sidebarEl.style.display='none'; return; }
+  if (sections.length < 2) {
+    sidebarEl.style.display='none';
+    if (sidebarEl.parentElement) sidebarEl.parentElement.classList.add('no-toc');   // v66 : corps pleine largeur
+    return;
+  }
   sidebarEl.style.display='';
+  if (sidebarEl.parentElement) sidebarEl.parentElement.classList.remove('no-toc');
 
   var title = document.createElement('div');
   title.className = 'toc-title';
@@ -10176,6 +10271,72 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
 
 
 <!-- ══ PAGE FAQ PRATIQUE ══ -->
+<!-- v66 — MENTIONS LÉGALES -->
+<div id="pg-mentions-legales" class="page">
+  <div class="detail-hero">
+    <div class="detail-hero-inner" style="background:var(--navy)">
+      <div class="detail-inner-wrap">
+        <button class="back-btn" onclick="currentUni ? navGo(currentUni,'home') : goToLanding()">← Retour</button>
+        <span class="detail-label">Informations légales</span>
+        <h1 class="detail-title">Mentions légales</h1>
+        <p class="detail-intro">Informations relatives à l'éditeur, à l'hébergement et aux conditions d'utilisation de ce site, conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN).</p>
+        <div class="detail-icon-bg" aria-hidden="true">⚖️</div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div style="max-width:860px;margin:0 auto;padding:1.5rem 1.5rem 3rem;font-size:13.5px;color:var(--text);line-height:1.75">
+
+        <div style="background:#fff8e6;border:1px solid #f0d68a;border-left:3px solid #d4a017;border-radius:0 6px 6px 0;padding:.7rem 1rem;font-size:12.5px;margin-bottom:1.5rem">
+          ✏️ Les champs signalés <strong>[À compléter]</strong> sont à renseigner par l'éditeur du site.
+        </div>
+
+        <h2 class="ml-title">1. Éditeur du site</h2>
+        <p>Le présent site est édité par :</p>
+        <ul style="padding-left:1.2rem;margin:.4rem 0 1rem">
+          <li><strong>Nom / raison sociale :</strong> [À compléter — nom et prénom, ou dénomination sociale]</li>
+          <li><strong>Statut :</strong> [À compléter — ex. : personne physique / SASU au capital de X € — RCS Ville n° XXX XXX XXX — SIRET XXX XXX XXX XXXXX]</li>
+          <li><strong>Adresse :</strong> [À compléter]</li>
+          <li><strong>Courriel :</strong> [À compléter]</li>
+          <li><strong>Téléphone :</strong> [À compléter]</li>
+          <li><strong>Profession réglementée :</strong> expert-comptable diplômé — Ordre des experts-comptables ([À compléter — conseil régional d'inscription, le cas échéant])</li>
+        </ul>
+
+        <h2 class="ml-title">2. Directeur de la publication</h2>
+        <p style="margin-bottom:1rem">[À compléter — nom du directeur de la publication, généralement l'éditeur du site].</p>
+
+        <h2 class="ml-title">3. Hébergement</h2>
+        <p style="margin-bottom:1rem">Le site est hébergé par <strong>Netlify, Inc.</strong>, 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis — <a href="https://www.netlify.com" target="_blank" rel="noopener" style="color:var(--navy-light)">www.netlify.com</a>.</p>
+
+        <h2 class="ml-title">4. Propriété intellectuelle</h2>
+        <p style="margin-bottom:1rem">L'ensemble des contenus de ce site (textes, tableaux, schémas, structure, mise en forme) est protégé par le droit d'auteur. Toute reproduction, représentation ou diffusion, intégrale ou partielle, à des fins commerciales, sans autorisation écrite préalable de l'éditeur, est interdite. Les courtes citations sont autorisées avec mention de la source. Les textes officiels (lois, décrets, normes) cités appartiennent au domaine public.</p>
+
+        <h2 class="ml-title">5. Caractère informatif — limitation de responsabilité</h2>
+        <p style="margin-bottom:1rem">Ce site a une vocation <strong>strictement informative et pédagogique</strong>. Les informations publiées (taux, seuils, barèmes, procédures, échéances) sont fournies de bonne foi, sourcées et datées, mais <strong>ne constituent ni un conseil professionnel, ni une consultation</strong> au sens de la réglementation de l'expertise comptable. Malgré le soin apporté à leur mise à jour, elles peuvent comporter des erreurs ou devenir obsolètes à la suite d'évolutions législatives ou réglementaires. Avant toute décision, vérifiez les valeurs en vigueur auprès des <strong>sources officielles</strong> (impots.gouv.fr, URSSAF, Légifrance, BOFiP, Ordre des experts-comptables, H2A) ou consultez un professionnel. L'éditeur ne saurait être tenu responsable des conséquences directes ou indirectes de l'usage des informations publiées.</p>
+
+        <h2 class="ml-title">6. Données personnelles (RGPD)</h2>
+        <p style="margin-bottom:.6rem">Ce site fonctionne <strong>sans compte utilisateur, sans collecte de données côté serveur et sans outil de mesure d'audience tiers</strong>.</p>
+        <ul style="padding-left:1.2rem;margin:0 0 1rem">
+          <li>Les préférences locales (recherches récentes, pages épinglées) sont stockées uniquement dans le <strong>stockage local de votre navigateur</strong> (localStorage) : elles ne quittent jamais votre appareil et sont effaçables à tout moment via les réglages de votre navigateur.</li>
+          <li>Si vous contactez l'éditeur par courriel, les données transmises (adresse, contenu du message) sont utilisées uniquement pour répondre à votre demande et ne sont ni cédées, ni utilisées à des fins commerciales.</li>
+          <li>Conformément au règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez de droits d'accès, de rectification, d'effacement et d'opposition sur vos données : exercez-les à l'adresse [À compléter — courriel]. Vous pouvez introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--navy-light)">CNIL</a>.</li>
+        </ul>
+
+        <h2 class="ml-title">7. Cookies et stockage local</h2>
+        <p style="margin-bottom:1rem">Ce site n'utilise <strong>aucun cookie publicitaire, analytique ou de suivi</strong>. Seul le stockage local du navigateur (localStorage) est utilisé, à des fins strictement fonctionnelles (préférences de navigation décrites ci-dessus). Ce stockage n'étant pas soumis à consentement au sens des lignes directrices de la CNIL (finalité strictement nécessaire au service demandé), aucun bandeau de consentement n'est requis.</p>
+
+        <h2 class="ml-title">8. Liens hypertextes</h2>
+        <p style="margin-bottom:1rem">Le site contient des liens vers des sites tiers, principalement institutionnels (Légifrance, impots.gouv.fr, URSSAF, INSEE, OEC, CNCC, H2A…). L'éditeur n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu. La mise en place d'un lien vers le présent site est libre, sous réserve de ne pas porter atteinte à son image et de ne pas laisser croire à une affiliation inexistante.</p>
+
+        <h2 class="ml-title">9. Droit applicable</h2>
+        <p style="margin-bottom:1rem">Les présentes mentions légales sont régies par le <strong>droit français</strong>. Tout litige relatif à l'utilisation du site relève des juridictions françaises compétentes.</p>
+
+        <p style="font-size:11.5px;color:var(--muted);margin-top:1.5rem">Dernière mise à jour des présentes mentions : juillet 2026.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>.ml-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 .6rem;padding-bottom:.35rem;border-bottom:2px solid var(--gold)}</style>
+
 <!-- v65.5 — HUB TRANSVERSE : BOÎTE À OUTILS -->
 <div id="pg-toolbox" class="page">
   <div class="detail-hero">
@@ -10202,6 +10363,7 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
 
         <h2 class="tbx-title">📘 Guides pratiques</h2>
         <div class="tbx-grid">
+          <button type="button" class="tbx-link" onclick="showOuvrirCabinet()">🚀 Ouvrir son cabinet (EC &amp; CAC)</button>
           <button type="button" class="tbx-link" onclick="showFiscal()">📊 Fiscalité &amp; TVA</button>
           <button type="button" class="tbx-link" onclick="showSocial()">👥 Droit social &amp; Paie</button>
           <button type="button" class="tbx-link" onclick="showComptaGen()">📒 Comptabilité générale pratique</button>
@@ -12036,6 +12198,419 @@ function buildChiffresUtiles() {
     + '<span class="md-tag">Seuils TVA · IS · CAC</span>'
     + '<span class="md-tag">Seuils comptables</span>'
     + '<span class="md-tag">Taux IFRS</span>'
+    + '</div></div>';
+
+  el.innerHTML = html;
+}
+
+/* ══════════════════════════════════════════════════════════
+   OUVRIR SON CABINET — GUIDE (v66) — EC & CAC
+══════════════════════════════════════════════════════════ */
+function showOuvrirCabinet(section) {
+  closeMenu();
+  if (currentUni !== 'ec' && currentUni !== 'cac') switchUni('ec');
+  showPage('pg-ouvrir-cabinet');
+  currentDetailBack = function(){ (currentUni==='cac'?navGo('cac','ressources'):navGo('ec','ressources')); };
+  var bodyEl = document.getElementById('ouvrir-cabinet-body');
+  if (!bodyEl) return;
+  if (!bodyEl.dataset.built) {
+    buildOuvrirCabinet();
+    bodyEl.dataset.built = '1';
+  }
+  var sidebar = wrapBodyWithTOC('ouvrir-cabinet-body');
+  buildTOCFromAnchors(bodyEl, sidebar, 'oc-sec-', '#0e5a44');
+  injectContextBar('pg-ouvrir-cabinet', 'Ouvrir son cabinet', 'Guides & chiffres', "(currentUni==='cac'?navGo('cac','ressources'):navGo('ec','ressources'))");
+  window.scrollTo(0, 0);
+  if (section) {
+    setTimeout(function() {
+      var el = document.getElementById('oc-sec-' + section);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+  }
+}
+
+/* Sélecteur EC / CAC / les deux — met en évidence les blocs concernés */
+function ocbFilter(view) {
+  var body = document.getElementById('ouvrir-cabinet-body');
+  if (!body) return;
+  body.classList.remove('ocb-filter-ec', 'ocb-filter-cac');
+  if (view === 'ec') body.classList.add('ocb-filter-ec');
+  else if (view === 'cac') body.classList.add('ocb-filter-cac');
+  body.querySelectorAll('.ocb-switch button').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-v') === view);
+  });
+}
+
+function buildOuvrirCabinet() {
+  var el = document.getElementById('ouvrir-cabinet-body');
+  if (!el) return;
+
+  var GREEN = '#0e5a44';
+
+  function SEC(id, icon, titre, sub) {
+    return '<div id="oc-sec-' + id + '" class="md-section">'
+      + '<h2 class="md-section-title" style="border-bottom-color:' + GREEN + '">' + icon + ' ' + titre + '</h2>'
+      + (sub ? '<p style="font-size:13px;color:var(--muted);margin-bottom:1rem;line-height:1.6">' + sub + '</p>' : '');
+  }
+  function END() { return '</div>'; }
+  function ALERT(txt, color) {
+    color = color || GREEN;
+    return '<div style="background:' + color + '15;border:1px solid ' + color + '30;border-left:3px solid ' + color + ';border-radius:0 6px 6px 0;padding:.7rem 1rem;font-size:13px;line-height:1.65;margin-bottom:1rem;color:var(--text)">' + txt + '</div>';
+  }
+  function H3(txt) {
+    return '<h3 style="font-family:\'Playfair Display\',serif;font-size:15px;font-weight:700;color:var(--navy);margin:1.4rem 0 .7rem">' + txt + '</h3>';
+  }
+  // Encadré EC ou CAC (uni = 'ec' | 'cac'). onlyClass isole le bloc pour le filtre.
+  function CARD(uni, titre, itemsHtml) {
+    var label = uni === 'ec' ? 'Expert-comptable' : 'Commissaire aux comptes';
+    return '<div class="ocb-card ' + uni + ' ocb-only-' + uni + '">'
+      + '<h4>' + titre + ' <span class="ocb-badge">' + label + '</span></h4>'
+      + itemsHtml + '</div>';
+  }
+  function PAIR(ecHtml, cacHtml) {
+    return '<div class="ocb-pair">' + ecHtml + cacHtml + '</div>';
+  }
+  function TL(items) {
+    var s = '<div class="ocb-tl">';
+    items.forEach(function(it) {
+      s += '<div class="ocb-tl-item"><div class="ocb-tl-when">' + it[0] + '</div>'
+        + '<div class="ocb-tl-what">' + it[1]
+        + (it[2] ? '<br><span class="ocb-tl-hidden">⏳ Délai caché : ' + it[2] + '</span>' : '')
+        + '</div></div>';
+    });
+    return s + '</div>';
+  }
+  function TABLE(headers, rows, caption) {
+    var s = '<div style="overflow-x:auto;margin-bottom:1rem"><table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px">';
+    s += '<thead><tr>' + headers.map(function(h){ return '<th style="background:' + GREEN + ';color:#fff;padding:.5rem .7rem;text-align:left;white-space:nowrap;font-size:11.5px">' + h + '</th>'; }).join('') + '</tr></thead><tbody>';
+    rows.forEach(function(r, i){
+      s += '<tr style="background:' + (i%2 ? '#f6f9f7' : '#fff') + '">';
+      r.forEach(function(c, j){
+        s += '<td style="padding:.5rem .7rem;border-bottom:1px solid #e5e7eb;line-height:1.5;' + (j===0 ? 'font-weight:700;color:var(--navy);white-space:nowrap' : 'color:var(--text)') + '">' + c + '</td>';
+      });
+      s += '</tr>';
+    });
+    s += '</tbody></table></div>';
+    if (caption) s += '<div class="ocb-src">' + caption + '</div>';
+    return s;
+  }
+  function LINKS(html2) {
+    return '<div style="margin:.6rem 0 .2rem">' + html2 + '</div>';
+  }
+
+  var html = '';
+
+  // ── Sélecteur EC / CAC ─────────────────────────────────
+  html += '<div class="ocb-switch">'
+    + '<span class="ocb-switch-label">Afficher</span>'
+    + '<button type="button" data-v="all" class="active" onclick="ocbFilter(\'all\')">Les deux</button>'
+    + '<button type="button" data-v="ec" onclick="ocbFilter(\'ec\')">Expert-comptable</button>'
+    + '<button type="button" data-v="cac" onclick="ocbFilter(\'cac\')">Commissaire aux comptes</button>'
+    + '</div>';
+
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:.5rem">Ce guide suit un <strong>fil rouge chronologique</strong>, du projet à la première mission. Les obligations diffèrent selon que vous vous installez comme <strong style="color:#1565c0">expert-comptable</strong> (inscription à l\'Ordre) ou comme <strong style="color:#7a1e2b">commissaire aux comptes</strong> (inscription à la H2A) : à chaque étape, les blocs bleus concernent l\'EC, les blocs bordeaux le CAC. Beaucoup exercent d\'ailleurs les deux, via deux inscriptions distinctes.</p>';
+
+  // ══ SECTION A — Préalables & rétroplanning ══
+  html += SEC('prealables', '🧭', 'Préalables & rétroplanning', 'Conditions d\'exercice, parcours d\'inscription, calendrier réaliste et transition depuis le salariat.');
+
+  html += H3('Conditions d\'exercice');
+  html += PAIR(
+    CARD('ec', '🔵 Devenir expert-comptable installé',
+      '<ul>'
+      + '<li>Être titulaire du <strong>DEC</strong> (diplôme d\'expertise comptable) et avoir prêté serment.</li>'
+      + '<li>Être <strong>inscrit au Tableau</strong> d\'un Conseil régional de l\'Ordre — en nom propre et/ou via une société d\'expertise comptable.</li>'
+      + '<li>Souscrire une <strong>RCP</strong> et respecter le code de déontologie (voir section Obligations).</li>'
+      + '</ul>'
+      + '<div class="ocb-src">Nécessaire pour exercer légalement la mission comptable réservée (art. 2 & 20, ordonnance n° 45-2138 du 19 sept. 1945).</div>'),
+    CARD('cac', '🔴 Devenir commissaire aux comptes',
+      '<ul>'
+      + '<li>Avoir la qualité de CAC (DEC ou CAFCAC + stage d\'audit) et <strong>prêter serment</strong> devant la cour d\'appel.</li>'
+      + '<li>Être <strong>inscrit sur la liste de la H2A</strong> (Haute Autorité de l\'audit, ex-H3C) — <strong>Liste I</strong> pour l\'audit légal, <strong>Liste II</strong> pour la certification de durabilité (CSRD).</li>'
+      + '<li>Missions et normes propres au CAC (NEP) — distinctes de la mission EC.</li>'
+      + '</ul>'
+      + '<div class="ocb-src">Inscription et surveillance : H2A. Deux sections de la Liste I (personnes physiques / sociétés).</div>')
+  );
+  html += ALERT('💡 <strong>EC et CAC, ce n\'est pas la même inscription.</strong> L\'expert-comptable s\'inscrit à l\'<strong>Ordre</strong> (mission comptable, conseil), le commissaire aux comptes à la <strong>H2A</strong> (audit légal, certification). Un même professionnel peut cumuler les deux, mais jamais sur la même entité cliente (incompatibilité d\'indépendance).');
+
+  html += H3('Parcours d\'inscription — étapes, délais, coûts');
+  html += PAIR(
+    CARD('ec', '🔵 Inscription au Tableau de l\'Ordre',
+      '<ul>'
+      + '<li><strong>Dossier</strong> déposé au Conseil régional : diplôme, serment, justificatifs, attestation RCP, statuts de la société le cas échéant.</li>'
+      + '<li><strong>Délai :</strong> dépôt ~<strong>6 semaines avant</strong> une session de la Commission du Tableau (~5 sessions/an) ; avis de la Commission puis décision du Conseil régional.</li>'
+      + '<li><strong>Coût (cotisation ordinale annuelle, variable selon la région) :</strong> ordre de grandeur ~<strong>800 €</strong> (personne physique), ~<strong>535 €</strong> (société unipersonnelle), ~<strong>1 070 € + 160 €</strong> (personne morale).</li>'
+      + '<li><strong>Points de blocage fréquents :</strong> RCP non encore souscrite, statuts de SEL non conformes aux règles de détention du capital, pièces manquantes → dossier reporté à la session suivante.</li>'
+      + '</ul>'
+      + '<div class="ocb-src">Source : Conseils régionaux de l\'Ordre (barèmes 2026, variables selon la région). Vérifier auprès de votre CRO.</div>'),
+    CARD('cac', '🔴 Inscription sur la liste H2A',
+      '<ul>'
+      + '<li><strong>Demande</strong> déposée sur le <strong>portail H2A</strong> : justificatifs de qualité de CAC, serment, RCP, liste des associés et détail de détention du capital pour une société.</li>'
+      + '<li><strong>Liste I</strong> (audit légal) et, pour auditer la durabilité, <strong>Liste II</strong> — « clause grand-père » pour les CAC inscrits avant le <strong>1er janvier 2026</strong> justifiant d\'une formation accréditée.</li>'
+      + '<li><strong>Coût :</strong> cotisations professionnelles CNCC/CRCC (distinctes des cotisations ordinales EC).</li>'
+      + '<li><strong>Points de vigilance :</strong> indépendance, incompatibilités, obligation de formation spécifique audit / durabilité.</li>'
+      + '</ul>'
+      + '<div class="ocb-src">Source : H2A — inscription via portail (h2a-france.org), Listes I & II. Régime distinct de l\'Ordre des EC.</div>')
+  );
+
+  html += H3('Rétroplanning type — et les délais qu\'on oublie');
+  html += '<p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:.6rem">Repère chronologique indicatif avant le lancement effectif (J0). Les étapes en jaune cachent des délais d\'instruction souvent sous-estimés.</p>';
+  html += TL([
+    ['J–6 à J–4 mois', 'Cadrage du projet : structure juridique cible, business plan, étude de marché local, choix EC et/ou CAC.', ''],
+    ['J–4 à J–3 mois', 'Constitution de la société (statuts, dépôt du capital, immatriculation) ou choix de l\'entreprise individuelle.', 'immatriculation au guichet unique INPI : comptez plusieurs jours à semaines selon les pièces'],
+    ['J–3 mois', 'Souscription de la <strong>RCP</strong> (indispensable avant l\'inscription) et, le cas échéant, de la garantie financière.', 'devis et mise en place RCP : prévoir 2 à 4 semaines'],
+    ['J–3 à J–2 mois', '<span class="ocb-only-ec">EC : dépôt du dossier d\'inscription au Tableau du CRO.</span><span class="ocb-only-cac">CAC : dépôt de la demande d\'inscription sur la liste H2A.</span>', 'dossier Ordre : ~6 semaines avant la session + délai de décision ; H2A : instruction du dossier'],
+    ['J–1 mois', 'Ouverture du <strong>compte bancaire professionnel</strong>, mise en place des logiciels, du site et des outils de facturation.', 'ouverture de compte pro : validation KYC parfois longue (1 à 3 semaines)'],
+    ['J0', 'Prestation de serment (si nouvelle inscription), démarrage effectif, premières lettres de mission.', '']
+  ]);
+
+  html += H3('Transition depuis un poste salarié');
+  html += ALERT('⚖️ <strong>Clause de non-concurrence (CCN des cabinets d\'EC/CAC du 9 déc. 1974) :</strong> pour être valable, elle est <strong>triplement limitée</strong> — durée <strong>≤ 3 ans</strong>, espace <strong>≤ 100 km</strong> autour du lieu de travail, et activité définie ; elle exige une <strong>contrepartie financière</strong> (≥ 25 % du salaire moyen des 24 derniers mois en cas de licenciement, ≥ 10 % en cas de démission). Attention : une clause qui <strong>module</strong> l\'indemnité selon le mode de rupture (moins en cas de démission) peut être jugée <strong>nulle</strong> — vérifiez la vôtre avant de démissionner.', '#7a1e2b');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Préavis :</strong> respectez le préavis prévu (convention collective / contrat) ; une dispense négociée peut accélérer le lancement.</li>'
+    + '<li><strong>Cumul temporaire :</strong> il est possible de démarrer une activité indépendante tout en restant salarié à temps partiel pendant la montée en charge (sous réserve de loyauté, non-concurrence et compatibilité déontologique) — voir la section « Modèles hybrides ».</li>'
+    + '<li><strong>Reprise de dossiers :</strong> démarcher les clients de son ex-employeur peut violer la clause de non-concurrence et la déontologie — prudence.</li>'
+    + '</ul>';
+  html += '<div style="margin:.4rem 0 0">'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showFormation(5)">🎓 Voies d\'accès au DEC / CAFCAC</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showDispenses()">📘 Suis-je dispensé ?</button>'
+    + '</div>';
+  html += END();
+
+  // ══ SECTION B — Structure juridique ══
+  html += SEC('structure', '🏛️', 'Structure juridique', 'EI, EURL, SASU, SEL, SPFPL : régime social, fiscalité, dividendes et capacité à s\'associer. Le choix conditionne vos charges dès le premier euro.');
+
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:1rem">Le professionnel du chiffre peut exercer en <strong>entreprise individuelle</strong> ou en <strong>société</strong>. Dès qu\'on exerce en société, la profession impose des <strong>sociétés d\'exercice libéral (SEL)</strong> — ou des sociétés d\'expertise comptable équivalentes — avec des règles strictes de détention du capital. Le premier arbitrage porte sur le régime social du dirigeant (TNS ou assimilé salarié), qui pèse lourdement sur le coût des charges.</p>';
+
+  html += TABLE(
+    ['Structure', 'Régime social du dirigeant', 'Imposition des bénéfices', 'Dividendes cotisés ?', 'Idéale pour'],
+    [
+      ['EI', 'TNS (~45 % du revenu net)', 'IR (option IS possible)', '—', 'Démarrer seul, coût minimal, formalités allégées'],
+      ['EURL', 'Gérant associé unique : TNS', 'IR par défaut, option IS', 'Oui, au-delà de 10 % du capital', 'Démarrer seul en société, optimiser les charges'],
+      ['SASU', 'Président : assimilé salarié (~80 % mais meilleure protection)', 'IS (option IR 5 ans)', 'Non (flat tax 30 %)', 'Protection sociale, image, s\'associer/lever ensuite'],
+      ['SELARL', 'Gérant majoritaire : TNS', 'IS', 'Oui, au-delà de 10 % du capital', 'Exercice en société, s\'associer entre pros'],
+      ['SELAS', 'Président : assimilé salarié', 'IS', 'Non', 'Exercice en société, gouvernance souple'],
+      ['SPFPL', 'Holding (selon la forme)', 'IS — régime mère-fille', 'Selon montage', 'Détenir des SEL, transmission, structuration de groupe']
+    ],
+    'TNS = travailleur non salarié (moins de charges, protection plus limitée, pas d\'assurance chômage). Assimilé salarié = charges plus élevées, meilleure couverture. Comparaison indicative 2026.'
+  );
+
+  html += ALERT('🔑 <strong>Spécificité SEL (professions réglementées) :</strong> plus de <strong>la moitié du capital et des droits de vote</strong> doit être détenue, directement ou via une <strong>SPFPL</strong>, par des professionnels <strong>en exercice au sein de la société</strong>. La réforme (décret du 4 déc. 2024) a précisé ces règles ; les sociétés existantes devaient se mettre en conformité <strong>avant le 1er septembre 2025</strong>. Un EC ne peut pas détenir de parts d\'une société d\'avocats ou de notaires (et réciproquement).');
+
+  html += PAIR(
+    CARD('ec', '🔵 Côté expert-comptable',
+      '<ul>'
+      + '<li>Société d\'expertise comptable inscrite à l\'<strong>Ordre</strong> ; le capital doit respecter les règles de détention par des EC en exercice.</li>'
+      + '<li>Formes courantes : SELARL, SELAS, ou société d\'expertise comptable de droit commun conforme.</li>'
+      + '</ul>'),
+    CARD('cac', '🔴 Côté commissaire aux comptes',
+      '<ul>'
+      + '<li>Société de commissariat aux comptes inscrite sur la liste de la <strong>H2A</strong> ; détention majoritaire par des CAC.</li>'
+      + '<li>Attention aux <strong>incompatibilités</strong> et à l\'indépendance : une même structure ne peut auditer une entité qu\'elle conseille par ailleurs en EC.</li>'
+      + '</ul>')
+  );
+
+  html += H3('Quelle structure selon votre profil ?');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Je démarre seul, petit budget, prudence :</strong> EI ou EURL — coûts et charges maîtrisés, bascule possible plus tard.</li>'
+    + '<li><strong>Je veux une bonne protection sociale et rester salarié en parallèle :</strong> SASU/SELAS (assimilé salarié, cumul ARE facilité).</li>'
+    + '<li><strong>J\'ai une ambition de croissance / de m\'associer :</strong> SELAS ou SELARL, éventuellement chapeautée par une SPFPL pour structurer et transmettre.</li>'
+    + '</ul>';
+  html += LINKS(
+    '<button type="button" class="ocb-linkbtn" onclick="showFormesJuridiques()">🏛️ Guide complet des formes juridiques</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showFiscal()">📊 Fiscalité IS / IR</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showSocial()">👥 Cotisations sociales</button>'
+  );
+  html += END();
+
+  // ══ SECTION C — Obligations à réunir ══
+  html += SEC('obligations', '📋', 'Obligations à réunir', 'RCP, déontologie, LCB-FT, RGPD, lettre de mission, formation continue — et les obligations comptables du cabinet lui-même.');
+
+  html += H3('Assurance et garantie financière');
+  html += ALERT('🛡️ <strong>RCP obligatoire.</strong> La responsabilité civile professionnelle est exigée dès l\'inscription (ordonnance de 1945). Le <strong>décret n° 2025-483 du 30 mai 2025</strong> a renforcé l\'obligation : couverture élargie à « tous les travaux et activités » et <strong>contrôle annuel</strong> par l\'Ordre. Niveau de garantie souvent recommandé : de l\'ordre de <strong>2 M€ par sinistre / 4 M€ par an</strong> (à ajuster selon la taille des dossiers). Une <strong>garantie financière</strong> est requise en cas de maniement de fonds pour le compte de clients.');
+
+  html += PAIR(
+    CARD('ec', '🔵 Expert-comptable',
+      '<ul>'
+      + '<li>RCP souscrite avant l\'inscription au Tableau ; attestation à fournir au CRO.</li>'
+      + '<li>Contrôle qualité périodique de l\'Ordre (structure d\'exercice professionnel).</li>'
+      + '</ul>'),
+    CARD('cac', '🔴 Commissaire aux comptes',
+      '<ul>'
+      + '<li>RCP spécifique à l\'activité d\'audit légal ; supervision de la <strong>H2A</strong>.</li>'
+      + '<li>Contrôles qualité de la profession (H2A / CNCC), renforcés pour les mandats EIP.</li>'
+      + '</ul>')
+  );
+
+  html += H3('Déontologie, LCB-FT et RGPD');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Code de déontologie :</strong> indépendance, secret professionnel, compétence, probité. Référentiel du <strong>CSOEC</strong> pour l\'EC, code propre au <strong>CAC</strong> (H2A/CNCC).</li>'
+    + '<li><strong>LCB-FT</strong> (art. L. 561-2 s. du Code monétaire et financier) : obligation de <strong>vigilance</strong> à l\'entrée en relation, <strong>déclaration de soupçon à TRACFIN</strong>, conservation des documents, et <strong>formation LCB-FT annuelle</strong> de tout le cabinet.</li>'
+    + '<li><strong>RGPD :</strong> registre des traitements, sécurisation des données clients, information des personnes ; le cabinet est responsable de traitement pour ses propres données et souvent sous-traitant pour celles de ses clients.</li>'
+    + '</ul>';
+
+  html += H3('Lettre de mission et formation continue');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Lettre de mission obligatoire :</strong> elle délimite le périmètre, répartit les responsabilités et fixe les honoraires. Pas de lettre de mission = mission juridiquement fragile.</li>'
+    + '<li><strong>Formation continue :</strong> l\'obligation professionnelle (reco CSOEC alignée sur la norme IFAC IES 7) est de <strong>120 heures sur 3 ans, avec un minimum de 20 heures par an</strong>. Les modules <strong>déontologie et LCB-FT</strong> comptent et sont attendus chaque année. Le CAC a en outre des obligations de formation propres à l\'audit et à la durabilité (CSRD).</li>'
+    + '</ul>';
+  html += LINKS('<button type="button" class="ocb-linkbtn" onclick="showLettres()">✉️ Modèles de lettres de mission</button>');
+
+  html += H3('Les obligations du cabinet lui-même');
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:.6rem">Votre cabinet est aussi une entreprise : il tient sa propre comptabilité, déclare sa TVA et son résultat (IS ou IR), gère la paie et les cotisations s\'il emploie des collaborateurs, et devra pouvoir <strong>recevoir des factures électroniques dès le 1er septembre 2026</strong> (puis émettre selon le calendrier). Anticipez l\'outillage en conséquence.</p>';
+  html += LINKS(
+    '<button type="button" class="ocb-linkbtn ghost" onclick="showFiscal()">📊 TVA, IS, liasse</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showSocial()">👥 Paie du 1er salarié</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showVeille()">📅 Calendrier facture électronique</button>'
+  );
+  html += END();
+
+  // ══ SECTION D — Ressources & budget ══
+  html += SEC('budget', '💶', 'Ressources & budget de démarrage', 'Combien prévoir pour lancer son cabinet, où s\'installer, quel matériel — et la trésorerie de sécurité qui évite les mauvaises surprises.');
+
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:1rem">Un cabinet se lance avec un investissement modéré comparé à d\'autres activités, mais plusieurs postes sont incompressibles (RCP, logiciels, inscription). Le vrai enjeu du démarrage n\'est pas l\'investissement matériel : c\'est la <strong>trésorerie de sécurité</strong> qui vous permet de tenir le temps que la clientèle se constitue et que les premières factures soient encaissées.</p>';
+
+  html += TABLE(
+    ['Poste', 'Fourchette indicative (année 1)', 'Remarques'],
+    [
+      ['Inscription &amp; cotisations', '~ 500 – 1 100 € / an', 'Cotisation ordinale EC (variable selon région) ; cotisations CNCC/CRCC pour le CAC'],
+      ['RCP', '~ 800 – 2 500 € / an', 'Selon activité, CA prévisionnel et niveau de garantie'],
+      ['Logiciels &amp; abonnements', '~ 100 – 500 € / mois', 'Production, révision, paie, GED, facturation — selon la suite retenue'],
+      ['Local', '0 – 1 500 € / mois', 'Domicile (0) · coworking (~200 – 400 €) · bureau dédié (500 – 1 500 €)'],
+      ['Communication', '~ 1 000 – 3 000 € (one-shot)', 'Site internet, identité visuelle, cartes, référencement local'],
+      ['Trésorerie de sécurité', '3 à 6 mois de charges', 'Poste le plus important — couvre le décalage de facturation du démarrage']
+    ],
+    'Fourchettes indicatives 2026, à affiner dans un business plan. Un cabinet à Paris coûte sensiblement plus cher qu\'en province. Sources : guides d\'installation OEC et retours de praticiens.'
+  );
+
+  html += H3('Domicile, coworking ou bureau ?');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Domicile :</strong> coût nul, idéal pour démarrer ; attention à l\'image, à la confidentialité (secret professionnel) et à la séparation vie pro / perso.</li>'
+    + '<li><strong>Coworking :</strong> souple, adresse professionnelle, salles de réunion pour recevoir les clients, réseau — bon compromis en phase de lancement.</li>'
+    + '<li><strong>Bureau dédié :</strong> crédibilité et capacité à recruter, mais engagement (bail) et charges fixes plus lourdes — à envisager une fois la clientèle stabilisée.</li>'
+    + '</ul>';
+  html += ALERT('👥 <strong>Premier renfort :</strong> plutôt qu\'un recrutement immédiat (charge fixe), beaucoup démarrent avec de la <strong>sous-traitance</strong> pour absorber les pics (saisie, bilans, révision) et ne recrutent qu\'une fois le carnet de commandes récurrent. Voir la section « Pallier le manque de missions ».');
+  html += END();
+
+  // ══ SECTION E — Logiciels & outils ══
+  html += SEC('logiciels', '🖥️', 'Logiciels & outils', 'Le panorama des outils du cabinet — et les pages du site qui les détaillent, pour ne pas dupliquer l\'information.');
+
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:1rem">L\'outillage d\'un cabinet moderne s\'organise autour de quelques familles. La plupart sont déjà comparées en détail ailleurs sur ce site : ci-dessous le panorama synthétique, avec les renvois directs.</p>';
+
+  html += TABLE(
+    ['Famille d\'outils', 'À quoi ça sert', 'Exemples de solutions'],
+    [
+      ['Production comptable', 'Tenue, imputation, révision, liasse', 'Cegid, MyUnisoft, Pennylane, Inqom, ACD, Fulll'],
+      ['Paie', 'Bulletins, DSN, conformité sociale', 'Silae, Cegid Paie, PayFit'],
+      ['Gestion de cabinet', 'Temps, facturation, GED, portail client', 'Suites intégrées des éditeurs ci-dessus'],
+      ['Dématérialisation / facture élec.', 'Réception &amp; émission (réforme 2026)', 'PDP immatriculées, Factur-X, PPF'],
+      ['Signature &amp; coffre-fort', 'Signature électronique, archivage probant', 'Yousign, DocuSign, coffres-forts numériques'],
+      ['IA &amp; automatisation', 'OCR, catégorisation, révision assistée', 'Voir le guide IA en cabinet']
+    ],
+    'Panorama non exhaustif — l\'inscription sur une PDP et la conformité facture électronique sont à anticiper pour le 1er septembre 2026.'
+  );
+  html += LINKS(
+    '<button type="button" class="ocb-linkbtn" onclick="showComparatifLogiciels()">🖥️ Comparatif filtrable des logiciels</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showVeille()">📅 Réforme facture électronique 2026</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showIA()">🤖 IA en cabinet — outils &amp; cas d\'usage</button>'
+  );
+  html += END();
+
+  // ══ SECTION F — Trouver des missions ══
+  html += SEC('missions', '🧲', 'Trouver des missions', 'Canaux d\'acquisition, prescripteurs, spécialisation — et comment construire son offre et sa grille tarifaire de départ.');
+
+  html += H3('Les canaux d\'acquisition');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Réseau &amp; recommandation :</strong> le premier canal de la profession. Anciens collègues, clients satisfaits, bouche-à-oreille — la recommandation reste la principale source de clients.</li>'
+    + '<li><strong>Prescripteurs :</strong> nouez des relations avec <strong>notaires, avocats, banquiers, CGP</strong> — ils orientent régulièrement des créateurs et dirigeants vers un EC de confiance.</li>'
+    + '<li><strong>Référencement local :</strong> fiche Google Business, site optimisé pour les recherches locales (« expert-comptable + ville »), présence LinkedIn.</li>'
+    + '<li><strong>Plateformes &amp; annuaires :</strong> mise en relation, comparateurs, annuaire de l\'Ordre.</li>'
+    + '<li><strong>Niche / spécialisation :</strong> se positionner sur un secteur (professions de santé, BTP, e-commerce, professions libérales…) ou une expertise (CIR, transmission, international) différencie et justifie des honoraires plus élevés.</li>'
+    + '</ul>';
+
+  html += PAIR(
+    CARD('ec', '🔵 Missions de l\'expert-comptable',
+      '<ul>'
+      + '<li>Tenue, révision, présentation des comptes, conseil, paie, accompagnement à la création.</li>'
+      + '<li>Clientèle de TPE/PME, professions libérales, associations.</li>'
+      + '</ul>'),
+    CARD('cac', '🔴 Mandats du commissaire aux comptes',
+      '<ul>'
+      + '<li>Mandats légaux (sociétés dépassant les seuils) et <strong>audit volontaire</strong> — un marché en développement malgré la baisse des mandats obligatoires post-PACTE.</li>'
+      + '<li>Réseau, tribunaux de commerce, co-commissariat, sous-traitance de mandats.</li>'
+      + '</ul>')
+  );
+
+  html += H3('Construire son offre et sa grille tarifaire');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Formaliser des offres lisibles</strong> (forfaits par typologie de client) plutôt qu\'un tarif horaire opaque : le client achète de la visibilité.</li>'
+    + '<li><strong>Ne pas sous-tarifer</strong> pour « attraper » des clients : c\'est l\'erreur la plus fréquente au démarrage (voir la section suivante). Un prix trop bas est difficile à réhausser et attire une clientèle fragile.</li>'
+    + '<li><strong>Chiffrer le temps réel</strong> d\'une mission (production + révision + rendez-vous + veille) avant d\'annoncer un forfait.</li>'
+    + '</ul>';
+  html += LINKS(
+    '<button type="button" class="ocb-linkbtn ghost" onclick="(currentUni===\'cac\'?navGo(\'cac\',\'missions\'):navGo(\'ec\',\'missions\'))">📁 Les missions normées</button>'
+    + '<button type="button" class="ocb-linkbtn ghost" onclick="showLettres()">✉️ Lettres de mission</button>'
+  );
+  html += END();
+
+  // ══ SECTION G — Pallier le manque de missions & modèles hybrides ══
+  html += SEC('hybride', '🔀', 'Pallier le manque de missions & modèles hybrides', 'Comment tenir la montée en charge : sous-traitance, cumul salarié, portage, enseignement — et combiner plusieurs sources de revenus au démarrage.');
+
+  html += '<p style="font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:1rem">Rares sont les cabinets qui démarrent avec un carnet plein. La bonne stratégie n\'est pas d\'attendre les clients, mais de <strong>sécuriser un revenu de transition</strong> tout en construisant sa clientèle propre. Plusieurs leviers, souvent combinés :</p>';
+
+  html += ALERT('🤝 <strong>Sous-traitance et co-traitance entre confrères.</strong> Répondre aux missions externalisées par d\'autres cabinets (saisie, révision, <strong>bilans en période fiscale</strong>, missions ponctuelles) est le moyen le plus rapide de générer du chiffre et de l\'expérience au démarrage. Cadre : <strong>art. 20 de l\'ordonnance de 1945</strong> — le donneur d\'ordre reste maître de la relation client, qui doit être informé de la sous-traitance. Des plateformes de mise en relation existent (Khompta, BBusi, Arkhos).');
+
+  html += '<div class="ocb-pair">'
+    + CARD('ec', '🔵 Leviers côté expert-comptable',
+        '<ul>'
+        + '<li><strong>Sous-traitance de production/révision</strong> pour des confrères débordés, surtout en <strong>saison fiscale</strong> (bilans, liasses).</li>'
+        + '<li><strong>Missions de conseil ponctuelles</strong> (création, prévisionnel, CIR, accompagnement).</li>'
+        + '<li><strong>Enseignement / formation</strong> (DCG, DSCG, organismes) — revenu régulier et visibilité.</li>'
+        + '</ul>')
+    + CARD('cac', '🔴 Leviers côté commissaire aux comptes',
+        '<ul>'
+        + '<li><strong>Sous-traitance de mandats</strong> et <strong>co-commissariat</strong> pour des cabinets d\'audit.</li>'
+        + '<li>Intervention sur des <strong>diligences ponctuelles</strong> (revue, procédures convenues).</li>'
+        + '<li>Développer l\'<strong>audit volontaire</strong> auprès de PME proches des seuils.</li>'
+        + '</ul>')
+    + '</div>';
+
+  html += H3('Cumul et modèles hybrides');
+  html += '<ul style="font-size:13.5px;color:var(--text);line-height:1.7;margin:0 0 1rem;padding-left:1.2rem">'
+    + '<li><strong>Salariat à temps partiel + activité indépendante :</strong> conserver un poste salarié (en cabinet ou en entreprise) à temps partiel pendant la montée en charge sécurise le revenu — sous réserve de loyauté, de la clause de non-concurrence et de la compatibilité déontologique.</li>'
+    + '<li><strong>Portage / temps partagé :</strong> exercer comme directeur financier à temps partagé pour plusieurs PME, ou via une structure de portage, en attendant de basculer à plein temps sur son cabinet.</li>'
+    + '<li><strong>Modèle progressif :</strong> base salariée dégressive + clientèle propre croissante, jusqu\'au basculement complet en indépendant quand le récurrent le permet.</li>'
+    + '</ul>';
+  html += END();
+
+  // ══ SECTION H — Les choses auxquelles on ne pense pas ══
+  html += SEC('anglesmorts', '🕳️', 'Les choses auxquelles on ne pense pas', 'Les angles morts remontés par les confrères installés — ceux qui font trébucher, rarement mentionnés dans les guides officiels.');
+
+  var angles = [
+    ['🧍 Isolement', 'On passe de collègues quotidiens à la solitude du dirigeant. Rejoignez un réseau, un club d\'installés, un espace de coworking — l\'isolement use plus vite qu\'on ne le croit.'],
+    ['💧 Trésorerie &amp; décalage de facturation', 'On produit en janvier, on facture en avril, on encaisse en juin. Ce décalage tue des cabinets rentables. D\'où la trésorerie de sécurité et une facturation régulière (acomptes, mensualisation).'],
+    ['📆 Saisonnalité', 'La charge n\'est pas linéaire : pics de bilans et de liasses au printemps, creux l\'été. Lissez avec des missions de conseil et de la sous-traitance hors saison.'],
+    ['🔥 Sur-engagement', 'Dire oui à tout au démarrage mène au surmenage et à la baisse de qualité. Mieux vaut refuser un dossier que rater une échéance sous sa responsabilité.'],
+    ['🏷️ Prix trop bas', 'Sous-tarifer pour démarrer attire une clientèle fragile et chronophage, et ce prix est très difficile à relever ensuite. Facturez votre valeur dès le départ.'],
+    ['⏱️ Temps non facturable', 'Veille, formation, administratif, prospection, LCB-FT : une part importante du temps n\'est pas facturable. Intégrez-la dans vos tarifs, sinon la rentabilité s\'effondre.'],
+    ['🎯 Dépendance à un gros client', 'Un client représentant 30-40 % du CA, c\'est un risque majeur (perte, impayé, pression sur l\'indépendance). Diversifiez vite le portefeuille.'],
+    ['📄 Reprise vs création pure', 'Racheter un portefeuille donne un CA immédiat mais coûte cher et impose une transition ; la création pure est moins risquée financièrement mais plus lente. Deux stratégies, deux profils de risque.'],
+    ['🛡️ Assurabilité &amp; responsabilité', 'Chaque signature engage votre responsabilité. Sélectionnez vos clients, formalisez chaque mission par une lettre, et ne négligez jamais la RCP.']
+  ];
+  html += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin-bottom:1rem">';
+  angles.forEach(function(a){
+    html += '<div style="border:1px solid var(--border);border-left:3px solid ' + GREEN + ';border-radius:0 8px 8px 0;padding:.9rem 1.1rem;background:var(--white)">'
+      + '<div style="font-weight:700;color:var(--navy);font-size:13.5px;margin-bottom:.35rem">' + a[0] + '</div>'
+      + '<div style="font-size:12.5px;color:var(--text);line-height:1.6">' + a[1] + '</div></div>';
+  });
+  html += '</div>';
+  html += ALERT('✅ <strong>À retenir :</strong> la réussite d\'un cabinet tient moins à la technique comptable — que vous maîtrisez — qu\'à la <strong>gestion (trésorerie, prix, temps)</strong> et à la <strong>relation client</strong>. Anticipez ces angles morts et vous éviterez les erreurs qui coûtent le plus cher les deux premières années.');
+  html += END();
+
+  // ══ Sources & date ══
+  html += '<div class="md-section" style="border-top:1px solid var(--border);margin-top:1rem;padding-top:1.2rem">'
+    + '<p style="font-size:11.5px;color:var(--muted);line-height:1.7"><strong>Informations à jour en 2026.</strong> Sources : Conseil supérieur et Conseils régionaux de l\'Ordre des experts-comptables (inscription, cotisations, déontologie, formation continue) ; H2A — Haute Autorité de l\'audit (inscription des CAC, Listes I &amp; II) ; ordonnance n° 45-2138 du 19 sept. 1945 ; décret n° 2025-483 du 30 mai 2025 (assurance) ; décret du 4 déc. 2024 (SEL) ; CCN des cabinets d\'EC/CAC du 9 déc. 1974 (clause de non-concurrence) ; art. L. 561-2 s. du Code monétaire et financier (LCB-FT) ; baromètre CNCC 2025. Les montants (cotisations, RCP, budget) sont indicatifs et varient selon la région, l\'activité et la taille du cabinet — vérifiez auprès de votre Conseil régional / de la H2A avant toute décision.</p>'
+    + '<div class="md-tag-row" style="margin-top:1rem">'
+    + '<span class="md-tag gold">Inscription Ordre &amp; H2A</span><span class="md-tag">Structure juridique</span><span class="md-tag">RCP &amp; déontologie</span><span class="md-tag">Budget de démarrage</span><span class="md-tag">Sous-traitance</span><span class="md-tag">Angles morts</span>'
     + '</div></div>';
 
   el.innerHTML = html;

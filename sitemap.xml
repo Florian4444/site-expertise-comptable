@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Le site est une application monopage à routage par fragment (#/...) :
+     les fragments ne sont pas indexables séparément, seule l'URL racine
+     est déclarée. Tout le contenu statique est présent dans index.html. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://zesty-puffpuff-2a26f1.netlify.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

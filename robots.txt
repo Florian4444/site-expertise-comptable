@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /modeles/
+
+Sitemap: https://zesty-puffpuff-2a26f1.netlify.app/sitemap.xml

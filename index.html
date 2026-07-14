@@ -3,25 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expertise Comptable & Commissariat aux Comptes — Normes, Missions, Cursus DEC</title>
+<meta name="theme-color" content="#0d1f3c">
+<title>Central EC — Expertise Comptable, Commissariat aux Comptes & Cursus DEC</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <meta name="description" content="Site de référence indépendant sur l'expertise comptable, le commissariat aux comptes et le cursus DEC. Normes PCG/IFRS/NEP, missions normées, outils, institutions et formations. Par un expert-comptable diplômé.">
 <meta name="keywords" content="expert-comptable, commissaire aux comptes, DEC, DCG, DSCG, NEP, IFRS, PCG, ANC, OEC, CNCC, H2A, CSRD, stage DEC, épreuves DEC, mémoire DEC, facture électronique, NP 2300, NP 2400">
 <meta name="author" content="Expert-Comptable Diplômé">
 <meta name="version" content="v67">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://expertise-comptable-ressources.fr/">
+<link rel="canonical" href="https://zesty-puffpuff-2a26f1.netlify.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Expertise Comptable & Commissariat — Normes, Missions, Cursus DEC">
+<meta property="og:url" content="https://zesty-puffpuff-2a26f1.netlify.app/">
+<meta property="og:image" content="https://zesty-puffpuff-2a26f1.netlify.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Central EC — logo">
+<meta property="og:site_name" content="Central EC">
+<meta property="og:title" content="Central EC — Expertise Comptable & Commissariat — Normes, Missions, Cursus DEC">
 <meta property="og:description" content="Site de référence indépendant sur l'expertise comptable, le commissariat aux comptes et le cursus DEC. Normes, missions, outils et formations par un expert-comptable diplômé.">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Expertise Comptable & Commissariat — Normes, Missions, Cursus DEC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zesty-puffpuff-2a26f1.netlify.app/assets/og-image.png">
+<meta name="twitter:title" content="Central EC — Expertise Comptable & Commissariat — Normes, Missions, Cursus DEC">
 <meta name="twitter:description" content="Site de référence indépendant : normes PCG/IFRS/NEP, missions EC et CAC, cursus DEC, outils et institutions.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Expertise Comptable & Commissariat — Ressources",
+  "name": "Central EC — Expertise Comptable & Commissariat",
+  "alternateName": "Central EC",
   "description": "Site de référence indépendant sur l'expertise comptable, le commissariat aux comptes et le cursus DEC",
   "inLanguage": "fr",
   "author": {
@@ -37,17 +47,18 @@
   ]
 }
 </script>
-<!-- Préconnexion aux deux origines Google Fonts (DNS + TLS anticipés) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Chargement non-bloquant : media="print" puis swap vers "all" une fois la police prête -->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
-      media="print" onload="this.media='all'">
-<!-- Fallback si JS est désactivé -->
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap">
-</noscript>
+<!-- Polices auto-hébergées (v68) : plus aucune requête vers Google Fonts.
+     Fichiers variables WOFF2 dans assets/fonts/ — RGPD-friendly, résilient hors-ligne. -->
+<link rel="preload" href="assets/fonts/sourceserif4-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/playfairdisplay-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/fonts/playfairdisplay-var-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/fonts/playfairdisplay-var-latinext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300 600;font-display:swap;src:url('assets/fonts/sourceserif4-var-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300 600;font-display:swap;src:url('assets/fonts/sourceserif4-var-latinext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/sourceserif4-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/sourceserif4-italic-latinext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+</style>
 <style>
 :root {
   --navy:#0d1f3c; --navy-mid:#1a3360; --navy-light:#2a4a82;
@@ -162,6 +173,23 @@ body.uni-dec .toc-list li a.toc-active{color:#7c5cbf;border-left-color:#9c7bd4;}
 }
 
 /* ══ TOP NAV ══ */
+/* ── Marque Central EC (v67) ── */
+.nav-brand{display:flex;align-items:center;gap:9px;height:64px;padding:0 1rem 0 0;margin-right:.5rem;border:none;background:transparent;cursor:pointer;flex-shrink:0;border-right:1px solid rgba(201,168,76,.25)}
+.nav-brand img{width:38px;height:38px;display:block}
+.nav-brand-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--gold-light);white-space:nowrap;transition:color .2s}
+.nav-brand:hover .nav-brand-name{color:#f2dc9e}
+@media(max-width:760px){.nav-brand-name{display:none}.nav-brand{padding:0 .6rem 0 0;margin-right:.2rem}}
+.landing-logo{width:120px;height:120px;margin-bottom:1.1rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
+@media(max-width:760px){.landing-logo{width:88px;height:88px}}
+/* Comparatif PCG/IFRS : colonnes empilées sur mobile */
+@media(max-width:640px){#pg-comparatif-pcg-ifrs .comp-grid{grid-template-columns:1fr !important}}
+/* v68 — a11y mobile : cibles tactiles ≥ 40px (WCAG 2.5.8) sur fil d'Ariane, retour et TOC */
+@media(max-width:760px){
+  .page-context-bar button{min-height:38px;padding-top:8px;padding-bottom:8px}
+  .back-btn{min-height:40px;display:inline-flex;align-items:center}
+  .toc-list a{min-height:40px;display:flex;align-items:center}
+}
+
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--navy);
   border-bottom:2px solid var(--gold);
   height:64px;display:flex;align-items:center;padding:0 1.5rem;gap:0;
@@ -1336,6 +1364,29 @@ nav.on-landing .nav-hamburger{display:flex}
 
 /* ── RESPONSIVE ── */
 
+/* ── Compaction progressive de la nav (v67) : tout doit tenir sans
+   passer derrière les boutons maison/loupe. Paliers :
+   1750px : paddings réduits + sous-titres masqués
+   1600px : libellés des univers masqués (badges EC/CC/DEC seuls)
+   1080px : nom "Central EC" masqué (logo seul)
+   900px  : bascule menu hamburger (règle existante) ── */
+@media(max-width:1750px){
+  .uni-btn{padding:0 .6rem}
+  .uni-btn .uni-sub{display:none}
+  .uni-btn .uni-label{font-size:12.5px}
+  .nav-links a{padding:0 .55rem;font-size:12.5px}
+  .nav-brand{padding:0 .7rem 0 0;margin-right:.3rem}
+  .nav-brand-name{font-size:15.5px}
+}
+@media(max-width:1600px){
+  .uni-text{display:none}
+  .uni-btn{padding:0 .5rem;gap:0}
+}
+@media(max-width:1080px){
+  .nav-brand-name{display:none}
+  .nav-brand{padding:0 .5rem 0 0;margin-right:.15rem}
+}
+
 /* Tablets (max 900px) */
 @media(max-width:900px){
   .uni-btn .uni-sub{display:none}
@@ -1606,12 +1657,16 @@ body.uni-dec [role="button"]:focus-visible {
 <body>
 <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <style>.skip-link{position:absolute;top:-50px;left:1rem;background:var(--gold);color:var(--navy);padding:8px 16px;border-radius:0 0 4px 4px;font-size:13px;font-weight:600;text-decoration:none;z-index:1000;transition:top .2s}.skip-link:focus{top:0}</style>
-<div id="main-content">
+<main id="main-content" tabindex="-1">
 
 <!-- ══ NAV ══ -->
 <nav id="top-nav">
+  <button type="button" class="nav-brand" onclick="goToLanding()" aria-label="Central EC — Accueil" title="Central EC — Accueil">
+    <img data-logo src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Central EC">
+    <span class="nav-brand-name">Central EC</span>
+  </button>
   <div class="uni-switcher" id="uni-switcher" style="display:none">
-    <button class="uni-btn ec-btn active" id="btn-ec" onclick="switchUni('ec')" aria-label="Univers Expert-Comptable">
+    <button class="uni-btn ec-btn active" id="btn-ec" onclick="switchUni('ec')" aria-label="Univers Expert-Comptable" title="Expert-Comptable">
       <div class="uni-logo">EC</div>
       <div class="uni-text">
         <span class="uni-label">Expert-Comptable</span>
@@ -1619,7 +1674,7 @@ body.uni-dec [role="button"]:focus-visible {
       </div>
     </button>
     <div class="nav-sep"></div>
-    <button class="uni-btn cac-btn" id="btn-cac" onclick="switchUni('cac')" aria-label="Univers Commissaire aux Comptes">
+    <button class="uni-btn cac-btn" id="btn-cac" onclick="switchUni('cac')" aria-label="Univers Commissaire aux Comptes" title="Commissaire aux Comptes">
       <div class="uni-logo">CC</div>
       <div class="uni-text">
         <span class="uni-label">Commissaire aux Comptes</span>
@@ -1627,7 +1682,7 @@ body.uni-dec [role="button"]:focus-visible {
       </div>
     </button>
     <div class="nav-sep"></div>
-    <button class="uni-btn dec-btn" id="btn-dec" onclick="switchUni('dec')" aria-label="Univers Étudiants DEC">
+    <button class="uni-btn dec-btn" id="btn-dec" onclick="switchUni('dec')" aria-label="Univers Étudiants DEC" title="Étudiants / Stagiaires DEC">
       <div class="uni-logo" style="background:#4527a0;color:#fff">DEC</div>
       <div class="uni-text">
         <span class="uni-label">Étudiants / Stagiaires DEC</span>
@@ -1723,6 +1778,7 @@ body.uni-dec [role="button"]:focus-visible {
 
 <!-- LANDING PAGE -->
 <div id="pg-landing" class="page active">
+  <img class="landing-logo" data-logo src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Central EC">
   <p class="landing-tagline" id="landing-tagline">Site d'information professionnelle indépendant<span class="tagline-cursor" id="tagline-cursor"></span></p>
   <h1 class="landing-title" id="landing-title">Expertise comptable,<br>Commissariat, <em>Cursus DEC</em></h1>
   <p class="landing-sub">Un site de référence pour comprendre les deux grandes professions du chiffre et les formations qui y mènent. Choisissez votre univers.</p>
@@ -2770,6 +2826,15 @@ body.uni-dec [role="button"]:focus-visible {
         <button onclick="showVeille()" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#006064;font-weight:600;border:1px solid #006064;border-radius:20px;padding:5px 14px;background:var(--white);cursor:pointer;font-family:'Source Serif 4',serif">📅 Timeline réglementaire</button>
       </div>
       <div class="actu-grid reveal-stagger">
+        <div class="actu-card" onclick="showActu('actu-ec-7')" style="cursor:pointer">
+          <div class="actu-stripe" style="background:linear-gradient(90deg,var(--navy-light),var(--gold))"></div>
+          <div class="actu-body">
+            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--navy-light)">Réglementation</span><span class="actu-date">Juill. 2026</span></div><span class="actu-freshness fresh-new">🟢 Récent</span>
+            <h3>Facture électronique : dernière ligne droite avant le 1er septembre 2026</h3>
+            <p>À moins de deux mois de l'échéance : réception obligatoire pour toutes les entreprises, émission et e-reporting pour les GE et ETI. Quatre nouvelles mentions obligatoires apparaissent sur les factures.</p>
+            <span class="mission-read-more" style="color:var(--navy-light)">Lire l'article →</span>
+          </div>
+        </div>
         <div class="actu-card" onclick="showActu('actu-ec-1')" style="cursor:pointer">
           <div class="actu-stripe" style="background:linear-gradient(90deg,var(--navy-light),var(--gold))"></div>
           <div class="actu-body">
@@ -2832,9 +2897,9 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Expert-Comptable</h4><p>Site d'information dédié aux professionnels du chiffre et aux entreprises souhaitant mieux comprendre la comptabilité et l'audit.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('ec','missions')">Missions</a><a onclick="navGo('ec','normes')">Normes comptables</a><a onclick="navGo('ec','outils')">Outils informatiques</a><a onclick="navGo('ec','institutions')">Institutions</a><a onclick="navGo('ec','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Expert-Comptable. Tous droits réservés.</p></div>
+      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Central EC. Tous droits réservés.</p></div>
     </div>
-    <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
+    <div class="footer-copy">Central EC — Site réalisé à titre informatif par un Diplômé d'Expertise Comptable</div>
   </footer>
 </div><!-- /pg-ec-home -->
 
@@ -2961,39 +3026,45 @@ body.uni-dec [role="button"]:focus-visible {
         <button class="back-btn" onclick="navGo('ec','normes')">← Retour aux normes</button>
         <span class="detail-label">Expert-Comptable — Normes comptables</span>
         <h1 class="detail-title">Comparatif PCG / IFRS</h1>
-        <p class="detail-intro">Tableau comparatif des traitements comptables selon le Plan Comptable Général (référentiel français) et les normes IFRS (référentiel international). Filtrez par thème pour une consultation rapide.</p>
+        <p class="detail-intro">Comparaison opérationnelle des traitements comptables entre le Plan Comptable Général (référentiel français) et les normes IFRS. Pour chaque poste : la règle française, la règle IFRS, l'écart principal, la conséquence sur la présentation des comptes (retraitement à opérer) et la norme de référence. Filtrez par thème ou recherchez un mot-clé.</p>
         <div class="detail-icon-bg" aria-hidden="true">⚖️</div>
       </div>
     </div>
     <div class="detail-body">
       <div style="padding:2rem 1.5rem">
 
+        <!-- Recherche par mot-clé -->
+        <div style="margin-bottom:1rem">
+          <input type="text" id="comparatif-search" oninput="comparatifSearch(this.value)" placeholder="🔍 Rechercher : goodwill, IFRS 16, location, retraitement, consolidation…" style="width:100%;max-width:520px;padding:.7rem 1rem;font-size:14px;font-family:inherit;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text)">
+        </div>
+
         <!-- Filtres thèmes -->
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem">
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.6rem">
           <button class="dcg-ann-filter active" onclick="comparatifFilter(this,'all')">Tous les thèmes</button>
+          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'pres')">Présentation des comptes</button>
           <button class="dcg-ann-filter" onclick="comparatifFilter(this,'immo')">Immobilisations</button>
           <button class="dcg-ann-filter" onclick="comparatifFilter(this,'stocks')">Stocks</button>
-          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'prov')">Provisions</button>
           <button class="dcg-ann-filter" onclick="comparatifFilter(this,'loc')">Contrats de location</button>
-          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'ca')">Chiffre d'affaires</button>
           <button class="dcg-ann-filter" onclick="comparatifFilter(this,'fin')">Instruments financiers</button>
+          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'prov')">Provisions & engagements</button>
+          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'ca')">Chiffre d'affaires</button>
+          <button class="dcg-ann-filter" onclick="comparatifFilter(this,'conso')">Consolidation</button>
           <button class="dcg-ann-filter" onclick="comparatifFilter(this,'regr')">Regroupements</button>
         </div>
 
-        <div style="overflow-x:auto;border:1px solid var(--border);border-radius:8px">
-          <table id="comparatif-table" style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:700px">
-            <thead>
-              <tr style="background:var(--navy)">
-                <th style="padding:12px 16px;text-align:left;color:var(--gold);font-weight:600;font-size:11px;letter-spacing:.07em;min-width:180px">Thème / Poste</th>
-                <th style="padding:12px 16px;text-align:left;color:var(--gold-light);font-weight:600;font-size:11px;letter-spacing:.07em;min-width:220px">🇫🇷 PCG (référentiel français)</th>
-                <th style="padding:12px 16px;text-align:left;color:#7ddaaa;font-weight:600;font-size:11px;letter-spacing:.07em;min-width:220px">🌍 IFRS (référentiel international)</th>
-                <th style="padding:12px 16px;text-align:left;color:rgba(255,255,255,.5);font-weight:600;font-size:11px;letter-spacing:.07em;min-width:140px">Norme(s) de référence</th>
-              </tr>
-            </thead>
-            <tbody id="comparatif-tbody"></tbody>
-          </table>
+        <p id="comparatif-count" style="font-size:12px;color:var(--muted);margin-bottom:1rem"></p>
+
+        <!-- Légende colonnes -->
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;margin-bottom:1.2rem;font-size:11.5px;color:var(--muted)">
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--gold);vertical-align:middle;margin-right:5px"></span>🇫🇷 PCG</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#2a6044;vertical-align:middle;margin-right:5px"></span>🌍 IFRS</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#b45309;vertical-align:middle;margin-right:5px"></span>⚖️ Écart principal</span>
+          <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#1a2e5a;vertical-align:middle;margin-right:5px"></span>📊 Conséquence sur la présentation</span>
         </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:1rem">Sources : Règlement ANC n°2022-06, normes IFRS en vigueur au 1er janvier 2025 — IASB.</p>
+
+        <div id="comparatif-list"></div>
+
+        <p style="font-size:12px;color:var(--muted);margin-top:1.5rem;line-height:1.6">Sources : Règlement ANC n°2022-06 (nouveau PCG applicable aux exercices ouverts à compter du 1er janvier 2025), Règlement ANC n°2020-01 (comptes consolidés), normes IFRS en vigueur — IASB. <strong>À noter :</strong> IFRS 18 (présentation des états financiers, remplace IAS 1) s'applique aux exercices ouverts à compter du 1er janvier 2027 ; le projet IASB sur les regroupements sous contrôle commun est toujours en cours. Vérifiez la version applicable à votre date de clôture.</p>
       </div>
     </div>
   </div>
@@ -3427,6 +3498,24 @@ body.uni-dec [role="button"]:focus-visible {
         <button onclick="showVeille()" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#006064;font-weight:600;border:1px solid #006064;border-radius:20px;padding:5px 14px;background:var(--white);cursor:pointer;font-family:'Source Serif 4',serif">📅 Timeline réglementaire</button>
       </div>
       <div class="actu-grid reveal-stagger">
+        <div class="actu-card" onclick="showActu('actu-cac-8')" style="cursor:pointer">
+          <div class="actu-stripe" style="background:linear-gradient(90deg,var(--bordeaux),var(--gold))"></div>
+          <div class="actu-body">
+            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--bordeaux)">Supervision</span><span class="actu-date">Juill. 2026</span></div><span class="actu-freshness fresh-new">🟢 Récent</span>
+            <h3>Contrôle des CAC : la H2A délègue à la CNCC les mandats hors EIP (2026-2029)</h3>
+            <p>Un arrêté du 2 juillet 2026 homologue la convention par laquelle la H2A confie à la CNCC les contrôles d'activité des CAC n'exerçant pas auprès d'entités d'intérêt public, pour 2026-2029.</p>
+            <span class="mission-read-more" style="color:var(--bordeaux)">Lire l'article →</span>
+          </div>
+        </div>
+        <div class="actu-card" onclick="showActu('actu-cac-7')" style="cursor:pointer">
+          <div class="actu-stripe" style="background:linear-gradient(90deg,var(--bordeaux),var(--gold))"></div>
+          <div class="actu-body">
+            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--bordeaux)">Normes</span><span class="actu-date">Avr. 2026</span></div><span class="actu-freshness fresh-new">🟢 Récent</span>
+            <h3>NEP 9510 révisée homologuée : diligences du CAC sur le rapport de gestion</h3>
+            <p>Arrêté du 20 avril 2026 (JO du 26 avril) : la NEP 9510 est révisée pour tirer les conséquences de la CSRD (suppression des références à la DPEF, articulation avec la vérification de durabilité).</p>
+            <span class="mission-read-more" style="color:var(--bordeaux)">Lire l'article →</span>
+          </div>
+        </div>
         <div class="actu-card" onclick="showActu('actu-cac-1')" style="cursor:pointer">
           <div class="actu-stripe" style="background:linear-gradient(90deg,var(--bordeaux),var(--gold))"></div>
           <div class="actu-body">
@@ -3489,9 +3578,9 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Commissaire aux Comptes</h4><p>Site d'information dédié à la pratique du commissariat aux comptes, aux normes d'audit et aux actualités réglementaires de la profession.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('cac','missions')">Missions</a><a onclick="navGo('cac','normes')">Normes d'audit</a><a onclick="navGo('cac','outils')">Outils informatiques</a><a onclick="navGo('cac','institutions')">Institutions</a><a onclick="navGo('cac','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Commissaire aux Comptes. Tous droits réservés.</p></div>
+      <div class="footer-col"><h4>Informations légales</h4><p>Ce site a une vocation informative et pédagogique. Les informations publiées ne constituent pas un conseil professionnel.</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Central EC. Tous droits réservés.</p></div>
     </div>
-    <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
+    <div class="footer-copy">Central EC — Site réalisé à titre informatif par un Diplômé d'Expertise Comptable</div>
   </footer>
 </div><!-- /pg-cac-home -->
 
@@ -4149,10 +4238,19 @@ body.uni-dec [role="button"]:focus-visible {
         <span style="margin-left:auto;font-size:11px;color:var(--muted)">Mise à jour recommandée tous les trimestres</span>
       </div>
       <div class="actu-grid reveal-stagger">
+        <div class="actu-card" onclick="showActu('actu-dec-7')" style="cursor:pointer">
+          <div class="actu-stripe" style="background:linear-gradient(90deg,var(--dec-light),var(--gold))"></div>
+          <div class="actu-body">
+            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--dec-light)">Examens</span><span class="actu-date">Juill. 2026</span></div><span class="actu-freshness fresh-new">🟢 Récent</span>
+            <h3>Résultats de la session 2026 (DCG / DSCG) publiés le 9 juillet 2026</h3>
+            <p>Résultats en ligne le 9 juillet 2026 à 12h sur Cyclades / SIEC. Dernière session sous l'ancien référentiel : la réforme des programmes s'applique à compter de la session 2027.</p>
+            <span class="mission-read-more" style="color:var(--dec-light)">Lire l'article →</span>
+          </div>
+        </div>
         <div class="actu-card" onclick="showActu('actu-dec-1')" style="cursor:pointer">
           <div class="actu-stripe" style="background:linear-gradient(90deg,var(--dec-light),var(--gold))"></div>
           <div class="actu-body">
-            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--dec-light)">Réforme</span><span class="actu-date">Août 2025</span></div><span class="actu-freshness fresh-new">🟢 Récent</span>
+            <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--dec-light)">Réforme</span><span class="actu-date">Août 2025</span></div><span class="actu-freshness fresh-recent">🟡 2025</span>
             <h3>Arrêté du 4 août 2025 : réforme DCG/DSCG applicable dès la session 2027</h3>
             <p>ECTS précisés, IA générative sans travail personnel assimilée à une fraude, double correction au DSCG, conservation des notes harmonisée (8 sessions). Applicable session 2027.</p>
             <span class="mission-read-more" style="color:var(--dec-light)">Lire l'article →</span>
@@ -4189,8 +4287,8 @@ body.uni-dec [role="button"]:focus-visible {
           <div class="actu-stripe" style="background:linear-gradient(90deg,var(--dec-light),var(--gold))"></div>
           <div class="actu-body">
             <div class="actu-meta"><span class="actu-cat" style="background:rgba(0,0,0,.05);color:var(--dec-light)">Taux de réussite</span><span class="actu-date">2024</span></div><span class="actu-freshness fresh-old">⚪ 2024</span>
-            <h3>DCG session 2024 : 36 % de réussite pour 24 369 inscrits</h3>
-            <p>3 692 diplômes obtenus sur 24 369 inscrits — taux de 36 %, en recul par rapport aux 40,5 % de 2023. Cela confirme l'exigence du DCG.</p>
+            <h3>DCG session 2024 : 36 % de réussite au diplôme (24 369 inscrits aux épreuves)</h3>
+            <p>24 369 candidats inscrits aux épreuves ; 3 692 diplômes délivrés, soit un taux de réussite de 36 % parmi les candidats au diplôme — en recul par rapport aux 40,5 % de 2023. Cela confirme l'exigence du DCG.</p>
             <span class="mission-read-more" style="color:var(--dec-light)">Lire l'article →</span>
           </div>
         </div>
@@ -4211,9 +4309,9 @@ body.uni-dec [role="button"]:focus-visible {
     <div class="footer-inner">
       <div class="footer-col"><h4>Étudiants / Stagiaires DEC</h4><p>Toutes les informations sur les formations de la filière expertise comptable : BTS CG, DCG, DSCG, Master CCA, DEC et CAFCAC.</p></div>
       <div class="footer-col"><h4>Rubriques</h4><a onclick="navGo('dec','etudes')">Les formations</a><a onclick="navGo('dec','cursus')">Cursus & schéma</a><a onclick="navGo('dec','actu')">Actualités</a><a onclick="showAbout()">À propos</a><a onclick="showContact()">Contact</a></div>
-      <div class="footer-col"><h4>Ressources officielles</h4><p>Inscriptions : plateforme Cyclades (SIEC)</p><p style="margin-top:.4rem">Stage DEC : Ordre des Experts-Comptables (OEC)</p><p style="margin-top:.4rem">CAFCAC : CNCC</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 — Site à vocation informative</p></div>
+      <div class="footer-col"><h4>Ressources officielles</h4><p>Inscriptions : plateforme Cyclades (SIEC)</p><p style="margin-top:.4rem">Stage DEC : Ordre des Experts-Comptables (OEC)</p><p style="margin-top:.4rem">CAFCAC : CNCC</p><a onclick="showMentionsLegales()" style="margin-top:.6rem">Mentions légales</a><p style="margin-top:.8rem">© 2026 Central EC — Site à vocation informative</p></div>
     </div>
-    <div class="footer-copy">Site réalisé à titre informatif — Diplômé d'Expertise Comptable</div>
+    <div class="footer-copy">Central EC — Site réalisé à titre informatif par un Diplômé d'Expertise Comptable</div>
   </footer>
 </div><!-- /pg-dec-home -->
 
@@ -4364,6 +4462,15 @@ body.uni-dec [role="button"]:focus-visible {
 
 <script>
 
+/* ══ MARQUE CENTRAL EC (v67) — logo embarqué en base64, injecté
+   dans tous les <img data-logo> (nav + landing) : une seule copie
+   du base64 dans le fichier, zéro dépendance externe. ══ */
+var CENTRAL_EC_LOGO = 'data:image/png;base64,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';
+(function () {
+  var imgs = document.querySelectorAll('img[data-logo]');
+  for (var i = 0; i < imgs.length; i++) { imgs[i].src = CENTRAL_EC_LOGO; }
+})();
+
 /* ══════════════════════════════════════════════════════════════
    CHARGEUR DE DONNÉES EXTERNES (v64)
    Les 15 référentiels (≈ 685 Ko) sont désormais dans data/*.json,
@@ -4448,6 +4555,7 @@ function switchUni(uni) {
 
 function goToLanding() {
   currentUni = null;
+  document.title = 'Central EC — Expertise Comptable, Commissariat aux Comptes & Cursus DEC';   // v68
   document.body.classList.remove('uni-ec','uni-cac','uni-dec');
   showPage('pg-landing');
   document.getElementById('top-nav').classList.add('on-landing');
@@ -4468,13 +4576,62 @@ function goToLanding() {
 // Build search index from all text content in the site
 var SEARCH_INDEX = null;
 
+// v66 — Normalisation : minuscules + suppression des accents + apostrophes/tirets
+// convertis en espaces. Rend la recherche insensible aux accents ("societe" trouve
+// "société") et aux variantes typographiques ("expert-comptable" = "expert comptable").
+function searchNormalize(s) {
+  return (s || '').toString().toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/['‘’′‐‑–—-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// v66 — Alias / synonymes métier : chaque terme saisi est complété par des
+// équivalents (sigles, formulations alternatives). Utilisés uniquement pour le
+// score, jamais pour la surbrillance. Clés et valeurs en forme normalisée (sans accent).
+var SEARCH_SYNONYMS = {
+  'cac': ['commissaire aux comptes', 'commissariat', 'audit legal'],
+  'commissaire': ['cac', 'commissaire aux comptes'],
+  'ec': ['expert comptable'],
+  'annales': ['annale', 'sujets', 'corriges', 'examen', 'epreuves'],
+  'annale': ['annales', 'sujets', 'corriges'],
+  'sujet': ['annales', 'sujets', 'corriges'],
+  'sujets': ['annales', 'corriges'],
+  'corrige': ['annales', 'corriges', 'corrections'],
+  'corriges': ['annales', 'corrige'],
+  'bts': ['bts cg', 'comptabilite gestion', 'brevet technicien superieur'],
+  'liasse': ['liasse fiscale', '2065'],
+  'km': ['kilometrique', 'bareme kilometrique', 'indemnite'],
+  'kilometrique': ['bareme kilometrique', 'km', 'indemnite'],
+  'bareme': ['bareme kilometrique'],
+  'tva': ['taxe valeur ajoutee'],
+  'ia': ['intelligence artificielle', 'chatgpt', 'copilot'],
+  'intelligence': ['intelligence artificielle', 'ia'],
+  'durabilite': ['csrd', 'esrs', 'esg'],
+  'csrd': ['durabilite', 'esrs', 'esg', 'oti'],
+  'facture': ['facture electronique', 'pdp', 'factur x'],
+  'efacture': ['facture electronique', 'pdp'],
+  'paie': ['bulletin', 'dsn', 'silae', 'payfit'],
+  'smic': ['salaire minimum', 'pmss'],
+  'memoire': ['memoire dec', 'soutenance'],
+  'stage': ['stage dec', 'irf'],
+  'dispense': ['dispenses', 'equivalences'],
+  'dispenses': ['dispense', 'equivalences'],
+  'logiciel': ['logiciels', 'outils', 'comparatif'],
+  'lettre': ['lettre de mission', 'lettres de mission'],
+  'seuil': ['seuils', 'certification', 'nomination cac'],
+  'seuils': ['seuil', 'certification']
+};
+
 function buildSearchIndex() {
   if (SEARCH_INDEX) return;
   SEARCH_INDEX = [];
 
-  // Helper to add entry
+  // Helper to add entry — _t / _k = titre / mots-clés normalisés (v66)
   function add(uni, section, title, keywords, action) {
-    SEARCH_INDEX.push({ uni, section, title, keywords: keywords.toLowerCase(), action });
+    SEARCH_INDEX.push({ uni, section, title, keywords: keywords.toLowerCase(), action,
+      _t: searchNormalize(title), _k: searchNormalize(keywords) });
   }
 
   // ── EC MISSIONS ──────────────────────────────────────────────
@@ -4542,7 +4699,7 @@ function buildSearchIndex() {
   add('ec','ressources',"Glossaire comptable interactif","glossaire EBE VA BFR FR CAF SIG flux trésorerie termes comptables",function(){showGlossaire()});
   add('ec','ressources',"FAQ pratique","FAQ questions fréquentes missions déontologie facturation délais",function(){showFaq()});
   add('ec','ressources',"Timeline réglementaire","timeline calendrier CSRD facture électronique FIDA H2A seuils",function(){showVeille()});
-  add('ec','ressources',"Comparatif PCG vs IFRS","comparatif PCG IFRS normes comptables différences immobilisations stocks",function(){showComparatifPCGIFRS()});
+  add('ec','ressources',"Comparatif PCG vs IFRS — écarts et retraitements","comparatif PCG IFRS normes comptables françaises internationales différences écart retraitement conséquence présentation des comptes états financiers immobilisations stocks location goodwill consolidation périmètre IAS 1 IFRS 18 revenu",function(){showComparatifPCGIFRS()});
   add('ec','outils',"Schéma : quelle structure choisir ?","schema structure juridique regime fiscal entrepreneur micro EURL SASU SARL SAS EI seuils IR IS TVA franchise BIC BNC",function(){showSchemaStructures()});
   add('ec','outils',"Formes juridiques — Guide complet","formes juridiques EI micro entreprise individuelle EURL SASU SARL SAS SA SNC SCS SCA SEL SELARL SELAS SCI GIE création société capital responsabilité fiscal social",function(){showFormesJuridiques()});
   add('cac','outils',"Calculateur de seuils légaux","calculateur seuils audit légal obligatoire CAC nomination EIP SARL SAS SA bilan CA salariés PACTE",function(){showCalculateur()});
@@ -4551,11 +4708,11 @@ function buildSearchIndex() {
   add('ec','actu',"Timeline réglementaire — Échéances 2024-2028","timeline veille réglementaire facture électronique CSRD AI Act NEP 600 ANC 2022-06 IFRS 18",function(){showVeille()});
   add('cac','actu',"Timeline réglementaire — Échéances 2024-2028","timeline veille réglementaire CSRD OTI facture électronique NEP 600 révisée ISQM AI Act",function(){showVeille()});
   add('ec','normes',"Glossaire comptable — EBE CAF BFR FEC liasse fiscale","glossaire comptable EBE CAF BFR FR TN VA SIG ETE IS TVA CIR FEC liasse fiscale OEC TRACFIN LCB-FT PDP goodwill",function(){showGlossaire()});
-  add('ec','normes',"Comparatif PCG vs IFRS — Immobilisations stocks provisions","comparatif PCG IFRS immobilisations stocks provisions contrats location chiffre affaires instruments financiers goodwill IAS 16 IFRS 15 IFRS 16 IFRS 9",function(){showComparatifPCGIFRS()});
+  add('ec','normes',"Comparatif PCG vs IFRS — Immobilisations stocks provisions présentation consolidation","comparatif PCG IFRS immobilisations stocks provisions engagements retraite contrats location chiffre affaires revenu instruments financiers goodwill consolidation périmètre présentation états financiers bilan compte de résultat annexe retraitement écart conséquence IAS 1 IAS 16 IAS 19 IAS 37 IAS 40 IFRS 3 IFRS 9 IFRS 10 IFRS 11 IFRS 15 IFRS 16 IFRS 18 ANC 2022-06 ANC 2020-01",function(){showComparatifPCGIFRS()});
 
   // ── FISCALITÉ & TVA ──────────────────────────────────────────
   add('ec','ressources',"Fiscalité & TVA — Guide pratique","TVA taxe valeur ajoutée IS impôt sociétés IR impôt revenu BIC BNC liasse fiscale CVAE crédits impôt CIR fiscalité entreprise",function(){showFiscal()});
-  add('ec','ressources',"TVA — Taux, régimes et seuils 2026","TVA taux normal 20% réduit 5,5% intermédiaire 10% super réduit 2,1% franchise base régime simplifié réel normal seuils 2026 CA déclaration CA3 CA12 91900 36800",function(){showFiscal('tva')});
+  add('ec','ressources',"TVA — Taux, régimes et seuils 2026","TVA taux normal 20% réduit 5,5% intermédiaire 10% super réduit 2,1% franchise base régime simplifié réel normal seuils 2026 CA déclaration CA3 CA12 85000 37500 93500 41250",function(){showFiscal('tva')});
   add('ec','ressources',"IS — Impôt sur les sociétés","IS impôt sociétés taux 25% PME 15% résultat fiscal réintégrations déductions acomptes 2065 liasse passage résultat comptable",function(){showFiscal('is')});
   add('ec','ressources',"IR — BIC BNC impôt revenu","IR impôt revenu BIC bénéfices industriels commerciaux BNC bénéfices non commerciaux BA agricoles micro-BIC micro-BNC barème tranches 2026",function(){showFiscal('ir')});
   add('ec','ressources',"Liasse fiscale — Formulaires et délais","liasse fiscale 2065 2050 2051 2052 2053 2054 2055 2058 2059 dépôt délai EDI-TDFC télédéclaration FEC contrôle fiscal",function(){showFiscal('liasse')});
@@ -4587,9 +4744,9 @@ function buildSearchIndex() {
   add('dec','etudes',"Mémoire DEC — retours d'expérience soutenance","mémoire DEC épreuve 3 sujet plan structure soutenance jury directeur de mémoire erreurs refus conseils",function(){switchUni('dec');setTimeout(function(){showMemoireDec()},60)});
   add('dec','etudes',"Mémoire DEC — banque de sujets thèmes tendance jury","mémoire DEC sujets récents IA CSRD facture électronique IFRS 18 thèmes tendance jury 2025 2026 exemples de sujets",function(){switchUni('dec');setTimeout(function(){showMemoireDec()},60)});
   add('dec','etudes',"Comparatif voies accès DEC — stage CAFCAC dispenses","voies accès DEC stage classique CAFCAC dispenses équivalences Master CCA durée prérequis avantages",function(){switchUni('dec');setTimeout(function(){showVoiesDec()},60)});
-  add('ec','home',"À propos — sources politique de mise à jour mentions légales","à propos site positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
-  add('cac','home',"À propos — sources politique de mise à jour mentions légales","à propos site positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
-  add('dec','home',"À propos — sources politique de mise à jour mentions légales","à propos site positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
+  add('ec','home',"À propos — sources politique de mise à jour mentions légales","à propos Central EC nom du site marque positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
+  add('cac','home',"À propos — sources politique de mise à jour mentions légales","à propos Central EC nom du site marque positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
+  add('dec','home',"À propos — sources politique de mise à jour mentions légales","à propos Central EC nom du site marque positionnement éditorial sources OEC CNCC ANC IASB mise à jour mentions légales",function(){showAbout()});
 
   // ── EC NORMES SUPPLÉMENTAIRES ─────────────────────────────────
   add('ec','normes',"IAS 16 — Immobilisations corporelles","IAS16 immobilisations corporelles coût amorti réévaluation durée utilité amortissement composants",function(){switchUni('ec');setTimeout(function(){showNorme('norme-pcg')},60)});
@@ -4718,14 +4875,19 @@ function buildSearchIndex() {
   add('dec','etudes',"Dispenses DCG — équivalences","dispenses DCG UE licence master équivalences VAE accords bilatéraux",function(){switchUni('dec');setTimeout(function(){showFormation(1)},60)});
   add('dec','etudes',"Dispenses DSCG — Master CCA","dispenses DSCG master CCA IAE université 5 UE sur 7 équivalences",function(){switchUni('dec');setTimeout(function(){showFormation(2)},60)});
   add('dec','etudes',"Alternance — BTS DCG DSCG","alternance apprentissage BTS DCG DSCG CFA contrat professionnalisation cabinet",function(){switchUni('dec');setTimeout(function(){showFormation(1)},60)});
+  add('ec','actu',"Facture électronique 2026 — 4 nouvelles mentions obligatoires","facture électronique 2026 1er septembre réception émission e-reporting GE ETI PME nouvelles mentions obligatoires SIREN adresse livraison catégorie opération PDP Factur-X compte à rebours",function(){switchUni('ec');setTimeout(function(){showActu('actu-ec-7')},60)});
+  add('cac','actu',"NEP 9510 révisée 2026 — rapport de gestion CAC","NEP 9510 révisée arrêté 20 avril 2026 rapport de gestion gouvernement entreprise DPEF CSRD durabilité diligences commissaire aux comptes homologation H2A",function(){switchUni('cac');setTimeout(function(){showActu('actu-cac-7')},60)});
+  add('cac','actu',"Délégation H2A CNCC — contrôle des CAC hors EIP 2026-2029","H2A CNCC délégation contrôle activité commissaires aux comptes hors EIP mandats non EIP arrêté 2 juillet 2026 supervision qualité 2026 2029",function(){switchUni('cac');setTimeout(function(){showActu('actu-cac-8')},60)});
+  add('dec','etudes',"Résultats session 2026 DCG DSCG — 9 juillet 2026","résultats session 2026 DCG DSCG 9 juillet 2026 Cyclades SIEC notes relevé copies dernière session ancien référentiel réforme 2027",function(){switchUni('dec');setTimeout(function(){showActu('actu-dec-7')},60)});
   add('dec','etudes',"Candidat libre — DCG DSCG","candidat libre DCG DSCG inscription Cyclades épreuves ponctuelles sans formation",function(){switchUni('dec');setTimeout(function(){showFormation(1)},60)});
   add('dec','etudes',"Résultats DCG — taux de réussite","résultats DCG taux réussite sessions statistiques UE difficultés UE9 UE10",function(){switchUni('dec');setTimeout(function(){showFormation(1)},60)});
   add('dec','etudes',"DSCG — session octobre novembre","DSCG session octobre novembre inscriptions mai Cyclades 7 UE",function(){switchUni('dec');setTimeout(function(){showFormation(2)},60)});
   add('dec','etudes',"Réforme DCG DSCG 2027 — IA fraude","réforme 2027 DCG DSCG IA intelligence artificielle fraude double correction arrêté août 2025",function(){switchUni('dec');setTimeout(function(){showActu('actu-dec-1')},60)});
   add('dec','etudes',"Salaire expert-comptable stagiaire DEC","salaire rémunération stagiaire DEC 2500 euros brut cabinet expertise comptable",function(){switchUni('dec');setTimeout(function(){showFormation(4)},60)});
-  add('dec','etudes',"Annales DCG — épreuves corrigées","annales DCG épreuves corrigées sessions sujets passés UE9 UE10 UE4",function(){switchUni('dec');setTimeout(function(){showFormation(1)},60)});
-  add('dec','etudes',"Annales DSCG — épreuves corrigées","annales DSCG épreuves corrigées sessions sujets passés UE1 UE4 révision",function(){switchUni('dec');setTimeout(function(){showFormation(2)},60)});
-  add('dec','etudes',"Annales DEC — épreuves corrigées","annales DEC épreuves corrigées sessions sujets passés déontologie révision légale mémoire",function(){switchUni('dec');setTimeout(function(){showDecAnnales()},60)});
+  add('dec','etudes',"Annales DCG — épreuves corrigées","annales DCG épreuves corrigées sujets corrigés sessions sujets passés examen révision UE1 UE2 UE3 UE4 UE5 UE6 UE7 UE8 UE9 UE10 UE11 UE12 UE13",function(){switchUni('dec');setTimeout(function(){showDcgAnnales()},60)});
+  add('dec','etudes',"Annales DSCG — épreuves corrigées","annales DSCG épreuves corrigées sujets corrigés sessions sujets passés examen révision UE1 UE2 UE3 UE4 UE5 UE6 UE7",function(){switchUni('dec');setTimeout(function(){showDscgAnnales()},60)});
+  add('dec','etudes',"Annales BTS CG — épreuves corrigées","annales BTS CG comptabilité gestion épreuves corrigées sujets corrigés sessions examen brevet technicien supérieur E1 culture générale expression E2 mathématiques E3 CEJM E4 E4.1 étude de cas E4.2 pratiques comptables fiscales E5 contrôle de gestion E6 parcours professionnel coefficients bac+2",function(){switchUni('dec');setTimeout(function(){showBtsAnnales()},60)});
+  add('dec','etudes',"Annales DEC — épreuves corrigées","annales DEC épreuves corrigées sujets corrigés sessions sujets passés examen déontologie révision légale mémoire",function(){switchUni('dec');setTimeout(function(){showDecAnnales()},60)});
 
   // ── FORMES JURIDIQUES ─────────────────────────────────────────
   add('ec','ressources',"SARL — Société à responsabilité limitée","SARL société responsabilité limitée gérant associés parts sociales IS IR capital",function(){switchUni('ec');setTimeout(function(){showFormesJuridiques()},60)});
@@ -4823,6 +4985,8 @@ function buildSearchIndex() {
   add('ec','outils',"E-reporting — données TVA DGFiP","e-reporting données transactions TVA DGFiP transmission mensuelle trimestrielle B2C",function(){switchUni('ec');setTimeout(function(){showOutilCategorie('cat-ec-efacture')},60)});
 
   add('ec','ressources',"Boîte à outils — tous les outils et guides du site","boîte outils hub transverse barèmes guides calculateur glossaire annales lettres mission raccourcis",function(){showToolbox()});
+  add('ec','ressources',"Lettres de mission — modèles types","lettres de mission modèles types lettre mission expert-comptable présentation examen limité tenue comptable paie conseil NEP 210 clauses honoraires responsabilités",function(){showLettres()});
+  add('ec','outils',"Seuils légaux — tableau de bord CAC audit","seuils légaux tableau de bord nomination commissaire aux comptes CAC audit obligatoire SARL SAS SA bilan chiffre affaires salariés certification micro petite grande entité PACTE",function(){showSeuils()});
 
   add('ec','ressources',"Ouvrir son cabinet — se lancer (expert-comptable)","ouvrir cabinet créer installation s'installer expert-comptable inscription Ordre tableau RCP SEL EURL SASU budget démarrage sous-traitance premiers clients honoraires",function(){showOuvrirCabinet()});
   add('cac','ressources',"Ouvrir son cabinet — se lancer (commissaire aux comptes)","ouvrir cabinet créer installation s'installer commissaire aux comptes inscription H2A liste mandats audit RCP budget sous-traitance co-commissariat",function(){showOuvrirCabinet()});
@@ -4845,17 +5009,34 @@ function runSearch(query) {
     el.innerHTML = '<div class="search-empty">Commencez à taper pour rechercher dans tout le site</div>';
     return;
   }
-  var words = q.split(/\s+/).filter(Boolean);
+  // v66 — recherche normalisée (sans accents) + expansion par synonymes
+  var words = searchNormalize(q).split(/\s+/).filter(Boolean);
+  var synTerms = [];
+  words.forEach(function(w) {
+    var syn = SEARCH_SYNONYMS[w];
+    if (syn) syn.forEach(function(s) {
+      var ns = searchNormalize(s);
+      if (ns && words.indexOf(ns) === -1 && synTerms.indexOf(ns) === -1) synTerms.push(ns);
+    });
+  });
   var scored = SEARCH_INDEX.map(function(item) {
     var score = 0;
-    words.forEach(function(w) {
-      if (item.title.toLowerCase().includes(w)) score += 3;
-      if (item.keywords.includes(w)) score += 1;
+    words.forEach(function(w) {                       // mots saisis : score plein
+      if (item._t.includes(w)) score += 3;
+      if (item._k.includes(w)) score += 1;
+    });
+    synTerms.forEach(function(w) {                     // synonymes : score réduit
+      if (item._t.includes(w)) score += 1.5;
+      else if (item._k.includes(w)) score += 0.5;
     });
     return { item: item, score: score };
   }).filter(function(x){ return x.score > 0; })
-    .sort(function(a,b){ return b.score - a.score; })
-    .slice(0, 12);
+    .sort(function(a,b){ return b.score - a.score; });
+  var _seen = {};                                     // v68 — dédoublonnage titre+univers
+  scored = scored.filter(function(x){
+    var k = x.item.uni + '|' + x.item.title;
+    if (_seen[k]) return false; _seen[k] = 1; return true;
+  }).slice(0, 12);
 
   if (!scored.length) {
     el.innerHTML = '<div class="search-empty">Aucun résultat pour "' + query.replace(/</g,'&lt;') + '"</div>';
@@ -5006,7 +5187,13 @@ document.addEventListener('keydown', function(e) {
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const pg = document.getElementById(id);
-  if (pg) { pg.classList.add('active'); }
+  if (pg) {
+    pg.classList.add('active');
+    // v68 — a11y : scope sur les en-têtes de tableaux (statiques et générés).
+    // Second passage différé : couvre les tableaux construits juste après showPage.
+    var tagScopes = function(){ pg.querySelectorAll('thead th:not([scope])').forEach(function(th){ th.setAttribute('scope','col'); }); };
+    tagScopes(); setTimeout(tagScopes, 120);
+  }
   // Toujours afficher le switcher sauf sur landing
   if (id !== 'pg-landing') {
     showUniSwitcher();
@@ -5052,6 +5239,10 @@ function navGo(uni, section) {
   closeMenu();
   if (uni !== currentUni) switchUni(uni);
   var homeMap = {ec:'pg-ec-home', cac:'pg-cac-home', dec:'pg-dec-home'};
+  // v68 — titre d'onglet : Univers · Section
+  var uniT = {ec:'Expert-Comptable', cac:'Commissaire aux Comptes', dec:'Étudiants / DEC'}[uni] || '';
+  var secT = {home:'',missions:'Missions',normes:'Normes',outils:'Logiciels & outils',ressources:'Guides & chiffres',institutions:'Institutions',actu:'Actualités',etudes:'Formations',cursus:'Cursus',annales:'Annales'}[section];
+  document.title = uniT + (secT ? ' · ' + secT : '') + ' — Central EC';
   if (section === 'home') { showPageWithNav(homeMap[uni]); window.scrollTo(0,0); routeSet(uni); return; }
   showPageWithNav(homeMap[uni]);
   const sId = uni + '-' + section;
@@ -5198,6 +5389,7 @@ function routeDispatch() {
     }
   } catch (e) {
     // Route invalide ou donnée absente : retour à la landing sans casser la page
+    console.error('[Central EC] Erreur de routage pour "' + h + '" :', e);   // v68
     try { goToLanding(); } catch (e2) {}
   }
   visitTrack(p0);   // v65.5 — les liens profonds alimentent aussi « Reprendre »
@@ -5300,6 +5492,8 @@ function showToolbox() {
 function injectContextBar(pgId, label, parentLabel, parentFn) {
   var pg = document.getElementById(pgId);
   if (!pg) return;
+  // v68 — titre d'onglet par page (historique, partage, SEO des liens profonds)
+  if (label) document.title = label.replace(/<[^>]*>/g, '') + ' — Central EC';
   var old = pg.querySelector('.page-context-bar');
   if (old) old.remove();
   var uni = currentUni || 'ec';
@@ -5515,9 +5709,10 @@ function showMission(uni, idx) {
   document.getElementById(uni+'-md-intro').textContent = m.intro;
   document.getElementById(uni+'-md-icon').textContent = m.icon;
   const nav = buildDetailNav(uni, idx, data);
-  const maj = m.maj || 'Mai 2026';
   const printBtn = `<button class="print-btn" onclick="window.print()" style="margin-left:auto">🖨️ Imprimer cette fiche</button>`;
-  const majHtml = `<div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap"><span class="maj-badge"><span class="maj-dot"></span>Mis à jour : ${maj}</span>${printBtn}</div>`;
+  // v68 — badge de fraîcheur uniquement si la donnée existe (pas de date par défaut mensongère)
+  const majBadge = m.maj ? `<span class="maj-badge"><span class="maj-dot"></span>Mis à jour : ${m.maj}</span>` : '';
+  const majHtml = `<div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap">${majBadge}${printBtn}</div>`;
   document.getElementById(uni+'-md-body').innerHTML = majHtml + m.body + nav;
   showPage(pgId);
   hideUniSwitcher();
@@ -10867,7 +11062,7 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
   </div>
 </div><!-- /pg-veille -->
 
-</div><!-- /main-content -->
+</main><!-- /main-content -->
 
 <script>
 /* ══ CALCULATEUR DE SEUILS LÉGAUX ══ */
@@ -11118,46 +11313,100 @@ function showComparatifPCGIFRS() {
 /* COMPARATIF_DATA — externalisé : data/comparatif_data.json (chargé au démarrage, v64) */
 
 var comparatifCurrentCat = 'all';
+var comparatifCurrentSearch = '';
 
 function buildComparatif() {
-  var tbody = document.getElementById('comparatif-tbody');
-  if (!tbody || tbody.dataset.built) return;
-  tbody.dataset.built = '1';
+  var list = document.getElementById('comparatif-list');
+  if (!list || list.dataset.built) return;
+  list.dataset.built = '1';
   comparatifRender();
 }
 
 function comparatifFilter(btn, cat) {
-  document.querySelectorAll('#pg-comparatif-pcg-ifrs .dcg-ann-filter').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#pg-comparatif-pcg-ifrs .dcg-ann-filter').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
   comparatifCurrentCat = cat;
   comparatifRender();
 }
 
-var COMPARATIF_THEME_LABELS = {immo:'Immobilisations',stocks:'Stocks',prov:'Provisions',loc:'Contrats de location',ca:'Chiffre d\'affaires',fin:'Instruments financiers',regr:'Regroupements'};
+function comparatifSearch(query) {
+  comparatifCurrentSearch = (query || '').trim();
+  comparatifRender();
+}
+
+var COMPARATIF_THEME_LABELS = {pres:'Présentation des états financiers',immo:'Immobilisations',stocks:'Stocks',loc:'Contrats de location',fin:'Instruments financiers',prov:'Provisions & engagements',ca:'Chiffre d\'affaires / revenu',conso:'Consolidation & périmètre',regr:'Regroupements d\'entreprises'};
+var COMPARATIF_THEME_ICONS = {pres:'📄',immo:'🏭',stocks:'📦',loc:'🔑',fin:'💹',prov:'🛡️',ca:'🧾',conso:'🔗',regr:'🤝'};
 
 function comparatifRender() {
-  var tbody = document.getElementById('comparatif-tbody');
-  if (!tbody) return;
-  var cat = comparatifCurrentCat;
-  var filtered = COMPARATIF_DATA.filter(function(r){ return cat === 'all' || r.theme === cat; });
+  var list = document.getElementById('comparatif-list');
+  if (!list) return;
+  var cat = comparatifCurrentSearch ? 'all' : comparatifCurrentCat;
+  var nq = (typeof searchNormalize === 'function') ? searchNormalize(comparatifCurrentSearch) : comparatifCurrentSearch.toLowerCase();
+
+  var filtered = COMPARATIF_DATA.filter(function(r){
+    if (cat !== 'all' && r.theme !== cat) return false;
+    if (!nq) return true;
+    var hay = (typeof searchNormalize === 'function')
+      ? searchNormalize(r.sujet+' '+r.pcg+' '+r.ifrs+' '+r.ecart+' '+r.impact+' '+r.normes)
+      : (r.sujet+' '+r.pcg+' '+r.ifrs+' '+r.ecart+' '+r.impact+' '+r.normes).toLowerCase();
+    return hay.indexOf(nq) !== -1;
+  });
+
+  var countEl = document.getElementById('comparatif-count');
+  if (countEl) countEl.textContent = filtered.length + ' poste' + (filtered.length > 1 ? 's' : '') + ' comparé' + (filtered.length > 1 ? 's' : '') + (comparatifCurrentSearch ? ' pour « ' + comparatifCurrentSearch + ' »' : '');
+
+  // Surbrillance du terme recherché (best-effort, sur le texte brut)
+  var q = comparatifCurrentSearch;
+  function hl(text) {
+    if (!q) return text;
+    try {
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+      return text.replace(re, '<mark style="background:rgba(201,168,76,.28);color:var(--navy);border-radius:2px;padding:0 2px">$1</mark>');
+    } catch (e) { return text; }
+  }
+
+  if (!filtered.length) {
+    list.innerHTML = '<div style="text-align:center;color:var(--muted);padding:3rem;font-size:14px">Aucun résultat pour cette recherche.</div>';
+    return;
+  }
+
   var lastTheme = '';
-  var rows = filtered.map(function(r) {
-    var themeRow = '';
+  list.innerHTML = filtered.map(function(r) {
+    var head = '';
     if (r.theme !== lastTheme) {
       lastTheme = r.theme;
-      themeRow = '<tr><td colspan="4" style="padding:10px 16px;background:var(--section-bg);font-family:\'Playfair Display\',serif;font-size:13px;font-weight:700;color:var(--navy);border-top:2px solid var(--border);border-bottom:1px solid var(--border)">'+
-        '📑 ' + (COMPARATIF_THEME_LABELS[r.theme]||r.theme) + '</td></tr>';
+      head = '<div style="display:flex;align-items:center;gap:.5rem;margin:1.8rem 0 .9rem;padding-bottom:.5rem;border-bottom:2px solid var(--gold)">' +
+        '<span style="font-size:18px">' + (COMPARATIF_THEME_ICONS[r.theme]||'📑') + '</span>' +
+        '<h2 style="font-family:\'Playfair Display\',serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin:0">' + (COMPARATIF_THEME_LABELS[r.theme]||r.theme) + '</h2>' +
+      '</div>';
     }
-    var bgAlt = '';
-    return themeRow +
-      '<tr style="border-bottom:1px solid var(--border)' + bgAlt + '">' +
-        '<td style="padding:10px 16px;font-weight:600;font-size:13px;color:var(--navy);vertical-align:top">' + r.sujet + '</td>' +
-        '<td style="padding:10px 16px;font-size:13px;color:var(--text);line-height:1.7;vertical-align:top">' + r.pcg + '</td>' +
-        '<td style="padding:10px 16px;font-size:13px;color:var(--text);line-height:1.7;vertical-align:top">' + r.ifrs + '</td>' +
-        '<td style="padding:10px 16px;font-size:11px;color:var(--muted);vertical-align:top;font-style:italic">' + r.normes + '</td>' +
-      '</tr>';
+    var card =
+      '<div class="comp-card" style="border:1px solid var(--border);border-radius:8px;background:var(--white);padding:1.1rem 1.3rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(0,0,0,.04)">' +
+        '<div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem">' +
+          '<h3 style="font-family:\'Playfair Display\',serif;font-size:1rem;font-weight:700;color:var(--navy);margin:0;flex:1">' + hl(r.sujet) + '</h3>' +
+          '<span style="font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:10px;background:rgba(26,46,90,.08);color:var(--navy);white-space:nowrap">' + hl(r.normes) + '</span>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:.7rem" class="comp-grid">' +
+          '<div style="border-left:3px solid var(--gold);background:rgba(201,168,76,.07);border-radius:0 6px 6px 0;padding:.6rem .8rem">' +
+            '<div style="font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8a6d1f;margin-bottom:.35rem">🇫🇷 PCG — Référentiel français</div>' +
+            '<div style="font-size:13px;color:var(--text);line-height:1.65">' + hl(r.pcg) + '</div>' +
+          '</div>' +
+          '<div style="border-left:3px solid #2a6044;background:rgba(42,96,68,.07);border-radius:0 6px 6px 0;padding:.6rem .8rem">' +
+            '<div style="font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#2a6044;margin-bottom:.35rem">🌍 IFRS — Référentiel international</div>' +
+            '<div style="font-size:13px;color:var(--text);line-height:1.65">' + hl(r.ifrs) + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="border-left:3px solid #b45309;background:rgba(180,83,9,.07);border-radius:0 6px 6px 0;padding:.55rem .8rem;margin-bottom:.55rem">' +
+          '<span style="font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#b45309">⚖️ Écart principal — </span>' +
+          '<span style="font-size:13px;color:var(--text);line-height:1.6">' + hl(r.ecart) + '</span>' +
+        '</div>' +
+        '<div style="border-left:3px solid #1a2e5a;background:rgba(26,46,90,.06);border-radius:0 6px 6px 0;padding:.55rem .8rem">' +
+          '<span style="font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#1a2e5a">📊 Conséquence sur la présentation — </span>' +
+          '<span style="font-size:13px;color:var(--text);line-height:1.6">' + hl(r.impact) + '</span>' +
+        '</div>' +
+      '</div>';
+    return head + card;
   }).join('');
-  tbody.innerHTML = rows || '<tr><td colspan="4" style="padding:2rem;text-align:center;color:var(--muted)">Aucun résultat pour ce filtre.</td></tr>';
 }
 
 /* ══ PAGE GLOSSAIRE / COMPARATIF — fin ══ */
@@ -11954,7 +12203,7 @@ function buildChiffresUtiles() {
       ['Taux intérêt légal pro S1','2,62 %','Arrêté 15 déc. 2025, JO 26 déc.'],
       ['Taux intérêt légal particuliers S1','6,67 %','Arrêté 15 déc. 2025, JO 26 déc.'],
       ['Pénalités de retard min. (CGV B2B)','7,86 %','= 3 × 2,62 %'],
-      ['Indemnité km vélo','0,25 €/km','Plafond 200 €/an'],
+      ['Indemnité km vélo (ancien dispositif)','0,25 €/km','Remplacée par le FMD depuis 2020'],
       ['Forfait mobilités durables','600 €/an','900 € si cumul abonnement TC'],
       ['Abattement frais réels plafonné (salaires)','14 555 €','Min. 509 €'],
     ],
@@ -12002,8 +12251,8 @@ function buildChiffresUtiles() {
 
   html += '<h3 style="font-size:14px;font-weight:700;margin:.8rem 0 .4rem;color:var(--text)">Vélo</h3>';
   html += '<div style="background:#f0fdf4;border:1px solid #86efac;border-radius:6px;padding:.7rem 1rem;font-size:13px;margin-bottom:1rem">'
-    + '🚴 <strong>0,25 €/km</strong> — plafond 200 €/an pour la déduction en frais réels (IR). '
-    + 'Le <strong>Forfait Mobilités Durables (FMD)</strong> permet à l\'employeur d\'exonérer jusqu\'à <strong>600 €/an</strong> (900 € cumulé avec abonnement TC).'
+    + '🚴 Le <strong>Forfait Mobilités Durables (FMD)</strong> permet à l\'employeur d\'exonérer jusqu\'à <strong>600 €/an</strong> (900 € cumulé avec abonnement TC). '
+    + 'L\'ancienne indemnité kilométrique vélo (<strong>0,25 €/km</strong>, plafond 200 €/an) est remplacée par le FMD depuis 2020.'
     + '</div>';
 
   html += '<div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:.7rem 1rem;font-size:12.5px;margin-bottom:1rem;line-height:1.65">'
@@ -12134,7 +12383,7 @@ function buildChiffresUtiles() {
       ['Réel simplifié','85 000 € → 945 000 €','37 500 € → 286 000 €','37 500 € → 286 000 €'],
       ['Réel normal','> 945 000 €','> 286 000 €','> 286 000 €'],
     ],
-    'Seuils appréciés sur le CA N−1 — franchise perdue dès le jour de dépassement du seuil majoré (93 500 € / 41 250 €) ; RSI TVA supprimé au 1er janvier 2027 (LF 2026)'
+    'Seuils appréciés sur le CA N−1 — franchise perdue dès le jour de dépassement du seuil majoré (93 500 € / 41 250 €) ; RSI TVA supprimé au 1er janvier 2027 (art. 38, LF 2025)'
   );
 
   html += '<h3 style="font-size:14px;font-weight:700;margin:.8rem 0 .4rem;color:var(--text)">Seuils régimes IR/IS</h3>';
@@ -12188,7 +12437,7 @@ function buildChiffresUtiles() {
     [
       ['Micro-entité','Oui (simplifié)','Confidentiel possible','Non','Non (sauf EIP)','Non'],
       ['Petite entité','Oui','Publication bilan seul possible','Non','Non (sauf seuils Décret 2024-152)','Non'],
-      ['Moyenne entité','Oui','Complet','Non','Oui si seuils CAC dépassés','Non (PME cotées : rapport 2029)'],
+      ['Moyenne entité','Oui','Complet','Non','Oui si seuils CAC dépassés','Non — PME cotées hors champ (dir. Omnibus 2026)'],
       ['Grande entité','Oui','Complet','Oui (si cotée)','Oui','Ex. 2027 si > 1 000 sal. et CA > 450 M€ (« stop the clock »)'],
     ],
     'Source : Code de commerce, Directive 2022/2464 CSRD, Décret 2024-152 du 28 fév. 2024'
@@ -12208,7 +12457,7 @@ function buildChiffresUtiles() {
       ['OAT France 10 ans','3,15 % (environs)','IAS 36 — test dépréciation goodwill / actifs ; IAS 19 DBO'],
       ['Bund Allemagne 10 ans','2,55 % (environs)','Référence "risk-free" zone euro — IFRS 16, IAS 37'],
       ['Taux swap EUR 10 ans','3,00 % (environs)','Actualisation flux de trésorerie — IFRS 16 / IAS 36'],
-      ['Taux BCE (dépôt)','3,50 % (post-mars 2025)','Référence de court terme — IAS 7 / trésorerie'],
+      ['Taux BCE (dépôt)','2,00 % (depuis juin 2025)','Référence de court terme — IAS 7 / trésorerie'],
     ],
     'Sources indicatives : BCE, Banque de France — vérifier les taux à la date de clôture de l\'exercice'
   );
@@ -13599,7 +13848,7 @@ function buildSocial() {
   + BOX('#fff3e0','#ffcc80','#e65100','⚠️','Ce que ne remplace PAS la DSN','Déclaration d\'AT/MP (cerfa 14463), solde de tout compte, reçu pour solde, contrat de travail, registre du personnel, DPAE (déclaration préalable à l\'embauche — à effectuer < 8h avant l\'embauche), déclaration BOETH (travailleurs handicapés), déclaration DOETH annuelle.')
   + '</div>'
 
-  + CARD(BLUE,'🔧','DPAE — Déclaration Préalable À l\'Embauche','La DPAE doit être transmise à l\'URSSAF <strong>au plus tôt 8 jours avant l\'embauche</strong> et au plus tard immédiatement avant la prise de poste (art. L1221-10 CT). Elle déclenche l\'immatriculation du salarié, son affiliation à l\'assurance chômage, la vérification médicale et la remise de l\'attestation d\'accueil. À défaut : pénalité de 300 fois le minimum garanti (≈ 1 071 €) par salarié concerné et redressement URSSAF possible.')
+  + CARD(BLUE,'🔧','DPAE — Déclaration Préalable À l\'Embauche','La DPAE doit être transmise à l\'URSSAF <strong>au plus tôt 8 jours avant l\'embauche</strong> et au plus tard immédiatement avant la prise de poste (art. L1221-10 CT). Elle déclenche l\'immatriculation du salarié, son affiliation à l\'assurance chômage, la vérification médicale et la remise de l\'attestation d\'accueil. À défaut : pénalité de 300 fois le minimum garanti (≈ 1 300 € en 2026) par salarié concerné et redressement URSSAF possible.')
 
   /* ══ CONTRATS ══ */
   + SEC('contrats','📝','Contrats de travail — CDI, CDD, alternance','Code du travail art. L1221-1 s. — Principales formes et obligations')
@@ -13640,7 +13889,7 @@ function buildSocial() {
   + '<div><strong style="font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em">Procédure obligatoire</strong><br>1. Convocation à entretien préalable (lettre RAR, délai ≥ 5 jours ouvrables avant entretien).<br>2. Entretien préalable (possibilité d\'être assisté).<br>3. Notification du licenciement (lettre RAR, au plus tôt 2 jours ouvrables après entretien).</div>'
   + '<div><strong style="font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em">Indemnité légale de licenciement</strong><br>Ancienneté ≥ 8 mois. Barème : 1/4 de mois de salaire par année jusqu\'à 10 ans + 1/3 au-delà. Calcul sur salaire de référence (meilleur des 3 ou 12 derniers mois). La CC peut prévoir un taux plus favorable.</div>'
   + '<div><strong style="font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em">Préavis</strong><br>Fixé par la CC ou la loi (1 mois < 2 ans d\'ancienneté, 2 mois ≥ 2 ans). La CC peut prévoir des durées plus longues. Dispense de préavis = maintien de la rémunération (indemnité compensatrice de préavis).</div>'
-  + '<div><strong style="font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em">Motif</strong><br>Cause réelle et sérieuse obligatoire (personnel ou économique). Barème MACRON (indemnités prud\'homales) applicable en cas de litige : de 0,5 mois (< 1 an) à 20 mois (à partir de 30 ans d\'ancienneté) de salaire brut.</div>'
+  + '<div><strong style="font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.05em">Motif</strong><br>Cause réelle et sérieuse obligatoire (personnel ou économique). Barème MACRON (indemnités prud\'homales) applicable en cas de litige : de 0,5 mois (< 1 an) à 20 mois (à partir de 29 ans d\'ancienneté) de salaire brut.</div>'
   + '</div></div>'
 
   + '<div style="border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;background:var(--white)">'
@@ -13759,7 +14008,7 @@ function buildFiscal() {
   + TBL_HEAD(['Régime','Seuil CA HT (vente)','Seuil CA HT (services)','Obligations'])
   + '<tbody>'
   + TBL_ROW(['Franchise en base (art. 293 B CGI)','< 85 000 €','< 37 500 €','Pas de TVA collectée, pas de TVA déductible — mention obligatoire sur factures'], true)
-  + TBL_ROW(['Régime simplifié (RSI)','85 000 € → 945 000 €','37 500 € → 286 000 €','2 acomptes (juil. et déc.) + déclaration annuelle CA12 — régime supprimé au 1er janvier 2027 (LF 2026)'])
+  + TBL_ROW(['Régime simplifié (RSI)','85 000 € → 945 000 €','37 500 € → 286 000 €','2 acomptes (juil. et déc.) + déclaration annuelle CA12 — régime supprimé au 1er janvier 2027 (art. 38, LF 2025)'])
   + TBL_ROW(['Régime réel normal (RRN)','> 945 000 € ou option','> 286 000 € ou option','Déclaration mensuelle CA3 (ou trimestrielle si TVA annuelle < 4 000 €)'], true)
   + '</tbody></table></div>'
   + '<div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:6px;padding:.8rem 1.1rem;font-size:13px;color:#7c4a00;margin-bottom:1.2rem;line-height:1.65">⚠️ <strong>Attention seuils majorés :</strong> En cas de dépassement du seuil majoré — 93 500 € (vente) ou 41 250 € (services) — la TVA est due dès le jour du dépassement. En cas de dépassement du seul seuil de base, la franchise cesse au 1er janvier de l\'année suivante.</div>'
@@ -13782,7 +14031,7 @@ function buildFiscal() {
   + '<tbody>'
   + TBL_ROW(['Taux normal (depuis 2022)','25 %','Totalité du bénéfice imposable'], true)
   + TBL_ROW(['Taux réduit PME (art. 219 I b CGI)','15 % sur les 42 500 premiers € de bénéfice','CA HT < 10 M€ et capital libéré et détenu à ≥ 75 % par des personnes physiques'])
-  + TBL_ROW(['Plus-values à long terme','0 % (régime mère-fille) ou 15 % (cas général)','Titres de participation détenus ≥ 2 ans'], true)
+  + TBL_ROW(['Plus-values à long terme (titres de participation)','Exonération — quote-part de frais et charges de 12 %','Titres de participation détenus ≥ 2 ans (art. 219 I a quinquies CGI)'], true)
   + '</tbody></table></div>'
 
   + '<h3 style="font-family:\'Playfair Display\',serif;font-size:14px;font-weight:700;color:var(--navy);margin:.8rem 0 .6rem">Du résultat comptable au résultat fiscal</h3>'
@@ -13844,7 +14093,7 @@ function buildFiscal() {
   + '<div style="overflow-x:auto;border:1px solid var(--border);border-radius:6px;margin-bottom:1.2rem"><table style="width:100%;border-collapse:collapse;font-size:13px;min-width:500px">'
   + TBL_HEAD(['Date de clôture','Délai légal de dépôt','Paiement solde IS'])
   + '<tbody>'
-  + TBL_ROW(['31 décembre','2e jour ouvré suivant le 1er mai (≈ 3 mai N+1)','15 avril N+1 (4e acompte en décembre N)'], true)
+  + TBL_ROW(['31 décembre','2e jour ouvré suivant le 1er mai (≈ 3 mai N+1)','15 mai N+1 — relevé de solde n° 2572 (4e acompte en décembre N)'], true)
   + TBL_ROW(['Autre date','Dans les 3 mois suivant la clôture','Dans les 3 mois et 15 jours suivant la clôture'])
   + '</tbody></table></div>'
 

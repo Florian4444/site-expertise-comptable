@@ -26,6 +26,12 @@
   [headers.values]
     Cache-Control = "public, max-age=86400"
 
+# ── Assets statiques (polices, images) : cache long ──
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/index.html"
   [headers.values]

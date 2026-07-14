@@ -5645,7 +5645,10 @@ function toggleMenu() {
   var overlay = document.getElementById('nav-overlay');
   if (!mm) return;
   if (mm.classList.contains('open')) { closeMenu(); return; }
-  var uni = currentUni || 'landing';
+  // Sur la landing (classe on-landing sur la nav), on affiche toujours le choix
+  // des 3 univers — currentUni peut valoir encore 'ec' au premier chargement.
+  var onLanding = document.getElementById('top-nav').classList.contains('on-landing');
+  var uni = onLanding ? 'landing' : (currentUni || 'landing');
   var items = MOBILE_MENUS[uni];
   mm.className = (uni === 'cac') ? 'cac-menu' : '';
   mm.innerHTML = items.map(function(it){ return '<li><a href="javascript:void(0)" onclick="'+it.f+'">'+it.l+'</a></li>'; }).join('');

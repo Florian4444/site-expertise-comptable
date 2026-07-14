@@ -179,6 +179,7 @@ body.uni-dec .toc-list li a.toc-active{color:#7c5cbf;border-left-color:#9c7bd4;}
 .nav-brand-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--gold-light);white-space:nowrap;transition:color .2s}
 .nav-brand:hover .nav-brand-name{color:#f2dc9e}
 @media(max-width:760px){.nav-brand-name{display:none}.nav-brand{padding:0 .6rem 0 0;margin-right:.2rem}}
+@media(max-width:760px){nav.on-landing .nav-brand-name{display:inline-block;font-size:15px}}
 .landing-logo{width:120px;height:120px;margin-bottom:1.1rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
 @media(max-width:760px){.landing-logo{width:88px;height:88px}}
 /* Comparatif PCG/IFRS : colonnes empilées sur mobile */
@@ -5632,9 +5633,9 @@ function showDscgAnnales() {
 /* ══ HAMBURGER ══ */
 
 var MOBILE_MENUS = {
-  ec:  [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('ec','home')"},{l:'Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Logiciels',f:"navGo('ec','outils')"},{l:'Guides & chiffres',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
-  cac: [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('cac','home')"},{l:'Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Logiciels',f:"navGo('cac','outils')"},{l:'Guides & chiffres',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
-  dec: [{l:'⌂ Accueil du site',f:"goToLanding()"},{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  ec:  [{l:'Accueil',f:"navGo('ec','home')"},{l:'Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('ec','missions')"},{l:'Normes',f:"navGo('ec','normes')"},{l:'Logiciels',f:"navGo('ec','outils')"},{l:'Guides & chiffres',f:"navGo('ec','ressources')"},{l:'Institutions',f:"navGo('ec','institutions')"},{l:'Actualités',f:"navGo('ec','actu')"},{l:'Glossaire',f:"showGlossaire()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'PCG vs IFRS',f:"showComparatifPCGIFRS()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  cac: [{l:'Accueil',f:"navGo('cac','home')"},{l:'Chiffres 2026',f:"showChiffresUtiles()"},{l:'Missions',f:"navGo('cac','missions')"},{l:'Normes',f:"navGo('cac','normes')"},{l:'Logiciels',f:"navGo('cac','outils')"},{l:'Guides & chiffres',f:"navGo('cac','ressources')"},{l:'Institutions',f:"navGo('cac','institutions')"},{l:'Actualités',f:"navGo('cac','actu')"},{l:'Chronologie',f:"showChronologieAudit()"},{l:'Matrice risques',f:"showMatriceAudit()"},{l:'Fiche EIP',f:"showFicheEIP()"},{l:'🚀 Ouvrir son cabinet',f:"showOuvrirCabinet()"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
+  dec: [{l:'Accueil',f:"navGo('dec','home')"},{l:'Formations',f:"navGo('dec','etudes')"},{l:'Cursus',f:"navGo('dec','cursus')"},{l:'Annales',f:"navGo('dec','annales')"},{l:'Outils',f:"navGo('dec','outils')"},{l:'Actualités',f:"navGo('dec','actu')"},{l:'Institutions',f:"navGo('dec','institutions')"},{l:'🧰 Boîte à outils',f:"showToolbox()"},{l:'Contact',f:"showContact()"}],
   landing: [{l:'🟡 Expert-Comptable',f:"switchUni('ec')"},{l:'🟢 Commissaire aux Comptes',f:"switchUni('cac')"},{l:'🟣 Étudiants / DEC',f:"switchUni('dec')"}]
 };
 
@@ -9681,7 +9682,7 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
 
         <!-- Tableau Épreuve 1 -->
         <div class="md-section">
-          <h2 class="md-section-title" style="border-bottom-color:#b71c1c">Épreuve 1 — Réglementation professionnelle & déontologie (4h)</h2>
+          <h2 class="md-section-title" style="border-bottom-color:#b71c1c">Épreuve 1 — Réglementation professionnelle & déontologie (1h)</h2>
           <p style="font-size:13px;color:var(--muted);margin-bottom:1rem">Cette épreuve comporte 2 parties : <strong>Dossier EC</strong> (expert-comptable) + <strong>Dossier CAC</strong> (commissaire aux comptes). Elle teste la maîtrise du code de déontologie, des normes professionnelles et de la réglementation OEC/CNCC.</p>
           <div class="ue-table-wrap"><table class="ue-table" style="table-layout:auto">
             <thead><tr>
@@ -9791,7 +9792,7 @@ Les sujets sont publiés par L'Étudiant dès la fin de l'épreuve.
 
         <!-- Tableau Épreuve 2 -->
         <div class="md-section">
-          <h2 class="md-section-title" style="border-bottom-color:#b71c1c">Épreuve 2 — Révision contractuelle & légale des comptes (5h)</h2>
+          <h2 class="md-section-title" style="border-bottom-color:#b71c1c">Épreuve 2 — Révision contractuelle & légale des comptes (4h30)</h2>
           <p style="font-size:13px;color:var(--muted);margin-bottom:1rem">Cette épreuve présente 2 à 3 dossiers indépendants, chacun basé sur une entreprise fictive différente (PME, groupe, association…). Elle évalue les techniques d'audit, de révision et de certification des comptes.</p>
           <div class="ue-table-wrap"><table class="ue-table" style="table-layout:auto">
             <thead><tr>
@@ -11688,7 +11689,7 @@ function buildSessions() {
   var sessions = [
     {
       nom: 'Session de mai — Épreuve 1 (Déontologie & réglementation professionnelle)',
-      coef: 1, duree: '3h', type: 'Écrit',
+      coef: 1, duree: '1h', type: 'Écrit',
       inscriptions: 'Mi-janvier → fin février',
       epreuve: 'Début mai (date exacte : siec.education.fr)',
       resultats: 'Fin juin / début juillet',
@@ -11697,7 +11698,7 @@ function buildSessions() {
     },
     {
       nom: 'Session de mai — Épreuve 2 (Révision légale et contractuelle)',
-      coef: 2, duree: '4h', type: 'Écrit',
+      coef: 2, duree: '4h30', type: 'Écrit',
       inscriptions: 'Mi-janvier → fin février',
       epreuve: 'Début mai (même semaine que E1)',
       resultats: 'Fin juin / début juillet',
